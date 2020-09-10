@@ -1,0 +1,27 @@
+@import '../../../index.scss';
+
+.servicesWrapper {
+    border: 1px solid #F0F0F0;
+    background-color: #F9F9F9;
+    height: 362px;
+    display: flex;
+    align-items: center;
+}
+.services {
+    display: flex;
+    justify-content: space-between;
+    @extend .container;
+    .service {
+        text-align: center;
+        width: 320px;
+        .service__title {
+            color: #222222;
+            font-size: 15px;
+        }
+        .service__text {
+            font-family: $Roboto;
+            color: #888888;
+            font-size: 14px;
+        }   
+    }
+}

@@ -1,0 +1,28 @@
+@import '../../../index.scss';
+
+.countersWrapper {
+    background-color: #D0D0D0;
+    border: 1px solid #F6F6F6;
+    height: 240px;
+    display: flex;
+    align-items: center;
+}
+.counters {
+    @extend .container;
+    display: flex;
+    justify-content: space-between;
+    .counter {
+        text-align: center;
+        color: #fff;
+        h5 {
+            font-size: 50px;
+            font-weight: normal;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        p {
+            font-size: 15px;
+            font-weight: 500;
+        }
+    }
+}

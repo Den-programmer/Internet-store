@@ -1,0 +1,49 @@
+@import '../../../index.scss';
+
+.welcome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 512px;
+    background-color: #FFFF;
+    @extend .container;
+    >div {
+        margin: 0px 40px;
+    }
+}
+.storeImg {
+    img {
+        width: 550px;
+        height: 350px;
+    }
+}
+.welcome__text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    .welcome__text_title {
+        font-weight: 600;
+        color: #222222;
+        font-size: 24px;
+    }
+    .welcome__text_subTitle {
+        color: #7B7B7B;
+        font-size: 15px;
+    }
+    .welcome__text_maintext {
+        font-size: 14px;
+        color: #8D8D8D;
+    }
+    .btn_contactUs {
+        button {
+            outline: none;
+            border: 1px solid #E5E5E5;
+            background: #EEEEEE;
+            text-transform: uppercase;
+            font-family: $Raleway;
+            font-size: 12px;
+            color: #222222;
+            padding: 16px 28px;
+        }
+    }
+}

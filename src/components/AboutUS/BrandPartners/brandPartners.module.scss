@@ -1,0 +1,20 @@
+@import '../../../index.scss';
+
+.brandPartnersWrapper {
+    height: 156px;
+    border-bottom: 1px solid #EFEFEF;
+    background-color: #F9F9F9; 
+}
+.brandPartners {
+    @extend .container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.prevBtn, .nextBtn {
+    color: #555555;
+    padding: 10px;
+    border: 1px solid #DDDDDD;   
+    cursor: pointer;
+}

@@ -1,0 +1,61 @@
+@import '../../../index.scss';
+
+$members_content: center;
+
+.team {
+    @extend .container;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 80px;
+    p {
+        font-family: $Raleway;
+        font-size: 16px;
+        color: silver;
+    }
+    h3 {
+        color: #222222;
+        font-family: $Roboto;
+    }
+    .title {
+        text-align: center;
+        box-sizing: border-box;
+        padding: 20px 0;
+        h3 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+    .members {
+        display: flex;
+        justify-content: $members_content;
+        align-items: center;
+        .member {
+            height: 400px;
+            width: 260px;
+            text-align: center;
+            img {
+                width: 260px;
+                height: 260px;
+            }
+            .member__inf {
+                width: 259px;
+                height: 140px;
+                border: 1px solid #EEEEEE;
+                border-top: none;
+                h5 {
+                    font-size: 14px;
+                    font-family: $Roboto;
+                }
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+.socialMedias {
+    display: flex;
+}

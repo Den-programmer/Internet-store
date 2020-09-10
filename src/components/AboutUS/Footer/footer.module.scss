@@ -1,0 +1,134 @@
+@import '../../../index.scss';
+
+.features {
+    @extend .container;
+    display: flex;
+    justify-content: space-between;
+    height: 210px;
+    align-items: center;
+}
+.feature {
+    font-size: 13px;
+    text-align: center;
+    h5 {
+        color: #222222;
+        text-transform: uppercase;
+    }
+    p {
+        color: silver;
+    }
+}
+
+.newsShareWrapper {
+    background-color: #408DE4;
+    height: 100px;
+}
+.newsShare {
+    @extend .container;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .newsShare__logo {
+        display: flex;
+        width: 100px;
+        align-items: center;
+        cursor: pointer;
+        img {
+            width: 30px;
+            height: 30px;
+            margin-right: 20px;
+        }
+        h4 {
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+    .submittingForm {
+        display: flex;
+        align-items: center;
+        input {
+            padding: 0;
+            padding-left: 20px;
+            width: 400px;
+            height: 50px;
+            outline: none;
+            border: none;
+        }
+        button {
+            width: 100px;
+            height: 50px;
+            padding: 0;
+            background-color: #FFD200;
+            color: #2C2C2C;
+            text-transform: uppercase;
+            font-weight: bold;
+            border: none;
+            outline: none;
+            font-weight: bold;
+            font-size: 14px;
+            font-family: $Raleway;
+        }
+    }
+    .social_medias {
+        display: flex;
+        .keepInTouchTitle {
+            text-transform: uppercase;
+            color: #FFF;
+            font-size: 13px;
+        }
+    }
+}
+
+.footInfWrapper {
+    background-color: #F8F8F8;
+    height: 350px;
+    border-bottom: 1px solid #F0F0F0;
+    .footInf {
+        @extend .container;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .foot_about {
+            width: 310px;
+            .logo {
+                display: flex;
+                align-items: center;
+                h3 {
+                    color: #222222;
+                    text-transform: uppercase;
+                    font-size: 25px;
+                }
+            }
+            .about_inf {
+                display: flex;
+                align-items: center;
+                span {
+                    margin-right: 5px;
+                    color: #555555;
+                }
+            }
+        }
+        .additionalLinks {
+            h4 {
+                font-weight: 600;
+                color: #151515;
+                font-size: 15px;
+                text-transform: uppercase;
+            }
+            ul > li {
+                padding: 10px 0px;
+            }
+        }
+        p {
+            color: silver;
+        }
+        ul > li {
+            color: silver;
+            font-weight: 300;
+            cursor: pointer;
+        }
+    }
+}

@@ -12,11 +12,29 @@ code {
     monospace;
 }
 
+$Raleway: 'Raleway', sans-serif;
+$Roboto: 'Roboto', sans-serif;
 
 .container {
   width: 1170px;
   margin: 0 auto;
 }
-.d-flex {
-  display: flex;
+
+h1, h2, h3, h4 {
+  font-family: $Raleway;
+}
+
+p, li {
+  font-family: $Roboto;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
 }
