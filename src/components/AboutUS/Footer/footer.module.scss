@@ -10,6 +10,7 @@
 .feature {
     font-size: 13px;
     text-align: center;
+    width: 210px;
     h5 {
         color: #222222;
         text-transform: uppercase;
@@ -73,10 +74,17 @@
     }
     .social_medias {
         display: flex;
+        align-items: center;
         .keepInTouchTitle {
             text-transform: uppercase;
             color: #FFF;
             font-size: 13px;
+        }
+        img {
+            width: 40px;
+            height: 40px;
+            margin: 0px 5px;
+            cursor: pointer;
         }
     }
 }

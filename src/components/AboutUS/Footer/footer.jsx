@@ -4,37 +4,47 @@ import basket from './images/basket.png'
 import shield from './images/shield.png'
 import cards from './images/cards.png'
 import envelope from './images/envelope.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import basketlogo from '../../../images/basket.png'
+import v from './images/victory.png'
+import instagram from './images/instagram.png'
+import facebook from './images/facebook.png'
+import twitter from './images/twitter.png'
+import pinterest from './images/pinterest.png'
 
 const Footer = (props) => {
+    const featuresData = [
+        {
+            id: 1,
+            photo: basket,
+            title: 'Free Shipping',
+            text: 'Free Shipping on World wide Order Over $99'
+        },
+        {
+            id: 2,
+            photo: shield,
+            title: 'Trusted Pay',
+            text: '100% Payment Protection & Easy Return'
+        },
+        {
+            id: 3,
+            photo: cards,
+            title: 'Secured Payment',
+            text: 'All Major Credit & Debit Cards Accepted'
+        }
+    ]
+    const features = featuresData.map(f => {
+        return (
+            <div key={f.id} className={classes.feature}>
+                <img src={f.photo} alt="" />
+                <h5>{f.title}</h5>
+                <p>{f.text}</p>
+            </div>
+        )
+    })
     return (
         <footer>
             <section className={classes.features}>
-                <div className={classes.feature}>
-                    <img src={basket} alt="" />
-                    <h5>Free Shipping</h5>
-                    <p>
-                        Free Shipping on World wide Order
-                        Over $99.
-                    </p>
-                </div>
-                <div className={classes.feature}>
-                    <img src={shield} alt="" />
-                    <h5>Trusted Pay</h5>
-                    <p>
-                        100% Payment Protection &#38;
-                        Easy Return
-                    </p>
-                </div>
-                <div className={classes.feature}>
-                    <img src={cards} alt="" />
-                    <h5>Secured Payment</h5>
-                    <p>
-                        All Major Credit &#38; Debit Cards
-                        Accepted
-                    </p>
-                </div>
+                {features}
             </section>
             <section className={classes.newsShareWrapper}>
                 <div className={classes.newsShare}>
@@ -48,11 +58,11 @@ const Footer = (props) => {
                     </form>
                     <div className={classes.social_medias}>
                         <h4 className={classes.keepInTouchTitle}>Keep in touch</h4>
-                        <FontAwesomeIcon />
-                        <FontAwesomeIcon />
-                        <FontAwesomeIcon />
-                        <FontAwesomeIcon />
-                        <FontAwesomeIcon />
+                        <img src={twitter} alt="twitter" />
+                        <img src={facebook} alt="facebook" />
+                        <img src={instagram} alt="instagram" />
+                        <img src={pinterest} alt="" />
+                        <img src={v} alt="v" />
                     </div>
                 </div>
             </section>

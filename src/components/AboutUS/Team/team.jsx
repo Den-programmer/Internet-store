@@ -1,9 +1,18 @@
 import React from 'react'
 import classes from './team.module.scss'
-import MemberOne from '../../../images/avatar.jpg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Member from './Member/member'
 
 const Team = (props) => {
+    const Team = props.team.map(m => {
+        return <Member key={m.id} id={m.id} 
+        name={m.name} 
+        photo={m.photo} 
+        position={m.position} 
+        facebook={m.facebook} 
+        google={m.google} 
+        linkedIn={m.linkedIn} 
+        twitter={m.twitter}/>
+    })
     return (
         <section className={classes.team}>
             <div className={classes.title}>
@@ -13,19 +22,7 @@ const Team = (props) => {
                 </p>
             </div>
             <div className={classes.members}>
-                <div className={classes.member}>
-                    <img src={MemberOne} alt="" />
-                    <div className={classes.member__inf}>
-                        <h5>Denis Grigorov</h5>
-                        <p>Godness</p>
-                        <div className={classes.socialMedias}>
-                            <div>Facebook Icon</div>
-                            <div>Twitter Icon</div>
-                            <div>Linked In Icon</div>
-                            <div>Google+ Icon</div>
-                        </div>
-                    </div>
-                </div>
+                {Team}
             </div>
         </section>
     )

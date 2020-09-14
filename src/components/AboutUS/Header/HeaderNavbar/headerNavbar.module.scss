@@ -1,0 +1,52 @@
+@import '../../../../index.scss';
+
+.navbarWrapper {
+    background: #408DE4;
+}
+.navbar {
+    @extend .container;
+    display: flex;
+    align-items: center;
+    nav {
+        padding: 0px 30px;
+        ul {
+            display: flex;
+            li {
+                a {
+                    color: #FFF;
+                    margin: 0px 12px;
+                    font-family: $Raleway;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 12px;
+                    cursor: pointer;
+                    &:hover {
+                        transition: all 0.2s linear;
+                        color: #AC053D;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contacts {
+    font-family: $Roboto;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    box-sizing: border-box;
+    padding-left:100px;
+    margin-left: auto;
+    p {
+        text-transform: uppercase;
+        color: #FFF;
+    }
+    span {
+        color: #333333;
+        background-color: #FFD200;
+        padding: 5px;
+        margin-left: 5px;
+    }
+}

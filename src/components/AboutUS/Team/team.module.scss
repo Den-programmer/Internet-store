@@ -32,30 +32,5 @@ $members_content: center;
         display: flex;
         justify-content: $members_content;
         align-items: center;
-        .member {
-            height: 400px;
-            width: 260px;
-            text-align: center;
-            img {
-                width: 260px;
-                height: 260px;
-            }
-            .member__inf {
-                width: 259px;
-                height: 140px;
-                border: 1px solid #EEEEEE;
-                border-top: none;
-                h5 {
-                    font-size: 14px;
-                    font-family: $Roboto;
-                }
-                p {
-                    font-size: 14px;
-                }
-            }
-        }
     }
-}
-.socialMedias {
-    display: flex;
 }

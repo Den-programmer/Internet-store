@@ -1,0 +1,28 @@
+@import '../../../../index.scss';
+
+.pageNameWrapper {
+    background-color: #686868;
+    width: 100%;
+}
+
+.pageName {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1170px;
+    margin: 0 auto;
+}
+.pageName__Title {
+    h2 {
+        font-size: 32px;
+        color: #FFF;
+        text-transform: uppercase;
+    }
+}
+.pageName__path {
+    h3 {
+        font-weight: 600;
+        color: #FFF;
+    }
+}

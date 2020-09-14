@@ -1,0 +1,51 @@
+@import '../../../index.scss';
+
+.departments {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFD200;
+    width: 270px;
+    box-sizing: border-box;
+    padding: 0px 20px;
+    color: #222222;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 14px;
+    font-family: $Roboto;
+    h3 {
+        text-transform: uppercase;
+    }
+}
+.menu {
+    position: relative;
+    .menuList {
+        position: absolute;
+        top: 25px;
+        right: -84px;
+        z-index: 999;
+        background-color: #FFFFFF;
+        li {
+            padding: 20px 0; 
+            width: 268px;
+            border: 1px solid #E8E8E8;
+            &:hover {
+                transition: all .3s linear;
+                background-color: #60C4C3;
+            }
+            &:hover a, &:hover .menuIcon {
+                color: #fff;
+            }
+            a {
+                color: #555555;
+                font-size: 14px;
+                text-decoration: none;
+            }
+        }
+    }
+}
+.menuIcon {
+    margin-right: 5px;
+    margin-left: 20px;
+    color: #555555;
+}
