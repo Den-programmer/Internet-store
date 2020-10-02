@@ -1,0 +1,24 @@
+@import '../../../index.scss';
+
+.mainNav {
+    padding: 0px 30px;
+    ul {
+        display: flex;
+        li {
+            a {
+                color: #FFF;
+                margin: 0px 12px;
+                font-family: $Raleway;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 12px;
+                cursor: pointer;
+                &:hover {
+                    transition: all 0.2s linear;
+                    color: #AC053D;
+                }
+            }
+        }
+    }
+}

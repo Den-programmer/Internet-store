@@ -1,0 +1,47 @@
+@import '../../../index.scss';
+
+.extremeBanner {
+    @extend .container;
+    margin: 40px auto;
+    position: relative;
+    .extremeBanner__photo {
+        width: 100%;
+        height: 200px;
+    }
+    .extremeBanner__content {
+        position: absolute;
+        top: 20%;
+        left: 60%;
+        text-align: center;
+        line-height: 3em;
+        .btn_specialOffer {
+            button {
+                outline: none;
+                border: none;
+                padding: 7px 10px;
+                border-radius: 1px;
+                color: #171717;
+                font-size: 11px;
+                background-color: #DEC938;
+                &:hover {
+                    transition: all .1s linear;
+                    opacity: 0.9;
+                }
+            }
+        }
+        h2 {
+            color: #FFF;
+            font-size: 32px;
+            font-weight: 500;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        p {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 300;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+        }
+    }
+}

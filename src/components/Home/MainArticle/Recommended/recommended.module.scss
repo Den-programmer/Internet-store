@@ -1,0 +1,27 @@
+@import '../../home.module.scss';
+
+.recommended {
+    .recommended__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .title {
+            h3 {
+                text-transform: uppercase;
+                color: #222222;
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+        .control_btns {
+            display: flex;
+            align-items: center;
+            .btn_prev, .btn_next {
+                @extend .sliderButton;
+            }
+        } 
+    }
+    .products {
+        display: flex;
+    }
+}

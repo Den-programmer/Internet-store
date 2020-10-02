@@ -5,8 +5,8 @@ import Welcome from './Welcome/welcome'
 import Services from './Services/services'
 import Counter from './Counter/counterContainer'
 import Team from './Team/teamContainer'
-import BrandPartners from './BrandPartners/brandPartners'
-import Footer from './Footer/footer'
+import BrandPartners from '../common/BrandPartners/brandPartnersContainer'
+import Footer from '../common/Footer/footerContainer'
 
 const AboutUs = (props) => {
     return (

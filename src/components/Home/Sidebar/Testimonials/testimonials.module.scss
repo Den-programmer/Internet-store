@@ -1,0 +1,76 @@
+.horizontal_line {
+    width: 234px;
+    height: 1px;
+    background-color: #EBEBEB;
+    margin: 0 auto;
+}
+
+.testimonials {
+    margin-top: 30px;
+    width: 265px;
+    .title {
+        background-color: #408DE4;
+        text-align: center;
+        padding: 20px 0px;
+        h2 {
+            color: #FFF;
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+    }
+    .mainPart {
+        border: 1px solid #E5E5E5;
+    }
+    .testimonial {
+        width: 225px;
+        margin: 0 auto;
+        p {
+            text-align: center;
+            color: #8D8D8D;
+            font-size: 14px;
+        }
+    }
+    .authour {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        .authour_photo {
+            margin: 0 auto;
+            width: 66px;
+            height: 66px;
+            border-radius: 50px;
+        }
+        h4 {
+            color: #222222;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+        p {
+            font-size: 14px;
+            font-weight: 300;
+            color: #A9A9A9;
+        }
+    }
+    .switch_btns {
+        padding: 30px 0px;
+        display: flex;
+        justify-content: center;
+        .switch_btn {
+            height: 7px;
+            width: 7px;
+            background-color: #CECECE;
+            border-radius: 3px;
+            margin: 0 3px;
+            cursor: pointer;
+        }
+        .active_switch_btn {
+            height: 7px;
+            width: 7px;
+            background-color: #408DE4;
+            border-radius: 3px;
+            margin: 0 3px;
+            cursor: pointer;
+        }
+    }
+}

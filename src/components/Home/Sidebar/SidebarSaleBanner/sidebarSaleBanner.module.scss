@@ -1,0 +1,41 @@
+.sidebarSaleBanner {
+    margin-top: 30px;
+    position: relative;
+    .product_photo {
+        width: 265px;
+        height: 340px;
+        border-radius: 1px;
+    }
+    .product_inf {
+        text-align: center;
+        position: absolute;
+        top: 25%;
+        left: 45%;
+        .title {
+            h4 {
+                text-transform: uppercase;
+                color: #323232;
+                font-size: 11px;
+            }
+        }
+        .subtitle {
+            p {
+                text-transform: uppercase;
+                font-size: 19px;
+                color: #2A2B2E;
+            }
+        }
+        .btn_shopNow {
+            button {
+                outline: none;
+                border: none;
+                color: #656565;
+                background-color: #FFFFFF;
+                padding: 5px 10px;
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+        }
+    }
+}

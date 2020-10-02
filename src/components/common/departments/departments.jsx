@@ -3,7 +3,7 @@ import classes from './departments.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTv, faMobile, faFutbol, faLeaf, faShoppingBasket, faCameraRetro, faPlug, faHeadphones, faAppleAlt, faTags } from '@fortawesome/free-solid-svg-icons'
 
-const Departments = ({ setMenuStatus, isDepartmentsMenuOpen }) => {
+const Departments = ({ setIsDepartmentsMenuOpenStatus, isDepartmentsMenuOpen }) => {
     const departmentsData = [
         {
             id: 1,
@@ -70,7 +70,7 @@ const Departments = ({ setMenuStatus, isDepartmentsMenuOpen }) => {
         return <li key={d.id}><FontAwesomeIcon className={classes.menuIcon} icon={d.icon} /><a href={d.path}>{d.title}</a></li>
     })
     return (
-        <div onClick={setMenuStatus} className={classes.departments}>
+        <div onClick={() => setIsDepartmentsMenuOpenStatus(!isDepartmentsMenuOpen)} className={classes.departments}>
             <h3>Departments</h3>
             {isDepartmentsMenuOpen && <div className={classes.menu}>
                 <ul className={classes.menuList}>

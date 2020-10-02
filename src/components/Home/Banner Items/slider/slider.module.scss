@@ -1,0 +1,55 @@
+@import "../../../../index.scss";
+
+.slider {
+    margin: 0 auto;
+    width: 850px;
+    height: 470px;
+}
+
+.slide {
+    position: relative;
+    .slideImage {
+        width: 850px;
+        height: 470px;
+        border-radius: 1px;
+    }
+    .description {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        .description__title {
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 40px;
+            font-weight: 600;
+        }
+        .description__subtitle {
+            font-size: 16px;
+            font-weight: 600;
+            color: #FFF;
+            text-transform: uppercase;
+        }
+        .switchBtnsControl {
+            display: flex;
+            position: absolute;
+            top: 180%;
+            right: -10%;
+            .switchBtn {
+                height: 7px;
+                width: 7px;
+                border-radius: 3px;
+                background-color: #E7E7E7;
+                margin: 0px 7px;
+                cursor: pointer;
+            }
+            .activeBtn {
+                margin: 0px 7px;
+                height: 7px;
+                width: 7px;
+                border-radius: 3px;
+                background-color: red;
+                cursor: pointer;
+            }
+        }
+    }
+}

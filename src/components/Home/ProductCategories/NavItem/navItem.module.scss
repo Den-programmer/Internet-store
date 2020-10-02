@@ -1,0 +1,26 @@
+@import '../../../../index.scss';
+
+.navItem {
+    border: 1px solid #E8E8E8;
+    text-align: center;
+    width: 115px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    .navIcon {
+        color: #888888;
+    }
+    .navTitle {
+        color: #222222;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-family: $Roboto;
+    }
+    &:hover {
+        transition: all .2s linear;
+        height: 97px;
+        border-top: 3px solid #408DE4;
+    }
+}

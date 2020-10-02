@@ -1,0 +1,21 @@
+@import '../../../index.scss';
+
+.contacts {
+    font-family: $Roboto;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    box-sizing: border-box;
+    padding-left:100px;
+    margin-left: auto;
+    p {
+        text-transform: uppercase;
+        color: #FFF;
+    }
+    span {
+        color: #333333;
+        background-color: #FFD200;
+        padding: 5px;
+        margin-left: 5px;
+    }
+}

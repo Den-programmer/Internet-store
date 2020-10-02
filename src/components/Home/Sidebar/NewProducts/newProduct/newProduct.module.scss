@@ -1,0 +1,36 @@
+@import '../../../../../index.scss';
+
+.product {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #E5E5E5;
+    cursor: pointer;
+    .product_photo {
+        width: 70px;
+        height: 70px;
+    }
+    .product_inf {
+        width: 140px;
+        h4 {
+            font-family: $Roboto;
+            font-size: 14px;
+            font-weight: normal;
+            color: #686868;
+        }
+        .price {
+            color: #222222;
+            font-size: 13px;
+            font-family: $Roboto;
+            font-weight: 500;
+        }
+        .rating {
+            display: flex;
+            align-self: center;
+            margin-bottom: 25px;
+            img {
+                margin: 0px 2px;
+            }
+        }
+    }
+}

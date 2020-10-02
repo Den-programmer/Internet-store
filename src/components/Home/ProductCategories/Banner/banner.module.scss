@@ -1,0 +1,35 @@
+.banner {
+    position: relative;
+    height: 327px;
+    width: 285px;
+    border: 1px solid #E8E8E8;
+    .banner__photo {
+        width: 275px;
+        height: 310px;
+    }
+    .banner__content {
+        .banner__title {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 20px;
+            color: #2A2B2E;
+        }
+        .banner__subtitle {
+            font-size: 15px;
+            color: #555555;
+        }
+        .btn_todayOnly {
+            button {
+                outline: none;
+                border: none;
+                border-radius: 1px;
+                background-color: #24BBBC;
+                padding: 7px 10px;
+                color: #FFF;
+                font-size: 500;
+                font-size: 11px;
+                font-family: $Roboto;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@import "../../../../index.scss";
+
+.navbarWrapper {
+    background-color: #408DE4;
+    min-height: 50px;
+    width: 100%;
+}
+
+.navbar {
+    @extend .container;
+    display: flex;
+    align-items: center;
+    .mainPartWrapper {
+        background-color: #333333;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+        width: 100%;
+        .callUsWrapper {
+            box-sizing: border-box;
+            padding: 0px 10px;
+        }
+    }
+}

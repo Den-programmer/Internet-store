@@ -6,7 +6,7 @@ const aboutUsState = {
     navigationLinks: [
         {
             id: 1,
-            path: '/',
+            path: '/Home',
             title: 'Home'
         },
         {

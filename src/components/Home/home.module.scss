@@ -1,0 +1,26 @@
+@import '../../index.scss';
+
+.dFlex {
+    display: flex;
+    @extend .container;
+}
+
+.sliderButton {
+    color: #555555;
+    border: 1px solid #E5E5E5;
+    font-size: 16px;
+    border-radius: 1px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    margin: 0px 5px;
+    user-select: none;
+    &:hover {
+        background-color: #DF9093;
+        color: #fff;
+        border: 1px solid #EC4A9B;
+    }
+}

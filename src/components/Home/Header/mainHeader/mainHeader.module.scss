@@ -1,0 +1,99 @@
+@import "../../../../index.scss";
+
+.mainHeaderWrapper {
+    background-color: #408DE4;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    a {
+        text-decoration: none;
+    }
+}
+
+.mainHeader {
+    @extend .container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        h1 {
+            font-size: 26px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #FFF;
+        }
+    }
+    .mainPanel {
+        display: flex;
+        align-self: center;
+        .searchPanel {
+            display: flex;
+            margin:0 30px;
+            .categories {
+                color: #333333;
+                padding: 0px 5px 0px 15px;
+                height: 50px;
+                border-left: 1px solid #E8E8E8;
+                background-color: #fff;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                h4 {
+                    font-family: $Roboto;
+                    font-size: 13px;
+                }
+                .angleDownIcon {
+                    padding: 0px 12px;
+
+                }
+            }
+            input {
+                box-sizing: border-box;
+                padding-left: 15px;
+                width: 410px;
+                height: 50px;
+                border-radius: 1px;
+                border: none;
+                outline: none;
+            }
+            .searchIcon {
+                background-color: #FFD200;
+                padding:0 20px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+            }
+        }
+        .basket {
+            display: flex;
+            border-radius: 1px;
+            background-color: #fff;
+            height: 50px;
+            .shoppingBasketIcon {
+                padding:0 15px;
+                border-right: 1px solid #E5E5E5;
+                display: flex;
+                align-items: center;
+            }
+            .shoppingBoughtItems {
+                padding:0 20px;
+                display: flex;
+                align-items: center;
+                p {
+                    font-size: 12px;
+                    color: #555555;
+                    margin-right: 5px;
+                }
+                span {
+                    font-size: 12px;
+                    color: #408DE4;
+                }
+            }
+        }
+    }
+}

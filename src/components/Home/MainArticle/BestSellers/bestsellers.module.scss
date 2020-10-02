@@ -1,0 +1,97 @@
+@import '../../../../index.scss';
+@import '../../home.module.scss';
+
+.bestsellers {
+    padding-top: 40px;
+    .bestsellers__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .title {
+            h3 {
+                color: #222222;
+                text-transform: uppercase;
+                font-size: 18px;
+            }
+        }
+        .control_btns {
+            display: flex;
+            align-items: center;
+            user-select: none;
+            .btn_prev, .btn_next {
+                @extend .sliderButton;
+            }
+        }
+    }
+    .mainContent {
+        display: flex;
+        flex-wrap: wrap;
+        .bestseller {
+            position: relative;
+            display: flex;
+            align-items: center;
+            border: 1px solid #E8E8E8;
+            width: 49.5%;
+            cursor: pointer;
+            .new, .sale {
+                position: absolute;
+                top: 10%;
+                left: 5%;
+                width: 42px;
+                height: 20px;
+                border-radius: 1px;
+                color: #FFF;
+                font-weight: bold;
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 999;
+            }
+            .new {
+                background-color: #F7AB27;
+            }
+            .sale {
+                background-color: #EA5C5C;
+            }
+            .bestseller__photo {
+                width: 190px;
+                height: 190px;
+                z-index: 888;
+                margin: 10px;
+            }
+            .bestseller__content {
+                margin: 0px 20px;
+                .bestseller__title {
+                    font-family: $Roboto;
+                    font-size: 14px;
+                    font-weight: normal;
+                    color: #444444;
+                }
+                .price {
+                    color: #222222;
+                    font-size: 14px;
+                }
+                .rating {
+                    display: flex;
+                    margin-bottom: 20px;
+                    img {
+                        margin:0 2px;
+                    }
+                }
+                .bestseller__btn {
+                    button {
+                        outline: none;
+                        border: 1px solid #E5E5E5;
+                        color: #222222;
+                        text-transform: uppercase;
+                        padding: 12px;
+                        border-radius: 1px;
+                        font-weight: 600;
+                        font-family: $Raleway;
+                    }
+                }
+            }
+        }
+    }
+}

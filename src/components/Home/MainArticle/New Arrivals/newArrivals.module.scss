@@ -1,0 +1,134 @@
+@import '../../../../index.scss';
+@import '../../home.module.scss';
+
+.newArrivals {
+    padding-bottom: 40px;
+    .newArrivals__header {
+        display: flex;
+        align-items: center;
+        .title {
+            h3 {
+                text-transform: uppercase;
+                color: #222222;
+                font-size: 18px;
+            }
+        }
+        .navigation {
+            margin-left: auto;
+            ul {
+                display: flex;
+                align-items: center;
+                li {
+                    cursor: pointer;
+                    margin: 0px 10px;
+                    a {
+                        font-size: 12px;
+                        font-weight: 500;
+                        color: #777777;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        &:hover {
+                            transition: all .1s ease;
+                            color: #408DE4;
+                        }
+                    }
+                }
+            }
+        }
+        .control_btns {
+            display: flex;
+            align-items: center;
+            .prev_btn, .next_btn {
+                @extend .sliderButton;
+            }
+        }
+    }
+    .arrivals {
+        display: flex;
+        .arrival {
+            border: 1px solid #E8E8E8;
+            position: relative;
+            width: 210px;
+            text-align: center;
+            cursor: pointer;
+            .sale, .new {
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                width: 42px;
+                height: 20px;
+                border-radius: 1px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                user-select: none;
+                p {
+                    color: #FFF;
+                    font-size: 12px;
+                }
+            }
+            .sale {
+                background-color: #EA5C5C;
+            }
+            .new {
+                background-color: #FFB128;
+            }
+            .arrival_photo {
+                width: 200px;
+                height: 210px;
+                margin: auto;
+            }
+            .additional_functions {
+                display: flex;
+                align-items: center;
+                >* {
+                    width: 52px;
+                    height: 35px;
+                    color: #222222;
+                    border: 1px solid #EEEEEE;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &:hover {
+                        transition: all .2s linear;
+                        color: #fff;
+                        background-color: #408DE4;
+                    }
+                }
+                .comprison {
+                    display: block;
+                    position: relative;
+                    .leftArrow {
+                        position: absolute;
+                        top: 40%;
+                        right: 40%;
+                    }
+                    .rigthArrow {
+                        position: absolute;
+                        bottom: 40%;
+                    }   
+                }
+            }
+            .arrival__information {
+                background-color: #FAFAFA;
+                .arrival__title {
+                    color: #444444;
+                    font-size: 14px;
+                    font-family: $Roboto;
+                    min-height: 30px;
+                }
+                .price {
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #222222;
+                }
+                .rating {
+                    padding:10px 0 15px 0;
+                    img {
+                        margin: 0px 1px;
+                    }
+                }
+            }
+        }
+    }
+}

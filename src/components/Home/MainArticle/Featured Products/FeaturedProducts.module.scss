@@ -1,0 +1,77 @@
+@import '../../home.module.scss';
+
+.featuredProducts {
+    padding-top: 50px;
+    .featuredProducts__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .title {
+            h3 {
+                color: #222222;
+                text-transform: uppercase;
+                font-size: 18px;
+            }
+        }
+        .control_btns {
+            display: flex;
+            .btn_prev, .btn_next {
+               @extend .sliderButton;
+            }
+        }
+    }
+    .products {
+        display: flex;
+        align-items: center;
+        .featureProduct {
+            border:1px solid #E8E8E8;
+            text-align: center;
+            position: relative;
+            width: 210px;
+            cursor: pointer;
+            .new, .sale {
+                position: absolute;
+                top: 5%;
+                left: 5%;
+                width: 42px;
+                height: 20px;
+                border-radius: 1px;
+                color: #FFF;
+                font-size: 12px;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .new {
+                background-color: #FFB128;
+            }
+            .sale {
+                background-color: #EA5C5C;
+            }
+            .featureProduct__photo {
+                height: 190px;
+                width: 190px;
+                margin: 10px 0px;
+            }
+            .featureProduct__information {
+                h4 {
+                    color: #444444;
+                }
+                p {
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #222222;
+                }
+                .rating {
+                    display: flex;
+                    justify-content: center;
+                    padding-bottom: 20px;
+                    img {
+                        margin: 0 2px;
+                    }
+                }
+            }
+        }
+    }
+}

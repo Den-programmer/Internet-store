@@ -11,6 +11,9 @@
     font-size: 13px;
     text-align: center;
     width: 210px;
+    img {
+        user-select: none;
+    }
     h5 {
         color: #222222;
         text-transform: uppercase;
@@ -84,6 +87,7 @@
             width: 40px;
             height: 40px;
             margin: 0px 5px;
+            user-select: none;
             cursor: pointer;
         }
     }

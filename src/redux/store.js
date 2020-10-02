@@ -1,8 +1,10 @@
 import { createStore, combineReducers, compose } from "redux"
 import reducerAboutUS from "./reducers/reducerAboutUs"
+import reducerHome from "./reducers/reducerHome"
 
 const reducers = combineReducers({
-    aboutUsPage: reducerAboutUS
+    aboutUsPage: reducerAboutUS,
+    homePage: reducerHome
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose

@@ -1,0 +1,38 @@
+@import '../../../index.scss';
+@import '../home.module.scss';
+
+.productCategories {
+    @extend .container;
+    .productCategories__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .title {
+            h3 {
+                text-transform: uppercase;
+                color: #222222;
+                font-size: 18px;
+            }
+        }
+        .control_btns {
+            display: flex;
+            align-items: center;
+            .btn_prev, .btn_next {
+                @extend .sliderButton;
+            }
+        }
+    }
+    .navbar {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+    .mainContent {
+        display: flex;
+        align-items: center;
+        .products {
+            display: flex;
+            align-items: center;
+        }
+    }
+}

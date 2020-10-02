@@ -1,0 +1,34 @@
+.container {
+    width: 860px;
+    margin: 0 auto;
+}
+.banners {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0;
+    .banner {
+        position: relative;
+        border-radius: 1px;
+        .banner__photo {
+            width: 400px;
+            height: 200px;
+        }
+        .bannerInformation {
+            position: absolute;
+            top: 15%;
+            left: 10%;
+            h3 {
+                font-size: 30px;
+                text-transform: uppercase;
+                color: #fff;
+                margin-block-start: 0;
+                margin-block-end: 0;
+            }
+            p {
+                font-size: 13px;
+                color: #DDDDDD
+            }
+        }
+    }
+}
