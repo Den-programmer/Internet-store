@@ -10,6 +10,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    user-select: none;
     img {
         width: 45px;
         height: 40px;

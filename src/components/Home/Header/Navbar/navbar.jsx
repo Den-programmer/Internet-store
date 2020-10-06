@@ -8,7 +8,9 @@ const Navbar = (props) => {
     return (
         <div className={classes.navbarWrapper}>
             <div className={classes.navbar}>
-                <Departments />
+                <div>
+                    <Departments />
+                </div>
                 <div className={classes.mainPartWrapper}>
                     <MainNav />
                     <div className={classes.callUsWrapper}>

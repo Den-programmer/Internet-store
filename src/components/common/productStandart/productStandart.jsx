@@ -2,8 +2,12 @@ import React from 'react'
 import classes from './productStandart.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart, faLongArrowAltRight, faLongArrowAltLeft, faHeart, faEye } from '@fortawesome/free-solid-svg-icons'
+import uncoloredHeart from '../../../images/heartUncolored.png'
 
-const ProductStandart = ({ id, photo, title, price, isNew, isSale, hovered, starsCount, greyStarsCount, onMouseMove, onMouseLeave }) => {
+const ProductStandart= ({ 
+    id, photo, title, price, isNew, isSale, hovered, starsCount, 
+    greyStarsCount, onMouseMove, onMouseLeave, likeProduct, removeLike, like 
+}) => {
     const onMouseMoveHandler = () => onMouseMove(id)
     const onMouseLeaveHandler = () => onMouseLeave()
     return (
@@ -15,13 +19,12 @@ const ProductStandart = ({ id, photo, title, price, isNew, isSale, hovered, star
                 Sale
             </div>}
             <img className={classes.product__photo} src={photo} alt="" />
-            {hovered && <div className={classes.additional_functions}>
+            {hovered && <div className={classes.additional_functions_Wrapper}><div className={classes.additional_functions}>
                     <div className={classes.basket}>
                         <FontAwesomeIcon icon={faShoppingCart} />
                     </div>
-                    <div className={classes.like}>
-                        <FontAwesomeIcon icon={faHeart} />
-                    </div>
+                        {like ? <div onClick={() => removeLike(id)} className={classes.like}><FontAwesomeIcon icon={faHeart} /></div> :
+                        <div onClick={() => likeProduct(id)} className={classes.like}><img src={uncoloredHeart} alt=""/></div>}
                     <div className={classes.comprison}>
                         <FontAwesomeIcon className={classes.rightArrow} icon={faLongArrowAltRight} />
                         <FontAwesomeIcon className={classes.leftArrow} icon={faLongArrowAltLeft} />
@@ -29,7 +32,7 @@ const ProductStandart = ({ id, photo, title, price, isNew, isSale, hovered, star
                     <div className={classes.view}>
                         <FontAwesomeIcon icon={faEye} />
                     </div>
-            </div>}
+            </div></div>}
             <div className={classes.product__information}>
                 <h4>{title}</h4>
                 <p>${price}</p>

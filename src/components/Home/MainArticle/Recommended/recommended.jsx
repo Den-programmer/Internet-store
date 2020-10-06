@@ -3,7 +3,7 @@ import classes from './recommended.module.scss'
 import ProductStandart from '../../../common/productStandart/productStandart'
 import { countRating } from '../../../../utils/function-helpers'
 
-const Recommended = ({ recommended, changeRecommendedHoveredStatus, unsetRecommendedAsHovered }) => {
+const Recommended = ({ recommended, changeRecommendedHoveredStatus, unsetRecommendedAsHovered, likeProduct, removeLike }) => {
     const products = recommended.map(item => {
         const data = countRating(item.rating)
         const { starsCount, greyStarsCount } = data
@@ -17,7 +17,10 @@ const Recommended = ({ recommended, changeRecommendedHoveredStatus, unsetRecomme
         starsCount={starsCount} 
         greyStarsCount={greyStarsCount} 
         onMouseMove={changeRecommendedHoveredStatus} 
-        onMouseLeave={unsetRecommendedAsHovered}/>
+        onMouseLeave={unsetRecommendedAsHovered}
+        like={item.like}
+        likeProduct={likeProduct}
+        removeLike={removeLike}/>
     })
     return (
         <section className={classes.recommended}>

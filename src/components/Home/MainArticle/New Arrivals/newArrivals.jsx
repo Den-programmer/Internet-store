@@ -3,7 +3,7 @@ import classes from './newArrivals.module.scss'
 import { countRating } from '../../../../utils/function-helpers'
 import ProductStandart from '../../../common/productStandart/productStandart'
 
-const NewArrivals = ({ newArrivals, changeArrivalsHoveredStatus, unsetArrivalAsHovered }) => {
+const NewArrivals = ({ newArrivals, changeArrivalsHoveredStatus, unsetArrivalAsHovered, likeProduct, removeLike }) => {
     const arrivals = newArrivals.map(a => {
         const data = countRating(a.rating)
         const { starsCount, greyStarsCount } = data
@@ -18,7 +18,10 @@ const NewArrivals = ({ newArrivals, changeArrivalsHoveredStatus, unsetArrivalAsH
         starsCount={starsCount}
         greyStarsCount={greyStarsCount}
         onMouseMove={changeArrivalsHoveredStatus}
-        onMouseLeave={unsetArrivalAsHovered}/>
+        onMouseLeave={unsetArrivalAsHovered}
+        like={a.like}
+        likeProduct={likeProduct}
+        removeLike={removeLike}/>
     })
     return (
         <section className={classes.newArrivals}>

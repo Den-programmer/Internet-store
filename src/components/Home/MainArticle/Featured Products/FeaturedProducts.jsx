@@ -3,7 +3,7 @@ import classes from './FeaturedProducts.module.scss'
 import { countRating } from '../../../../utils/function-helpers'
 import ProductStandart from '../../../common/productStandart/productStandart'
 
-const FeaturedProducts = ({ featuredProducts, changeFeaturedHoveredStatus, unsetFeaturedAsHovered }) => {
+const FeaturedProducts = ({ featuredProducts, changeFeaturedHoveredStatus, unsetFeaturedAsHovered, likeProduct, removeLike }) => {
     const products = featuredProducts.map(item => {
         const data = countRating(item.rating)
         const { starsCount, greyStarsCount } = data
@@ -18,7 +18,10 @@ const FeaturedProducts = ({ featuredProducts, changeFeaturedHoveredStatus, unset
         starsCount={starsCount}
         greyStarsCount={greyStarsCount}
         onMouseMove={changeFeaturedHoveredStatus}
-        onMouseLeave={unsetFeaturedAsHovered}/>
+        onMouseLeave={unsetFeaturedAsHovered}
+        like={item.like}
+        likeProduct={likeProduct}
+        removeLike={removeLike}/>
     })
     return (
         <section className={classes.featuredProducts}>

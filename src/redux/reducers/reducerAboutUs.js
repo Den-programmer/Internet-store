@@ -3,43 +3,6 @@ import MemberOne from '../../images/avatar.jpg'
 const TOGGLE_IS_DEPARTMENTS_MENU_OPEN_STATUS ='TOGGLE_IS_DEPARTMENTS_MENU_OPEN_STATUS'
 
 const aboutUsState = {
-    navigationLinks: [
-        {
-            id: 1,
-            path: '/Home',
-            title: 'Home'
-        },
-        {
-            id: 2,
-            path: '/',
-            title: 'Shop'
-        },
-        {
-            id: 3,
-            path: '/',
-            title: 'Fashion'
-        },
-        {
-            id: 4,
-            path: '/',
-            title: 'Electronics'
-        },
-        {
-            id: 5,
-            path: '/',
-            title: 'Pages'
-        },
-        {
-            id: 6,
-            path: '/',
-            title: 'Features'
-        },
-        {
-            id: 7,
-            path: '/',
-            title: 'Blog'
-        }
-    ],
     counter: {
         totalEmployees: '142',
         satisfaction:  '99%',

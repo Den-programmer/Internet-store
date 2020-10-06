@@ -60,6 +60,9 @@ const UNSET_RECOMMENDED_AS_HOVERED = 'UNSET_RECOMMENDED_AS_HOVERED'
 const CHANGE_PRODUCTS_CATEGORIES_HOVERED_STATUS = 'CHANGE_PRODUCTS_CATEGORIES_HOVERED_STATUS'
 const UNSET_PRODUCTS_CATEGORIES_AS_HOVERED = 'UNSET_PRODUCTS_CATEGORIES_AS_HOVERED'
 
+const LIKE_PRODUCT = 'LIKE_PRODUCT'
+const REMOVE_LIKE = 'REMOVE_LIKE' 
+
 
 const HomeState = {
     slider: {
@@ -292,7 +295,8 @@ const HomeState = {
                 rating: 4,
                 isSale: true,
                 isNew: false,
-                hovered: false
+                hovered: false,
+                like: false
             },
             {
                 id: 2,
@@ -302,7 +306,8 @@ const HomeState = {
                 rating: 5,
                 isSale: false,
                 isNew: false,
-                hovered: false
+                hovered: false,
+                like: false
             },
             {
                 id: 3,
@@ -312,7 +317,8 @@ const HomeState = {
                 rating: 3,
                 isSale: false,
                 isNew: true,
-                hovered: false
+                hovered: false,
+                like: false
             },
             {
                 id: 4,
@@ -322,7 +328,8 @@ const HomeState = {
                 rating: 4,
                 isSale: true,
                 isNew: false,
-                hovered: false
+                hovered: false,
+                like: false
             }
         ],
         banners: [
@@ -410,7 +417,8 @@ const HomeState = {
                 rating: 4,
                 isNew: false,
                 isSale: false,
-                hovered: false
+                hovered: false,
+                like: false
             },
             {
                 id: 2,
@@ -420,7 +428,8 @@ const HomeState = {
                 rating: 3,
                 isNew: true,
                 isSale: false,
-                hovered: false
+                hovered: false,
+                like: false
             },
             {
                 id: 3,
@@ -430,7 +439,8 @@ const HomeState = {
                 rating: 5,
                 isNew: false,
                 isSale: true,
-                hovered: false
+                hovered: false,
+                like: false
             },
             {
                 id: 4,
@@ -440,7 +450,8 @@ const HomeState = {
                 rating: 4,
                 isNew: false,
                 isSale: false,
-                hovered: false
+                hovered: false,
+                like: false
             }
         ],
         enormousBanner: [
@@ -460,7 +471,8 @@ const HomeState = {
                 rating: 4,
                 isNew: false,
                 isSale: false,
-                hovered: false
+                hovered: false,
+                like: false
             },
             {
                 id: 2,
@@ -470,7 +482,8 @@ const HomeState = {
                 rating: 4,
                 isNew: true,
                 isSale: false,
-                hovered: false
+                hovered: false,
+                like: false
             },
             {
                 id: 3,
@@ -480,7 +493,8 @@ const HomeState = {
                 rating: 5,
                 isNew: false,
                 isSale: true,
-                hovered: false
+                hovered: false,
+                like: false
             },
             {
                 id: 4,
@@ -490,7 +504,8 @@ const HomeState = {
                 rating: 4,
                 isNew: false,
                 isSale: false,
-                hovered: false
+                hovered: false,
+                like: false
             }
         ]
     },
@@ -563,7 +578,8 @@ const HomeState = {
             rating: 4,
             isNew: false,
             isSale: false,
-            hovered: false
+            hovered: false,
+            like: false
         },
         {
             id: 2,
@@ -573,7 +589,8 @@ const HomeState = {
             rating: 3,
             isNew: true,
             isSale: false,
-            hovered: false
+            hovered: false,
+            like: false
         },
         {
             id: 3,
@@ -583,7 +600,8 @@ const HomeState = {
             rating: 5,
             isNew: false,
             isSale: true,
-            hovered: false
+            hovered: false,
+            like: false
         },
         {
             id: 4,
@@ -593,7 +611,8 @@ const HomeState = {
             rating: 4,
             isNew: false,
             isSale: false,
-            hovered: false
+            hovered: false,
+            like: false
         }
     ],
     productCategoriesBanner: [
@@ -672,7 +691,7 @@ const reducerHome = (state = HomeState, action) => {
                         return { ...item, hovered: false }
                     })
                 }
-            }
+            }    
         case CHANGE_FEATURED_HOVERED_STATUS:
             return {
                 ...state,
@@ -725,7 +744,24 @@ const reducerHome = (state = HomeState, action) => {
                 categoriesProducts: state.categoriesProducts.map(item => {
                     return { ...item, hovered: false }
                 })
-            }    
+            } 
+        // Следующие строчки должны быть в reducerApp!
+        // case LIKE_PRODUCT:
+        //     return {
+        //         ...state,
+        //         products: state.products.map(item => {
+        //             if(action.itemId === item.id) return { ...item, like: true }
+        //             return item
+        //         })
+        //     } 
+        // case REMOVE_LIKE:
+        //     return {
+        //         ...state,
+        //         products: state.products.map(item => {
+        //             if(action.itemId === item.id) return { item, like: false }
+        //             return item
+        //         })
+        //     }             
         default:
             return state
     }
@@ -754,5 +790,8 @@ export const unsetRecommendedAsHovered = () => ({ type: UNSET_RECOMMENDED_AS_HOV
 
 export const changeProductsCategoriesHoveredStatus = (itemId) => ({ type: CHANGE_PRODUCTS_CATEGORIES_HOVERED_STATUS, itemId })
 export const unsetProductsCategoriesAsHovered = () => ({ type: UNSET_PRODUCTS_CATEGORIES_AS_HOVERED })
+
+export const likeProduct = (itemId) => ({ type: LIKE_PRODUCT, itemId })
+export const removeLike = (itemId) => ({ type: REMOVE_LIKE, itemId }) 
 
 export default reducerHome

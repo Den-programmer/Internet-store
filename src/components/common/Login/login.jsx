@@ -24,7 +24,6 @@ const Login = (props) => {
                     <li className={classes.vertical_line}>|</li>
                     <li><img className={classes.heartIcon} src={Heart} alt="" />Wishlist</li>
                 </ul>
-                <p className={classes.vertical_line}>|</p>
                 <p>
                     English
                 </p>

@@ -34,5 +34,13 @@
             display: flex;
             align-items: center;
         }
+        .banners {
+            width: 285px;
+            height: 326px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #E8E8E8;
+        }
     }
 }

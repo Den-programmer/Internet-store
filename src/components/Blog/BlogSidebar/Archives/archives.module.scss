@@ -1,0 +1,23 @@
+@import '../blogSidebar.module.scss';
+
+.archives {
+    .title {
+        @extend .title;
+    }
+    .content {
+        .archive {
+            padding: 17px 0px;
+            border-bottom: 1px solid #E5E5E5;
+            cursor: pointer;
+            p {
+                color: #777777;
+                font-size: 14px;
+            }   
+            &:hover {
+                transition: all .3s linear;
+                color: #222222;
+                border-bottom: 1px solid #222222;
+            }
+        }   
+    }
+}

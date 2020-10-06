@@ -1,0 +1,30 @@
+@import '../blogSidebar.module.scss';
+
+.tagsWrapper {
+    .title {
+        @extend .title;
+    }
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        .tag {
+            padding: 4.5px 8px;
+            border: 1px solid #E5E5E5;
+            margin: 9px 0px;
+            margin-right: 9px;
+            color: #777777;
+            .tag__title {
+                font-size: 12px;
+            }
+            &:hover {
+                transition: all .1s ease-in;
+                color: #FFF;
+                border: none;
+                padding: 5.5px 9px;
+                font-weight: bold;
+                background-color: #408DE4;
+            }
+        }
+    }
+}

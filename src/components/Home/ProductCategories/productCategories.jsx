@@ -3,9 +3,9 @@ import classes from './productCategories.module.scss'
 import ProductStandart from '../../common/productStandart/productStandart'
 import { countRating } from '../../../utils/function-helpers'
 import NavItem from './NavItem/navItem'
-import Banner from '../Banner Items/AdditionalBanners/Banner/banner'
+import BannerComponent from '../../common/BannerComponent/bannerComponent'
 
-const ProductCategories = ({ categoriesProducts, categories, banner, changeProductsCategoriesHoveredStatus, unsetProductsCategoriesAsHovered }) => {
+const ProductCategories = ({ categoriesProducts, categories, banner, changeProductsCategoriesHoveredStatus, unsetProductsCategoriesAsHovered, likeProduct, removeLike }) => {
     const navItems = categories.map(item => {
         return <NavItem key={item.id} id={item.id} title={item.title} icon={item.icon}/>
     })
@@ -23,10 +23,16 @@ const ProductCategories = ({ categoriesProducts, categories, banner, changeProdu
             starsCount={starsCount}
             greyStarsCount={greyStarsCount}
             onMouseMove={changeProductsCategoriesHoveredStatus}
-            onMouseLeave={unsetProductsCategoriesAsHovered} />
+            onMouseLeave={unsetProductsCategoriesAsHovered} 
+            like={item.like}
+            likeProduct={likeProduct}
+            removeLike={removeLike}/>
     })
     const banners = banner.map(item => {
-        return <Banner key={item.id} id={item.id} photo={item.photo} title={item.title} subtitle={item.subtitle}/>
+        return <BannerComponent key={item.id} id={item.id} 
+        photo={item.photo} 
+        title={item.title} subtitle={item.subtitle}
+        buttonText={"Today Only!"} widthPhoto={"255px"} heightPhoto={"290px"}/>
     })
     return (
         <section className={classes.productCategories}>
@@ -46,7 +52,9 @@ const ProductCategories = ({ categoriesProducts, categories, banner, changeProdu
                 <div className={classes.products}>
                     {products}
                 </div>
-                {banners}
+                <div className={classes.banners}>
+                    {banners}
+                </div>
             </div>
         </section>
     )

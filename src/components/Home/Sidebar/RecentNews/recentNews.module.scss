@@ -66,31 +66,7 @@
                 position: absolute;
                 top: 5%;
                 right: 70%;
-                .date {
-                    width: 40px;
-                    height: 45px;
-                    border-radius: 1px;
-                    background-color: #408DE4;
-                    color: #FFF;
-                    text-transform: uppercase;
-                    font-family: $Roboto;
-                    user-select: none;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    font-weight: bold;
-                    .day {
-                        font-size: 18px;
-                        margin-block-start: 0;
-                        margin-block-end: 0;
-                    }
-                    .month {
-                        font-size: 11px;
-                        margin-block-end: 0;
-                        margin-block-start: 0;
-                    }
-                }
+                @extend .dateWrapper;
             }
             .news {
                 .news_title {

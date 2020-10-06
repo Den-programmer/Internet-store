@@ -1,0 +1,7 @@
+@import '../../index.scss';
+
+.dFlex {
+    display: flex;
+    margin: 70px auto;
+    @extend .container;
+}
