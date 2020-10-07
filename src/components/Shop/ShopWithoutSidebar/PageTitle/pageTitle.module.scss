@@ -1,0 +1,25 @@
+@import '../../../../index.scss';
+
+.pageTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0px;
+    border-bottom: 1px solid #E8E8E8;
+    @extend .container;
+    .title {
+        h2 {
+            text-transform: uppercase;
+            color: #232323;
+            font-size: 16px;
+        }
+    }
+    .pathName {
+        h3 {
+            text-transform: uppercase;
+            color: #555555;
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+}

@@ -20,11 +20,11 @@ const Login = (props) => {
             </div>
             <div className={classes.smallNavbar}>
                 <ul>
-                    <li>Help</li>
+                    <li className={classes.navbarItem}>Help</li>
                     <li className={classes.vertical_line}>|</li>
-                    <li><img className={classes.heartIcon} src={Heart} alt="" />Wishlist</li>
+                    <li className={classes.navbarItem}><img className={classes.heartIcon} src={Heart} alt="" />Wishlist</li>
                 </ul>
-                <p>
+                <p className={classes.navbarItem}>
                     English
                 </p>
             </div>

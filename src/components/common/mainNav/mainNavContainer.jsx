@@ -5,6 +5,6 @@ const mapStateToProps = (state) => ({
     navbarLinks: state.app.navigationLinks
 })
 
-const MainNavContainer = connect(mapStateToProps, {})(MainNav)
+const MainNavContainer = connect(mapStateToProps, {  })(MainNav)
 
 export default MainNavContainer

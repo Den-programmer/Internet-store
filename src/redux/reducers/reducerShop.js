@@ -1,71 +1,11 @@
 import templateBanner from '../../images/photoTemplate.jpg'
 
-const SET_DATE = 'SET_DATE'
+const ON_POPULAR_PRODUCT_MOVE = 'ON_POPULAR_PRODUCT_MOVE'
+const REMOVE_POPULAR_PRODUCTS_HOVERED_STATUS = 'REMOVE_POPULAR_PRODUCTS_HOVERED_STATUS'
 
-const SET_TOTAL_PRODUCTS_COUNT = 'SET_TOTAL_PRODUCTS_COUNT'
-
-const MOVE_HOME_PAGE = 'MOVE_HOME_PAGE'
-const MOVE_SHOP_PAGE = 'MOVE_SHOP_PAGE'
-const MOVE_BLOG_PAGE = 'MOVE_BLOG_PAGE'
-
-const moveHomePage = () => ({ type: MOVE_HOME_PAGE })
-const moveShopPage = () => ({ type: MOVE_SHOP_PAGE })
-const moveBlogPage = () => ({ type: MOVE_BLOG_PAGE })
-
-const AppState = {
-    navigationLinks: [
-        {
-            id: 1,
-            path: '/Home',
-            title: 'Home',
-            method: moveHomePage
-        },
-        {
-            id: 2,
-            path: '/Home/Shop',
-            title: 'Shop',
-            method: moveShopPage
-        },
-        {
-            id: 3,
-            path: '/',
-            title: 'Fashion',
-            method: () => null
-        },
-        {
-            id: 4,
-            path: '/',
-            title: 'Electronics',
-            method: () => null
-        },
-        {
-            id: 5,
-            path: '/',
-            title: 'Pages',
-            method: () => null
-        },
-        {
-            id: 6,
-            path: '/',
-            title: 'Features',
-            method: () => null
-        },
-        {
-            id: 7,
-            path: '/Home/Blog',
-            title: 'Blog',
-            method: moveBlogPage
-        }
-    ],
-    currentPageName: 'About Us',
-    currentPath: 'Home/About Us',
-    date: {
-        year: '',
-        month: '',
-        day: '',
-        minutes: ''
-    },
-    products: [
+const ShopState = {
+    currentShopPage: 'Shop Without Sidebar',
+    popularProducts: [
         {
             id: 1,
             photo: templateBanner,
@@ -176,40 +116,26 @@ const AppState = {
             hovered: false, 
             like: false
         }
-    ],
-    totalProductsCount: 0
+    ]
 }
 
-const reducerApp = (state = AppState, action) => {
-    switch (action.type) {
-        case SET_DATE:
+const reducerShop = (state = ShopState, action) => {
+    switch (action.type) {     
+        case ON_POPULAR_PRODUCT_MOVE:
             return {
                 ...state,
-                date: { ...state.date, year: action.date.year, month: action.date.month, days: action.day, minutes: action.date.minutes }
+                popularProducts: state.popularProducts.map(item => {
+                    if(item.id === action.itemId) return { ...item, hovered: true }
+                    return { ...item, hovered: false }
+                })
             }
-        case SET_TOTAL_PRODUCTS_COUNT:
+        case REMOVE_POPULAR_PRODUCTS_HOVERED_STATUS:
             return {
                 ...state,
-                totalProductsCount: action.count
+                popularProducts: state.popularProducts.map(item => {
+                    return { ...item, hovered: false }
+                })
             }    
-        case MOVE_HOME_PAGE:
-            return {
-                ...state,
-                currentPageName: 'Home',
-                currentPath: 'Home'
-            }    
-        case MOVE_SHOP_PAGE:
-            return {
-                ...state,
-                currentPageName: 'Shop',
-                currentPath: 'Home/Shop'
-            }
-        case MOVE_BLOG_PAGE:
-            return {
-                ...state,
-                currentPageName: 'Blog',
-                currentPath: 'Home/Blog'
-            } 
         default:
             return state
     }
@@ -217,8 +143,7 @@ const reducerApp = (state = AppState, action) => {
 
 /* Action Creators! */
 
-export const setDate = (date) => ({ type: SET_DATE, date })
+export const onPopularProductMove = (itemId) => ({ type: ON_POPULAR_PRODUCT_MOVE, itemId })
+export const removePopularProductsHoveredStatus = () => ({ type: REMOVE_POPULAR_PRODUCTS_HOVERED_STATUS })
 
-export const setTotalProductsCount = (count) => ({ type: SET_TOTAL_PRODUCTS_COUNT, count })
-
-export default reducerApp
+export default reducerShop

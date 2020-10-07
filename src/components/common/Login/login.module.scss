@@ -25,6 +25,11 @@
         margin: 0px 4px;
     }
 }
+.currency {
+    &:hover {
+        cursor: pointer;
+    }
+}
 .smallNavbar {
     display: flex;
     margin-left: auto;
@@ -35,6 +40,9 @@
             margin: 0px 10px;
         }
     }
+}
+.navbarItem {
+    cursor: pointer;
 }
 .heartIcon {
     margin-right:5px;

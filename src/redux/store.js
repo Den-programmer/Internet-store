@@ -3,11 +3,13 @@ import reducerAboutUS from "./reducers/reducerAboutUs"
 import reducerHome from "./reducers/reducerHome"
 import reducerApp from "./reducers/reducerApp"
 import reducerBlog from "./reducers/reducerBlog"
+import reducerShop from "./reducers/reducerShop"
 
 const reducers = combineReducers({
     app: reducerApp,
     aboutUsPage: reducerAboutUS,
     homePage: reducerHome,
+    shopPage: reducerShop,
     blogPage: reducerBlog,
 })
 

@@ -1,0 +1,32 @@
+@import '../../../../index.scss';
+
+.products {
+    @extend .container;
+    .productsContent {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .paginator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 0px;
+        .btn_page {
+            margin: 0px 5px;
+            button {
+                outline: none;
+                border:1px solid #E0E0E0;
+                border-radius: 1px;
+                width: 32px;
+                height: 32px;
+                color: #555555;
+                &:hover {
+                    transition: all .3s linear;
+                    color: #FFF;
+                    background-color: #222222;
+                }
+            }
+        }
+    }
+}

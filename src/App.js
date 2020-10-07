@@ -3,7 +3,8 @@ import AboutUs from './components/AboutUS/aboutUs'
 import Home from './components/Home/home'
 import { Switch, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { setDate } from './redux/reducers/reducerApp'
+import { setDate, setTotalProductsCount } from './redux/reducers/reducerApp'
+import Shop from './components/Shop/shopContainer'
 import Blog from './components/Blog/blog'
 
 class App extends Component {
@@ -20,11 +21,15 @@ class App extends Component {
       minutes
     }
     this.props.setDate(date)
+
+    const totalProductsCount = this.props.products.length
+    this.props.setTotalProductsCount(totalProductsCount)
   }
   render() {
     return (
       <div className="App">
         <Switch>
+          <Route path="/Home/Shop" render={() => <Shop />}/>
           <Route path="/Home/Blog" render={() => <Blog />}/>
           <Route path="/Home" render={() => <Home />} />
           <Route path='/' render={() => <AboutUs />} />
@@ -35,9 +40,9 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => ({
-
+  products: state.app.products
 })
 
-const AppContainer = connect(mapStateToProps, { setDate })(App)
+const AppContainer = connect(mapStateToProps, { setDate, setTotalProductsCount })(App)
 
 export default AppContainer

@@ -3,14 +3,17 @@ import classes from './commonMainHeader.module.scss'
 import basket from '../../../images/basket.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faShoppingBasket, faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { NavLink } from 'react-router-dom'
 
 const CommonMainHeader = (props) => {
     return (
         <div className={classes.mainHeader}>
-            <div className={classes.logo}>
-                <img src={basket} alt="" />
-                <h3>Supermart</h3>
-            </div>
+            <NavLink className={classes.logoWrapper} to="/">
+                <div className={classes.logo}>
+                    <img src={basket} alt="" />
+                    <h3>Supermart</h3>
+                </div>
+            </NavLink>
             <div className={classes.severalOptions}>
                 <div className={classes.search}>
                     <input placeholder="Search..." type="text" />
