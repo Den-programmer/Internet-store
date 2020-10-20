@@ -6,7 +6,6 @@ import Sidebar from './Sidebar/sidebar'
 import MainArticle from './MainArticle/mainArticle'
 import ExtremeBanner from './ExtremeBanner/extremeBannerContainer'
 import ProductCategories from './ProductCategories/productCategoriesContainer'
-import BrandPartners from '../common/BrandPartners/brandPartnersContainer'
 import Footer from '../common/Footer/footerContainer'
 
 const Home = (props) => {
@@ -20,7 +19,6 @@ const Home = (props) => {
             </section>
             <ExtremeBanner />
             <ProductCategories />
-            <BrandPartners />
             <Footer />
         </div>
     )   

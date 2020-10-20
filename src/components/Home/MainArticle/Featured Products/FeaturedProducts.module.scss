@@ -2,6 +2,10 @@
 
 .featuredProducts {
     padding-top: 50px;
+    .products {
+        display: flex;
+        justify-content: center;
+    }
     .featuredProducts__header {
         display: flex;
         align-items: center;

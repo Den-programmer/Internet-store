@@ -1,32 +1,42 @@
 import React from 'react'
 import classes from './bestsellers.module.scss'
 import { countRating } from '../../../../utils/function-helpers'
+import BestSeller from './BestSeller/bestSeller'
+import Btn_Next from '../CommonSliderBtns/Btn_Next/Btn_Next'
+import Btn_Prev from '../CommonSliderBtns/Btn_Prev/Btn_Prev'
+import Slider from 'react-slick'
 
 const BestSellers = ({ bestsellers }) => {
+    let slider = React.createRef()
     const BestSellers = bestsellers.map(item => {
         const data = countRating(item.rating)
         const { starsCount, greyStarsCount } = data
-        return (
-            <div key={item.id} className={classes.bestseller}>
-                {item.isNew && <div className={classes.new}>
-                    New
-                </div>}
-                {item.isSale && <div className={classes.sale}>
-                    Sale
-                </div>}
-                <img className={classes.bestseller__photo} src={item.photo} alt="" />
-                <div className={classes.bestseller__content}>
-                    <h4 className={classes.bestseller__title}>{item.title}</h4>
-                    <p className={classes.price}>${item.price}</p>
-                    <div className={classes.rating}>
-                        {starsCount}
-                        {greyStarsCount}
-                    </div>
-                    <div className={classes.bestseller__btn}><button>{item.isInCart ? 'Select Options' : 'Add to cart'}</button></div>
-                </div>
-            </div>
-        )
+        return <BestSeller starsCount={starsCount} greyStarsCount={greyStarsCount} 
+        key={item.id} id={item.id} 
+        isNew={item.isNew} 
+        isSale={item.isSale}
+        photo={item.photo}
+        title={item.title}
+        price={item.price}
+        isInCart={item.isInCart}/>
     })
+    const previous = () => {
+        slider.slickPrev()
+    }
+    const next = () => {
+        slider.slickNext()
+    }
+    const settings = {
+        infinite: true,
+        speed: 500,
+        className: classes.mainContent,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        swipeToSlide: false,
+        draggable: false,
+        rows: 1,
+        slidesPerRow: 3
+    }
     return (
         <section className={classes.bestsellers}>
             <div className={classes.bestsellers__header}>
@@ -34,13 +44,11 @@ const BestSellers = ({ bestsellers }) => {
                     <h3>Best Sellers</h3>
                 </div>
                 <div className={classes.control_btns}>
-                    <div className={classes.btn_prev}><div>&#60;</div></div>
-                    <div className={classes.btn_next}><div>&#62;</div></div>
+                    <Btn_Prev click={previous}/>
+                    <Btn_Next click={next}/>
                 </div>
             </div>
-            <div className={classes.mainContent}>
-                {BestSellers}
-            </div>
+            <Slider ref={sliderRef => (slider = sliderRef)} {...settings}>{BestSellers}</Slider>
         </section>
     )
 }

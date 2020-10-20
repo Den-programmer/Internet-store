@@ -15,10 +15,10 @@ const aboutUsState = {
             photo: MemberOne,
             name: 'Denis Grigorov',
             position: 'Godness',
-            facebook: '',
-            google: '',
-            linkedIn: '',
-            twitter: ''
+            facebook: 'https://www.facebook.com/entityII/',
+            google: 'https://google.com/',
+            linkedIn: 'https://www.linkedin.com/',
+            twitter: 'https://twitter.com/'
         }
     ],
     companyPhone: '1-800-777-7889',

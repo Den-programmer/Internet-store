@@ -38,9 +38,6 @@
         .control_btns {
             display: flex;
             align-items: center;
-            .prev_btn, .next_btn {
-                @extend .sliderButton;
-            }
         }
     }
     .arrivals {

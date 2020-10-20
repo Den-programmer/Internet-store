@@ -1,0 +1,5 @@
+@import '../../../home.module.scss';
+
+.prev_btn {
+    @extend .sliderButton;
+}

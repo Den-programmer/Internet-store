@@ -2,8 +2,12 @@ import React from 'react'
 import classes from './FeaturedProducts.module.scss'
 import { countRating } from '../../../../utils/function-helpers'
 import ProductStandart from '../../../common/productStandart/productStandart'
+import Btn_Prev from '../CommonSliderBtns/Btn_Prev/Btn_Prev'
+import Btn_Next from '../CommonSliderBtns/Btn_Next/Btn_Next'
+import Slider from 'react-slick'
 
 const FeaturedProducts = ({ featuredProducts, changeFeaturedHoveredStatus, unsetFeaturedAsHovered, likeProduct, removeLike }) => {
+    let slider = React.createRef()
     const products = featuredProducts.map(item => {
         const data = countRating(item.rating)
         const { starsCount, greyStarsCount } = data
@@ -23,6 +27,20 @@ const FeaturedProducts = ({ featuredProducts, changeFeaturedHoveredStatus, unset
         likeProduct={likeProduct}
         removeLike={removeLike}/>
     })
+    const settings = {
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        infinite: true,
+        speed: 500,
+        className: classes.products,
+        adaptiveHeight: false
+    }
+    const previous = () => {
+        slider.slickPrev()
+    }
+    const next = () => {
+        slider.slickNext()
+    }
     return (
         <section className={classes.featuredProducts}>
             <div className={classes.featuredProducts__header}>
@@ -30,13 +48,11 @@ const FeaturedProducts = ({ featuredProducts, changeFeaturedHoveredStatus, unset
                     <h3>Featured Products</h3>
                 </div>
                 <div className={classes.control_btns}>
-                    <div className={classes.btn_prev}><div>&#60;</div></div>
-                    <div className={classes.btn_next}><div>&#62;</div></div>
+                   <Btn_Prev click={previous}/>
+                   <Btn_Next click={next}/>
                 </div>
             </div>
-            <div className={classes.products}>
-                {products}
-            </div>
+            <Slider ref={sliderRef => (slider = sliderRef)} {...settings}>{products}</Slider>
         </section>
     )
 }

@@ -2,8 +2,12 @@ import React from 'react'
 import classes from './recommended.module.scss'
 import ProductStandart from '../../../common/productStandart/productStandart'
 import { countRating } from '../../../../utils/function-helpers'
+import Slider from 'react-slick'
+import Btn_Prev from '../CommonSliderBtns/Btn_Prev/Btn_Prev'
+import Btn_Next from '../CommonSliderBtns/Btn_Next/Btn_Next'
 
 const Recommended = ({ recommended, changeRecommendedHoveredStatus, unsetRecommendedAsHovered, likeProduct, removeLike }) => {
+    let slider = React.createRef()
     const products = recommended.map(item => {
         const data = countRating(item.rating)
         const { starsCount, greyStarsCount } = data
@@ -22,6 +26,20 @@ const Recommended = ({ recommended, changeRecommendedHoveredStatus, unsetRecomme
         likeProduct={likeProduct}
         removeLike={removeLike}/>
     })
+    const previous = () => {
+        slider.slickPrev()
+    }
+    const next = () => {
+        slider.slickNext()
+    }
+    const settings = {
+        speed: 500,
+        adaptiveHeight: false,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        infinite: true,
+        className: classes.products
+    }
     return (
         <section className={classes.recommended}>
             <div className={classes.recommended__header}>
@@ -29,11 +47,11 @@ const Recommended = ({ recommended, changeRecommendedHoveredStatus, unsetRecomme
                     <h3>Recommended for you</h3>
                 </div>
                 <div className={classes.control_btns}>
-                    <div className={classes.btn_prev}><div>&#60;</div></div>
-                    <div className={classes.btn_next}><div>&#62;</div></div>
+                    <Btn_Prev click={previous}/>
+                    <Btn_Next click={next}/>
                 </div>
             </div>
-            <div className={classes.products}>{products}</div>
+            <Slider ref={sliderRef => (slider = sliderRef)} {...settings}>{products}</Slider>
         </section>
     )
 }

@@ -30,9 +30,11 @@
     .mainContent {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         .products {
             display: flex;
             align-items: center;
+            @extend .container;
         }
         .banners {
             width: 285px;

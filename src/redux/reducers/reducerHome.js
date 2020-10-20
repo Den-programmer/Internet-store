@@ -330,6 +330,61 @@ const HomeState = {
                 isNew: false,
                 hovered: false,
                 like: false
+            },
+            {
+                id: 5,
+                photo: Skinn_Celeste_Woman,
+                title: 'Skinn Celeste Woman EDP',
+                price: '56.00',
+                rating: 4,
+                isNew: false,
+                isSale: false,
+                hovered: false,
+                like: false
+            },
+            {
+                id: 6,
+                photo: IPhone7_32GB_Black,
+                title: 'Apple iPhone 7 (32GB)',
+                price: '289.00',
+                rating: 3,
+                isNew: true,
+                isSale: false,
+                hovered: false,
+                like: false
+            },
+            {
+                id: 7,
+                photo: Sasik_External_Disk_500GB,
+                title: 'Sasik External Disk-500GB',
+                price: '135.00',
+                rating: 5,
+                isNew: false,
+                isSale: true,
+                hovered: false,
+                like: false
+            },
+            {
+                id: 8,
+                photo: BLS_Tulip_BrownCream,
+                title: 'BLS Tulip Brown & Cream',
+                price: '49.00',
+                rating: 4,
+                isNew: false,
+                isSale: false,
+                hovered: false,
+                like: false
+            },
+            {
+                id: 9,
+                photo: appleWatch,
+                title: 'Apple Watch Pink',
+                price: '445.00',
+                rating: 5,
+                isNew: false,
+                isSale: true,
+                hovered: false,
+                like: false
             }
         ],
         banners: [
@@ -406,6 +461,126 @@ const HomeState = {
                 isSale: false,
                 isNew: false,
                 isInCart: false
+            },
+            {
+                id: 7,
+                photo: Flipkart_Buildskill_13MM_Powerful_Reversible_Impact_Heavy_Duty,
+                title: 'Flipkart Buildskill 13MM Powerful Reversible Impact',
+                price: '299.00',
+                rating: 3,
+                isSale: true,
+                isNew: false,
+                isInCart: true
+            },
+            {
+                id: 8,
+                photo: Jios_Dual_Speaker_Black,
+                title: 'Jios Dual Speaker-Black',
+                price: '52.00',
+                rating: 4,
+                isSale: false,
+                isNew: false,
+                isInCart: false
+            },
+            {
+                id: 9,
+                photo: Shaving_Cream_100gm,
+                title: 'Shaving Cream, 100 gm',
+                price: '58.00',
+                rating: 2,
+                isSale: false,
+                isNew: false,
+                isInCart: false
+            },
+            {
+                id: 10,
+                photo: Yunique_Plus_Hair_Styler2,
+                title: 'Yunique Plus Hair Styler',
+                price: '289.00',
+                rating: 3,
+                isSale: true,
+                isNew: false,
+                isInCart: false
+            },
+            {
+                id: 11,
+                photo: Cybershot_Digital_Camera,
+                title: 'Cyber shot Digital Camera',
+                price: '259.00',
+                rating: 5,
+                isSale: false,
+                isNew: true,
+                isInCart: false
+            },
+            {
+                id: 12,
+                photo: Plastic_Steel_Flask,
+                title: 'Plastic Steel Flask(750ml)',
+                price: '44.00',
+                rating: 4,
+                isSale: false,
+                isNew: false,
+                isInCart: false
+            },
+            {
+                id: 13,
+                photo: Flipkart_Buildskill_13MM_Powerful_Reversible_Impact_Heavy_Duty,
+                title: 'Flipkart Buildskill 13MM Powerful Reversible Impact',
+                price: '299.00',
+                rating: 3,
+                isSale: true,
+                isNew: false,
+                isInCart: true
+            },
+            {
+                id: 14,
+                photo: Jios_Dual_Speaker_Black,
+                title: 'Jios Dual Speaker-Black',
+                price: '52.00',
+                rating: 4,
+                isSale: false,
+                isNew: false,
+                isInCart: false
+            },
+            {
+                id: 15,
+                photo: Shaving_Cream_100gm,
+                title: 'Shaving Cream, 100 gm',
+                price: '58.00',
+                rating: 2,
+                isSale: false,
+                isNew: false,
+                isInCart: false
+            },
+            {
+                id: 16,
+                photo: Yunique_Plus_Hair_Styler2,
+                title: 'Yunique Plus Hair Styler',
+                price: '289.00',
+                rating: 3,
+                isSale: true,
+                isNew: false,
+                isInCart: false
+            },
+            {
+                id: 17,
+                photo: Cybershot_Digital_Camera,
+                title: 'Cyber shot Digital Camera',
+                price: '259.00',
+                rating: 5,
+                isSale: false,
+                isNew: true,
+                isInCart: false
+            },
+            {
+                id: 18,
+                photo: Plastic_Steel_Flask,
+                title: 'Plastic Steel Flask(750ml)',
+                price: '44.00',
+                rating: 4,
+                isSale: false,
+                isNew: false,
+                isInCart: false
             }
         ],
         featuredProducts: [
@@ -450,6 +625,50 @@ const HomeState = {
                 rating: 4,
                 isNew: false,
                 isSale: false,
+                hovered: false,
+                like: false
+            },
+            {
+                id: 5,
+                photo: Slooven_Stripped_T_shirt,
+                title: 'Slooven Stripped T-shirt',
+                price: '99.00',
+                rating: 4,
+                isSale: true,
+                isNew: false,
+                hovered: false,
+                like: false
+            },
+            {
+                id: 6,
+                photo: Halogen_Room_Handwear,
+                title: 'Halogen Room Handwear',
+                price: '289.00',
+                rating: 5,
+                isSale: false,
+                isNew: false,
+                hovered: false,
+                like: false
+            },
+            {
+                id: 7,
+                photo: XiaomiMI9SEDual_64GB_6GB_Ram,
+                title: 'Xiaomi Mi 9 SE Dual - 64GB, 6GB RAM',
+                price: '420.78',
+                rating: 3,
+                isSale: false,
+                isNew: true,
+                hovered: false,
+                like: false
+            },
+            {
+                id: 8,
+                photo: Slooven_Stripped_T_shirt,
+                title: 'Slooven Stripped T-shirt',
+                price: '87.00',
+                rating: 4,
+                isSale: true,
+                isNew: false,
                 hovered: false,
                 like: false
             }
@@ -501,6 +720,50 @@ const HomeState = {
                 photo: BLS_Tulip_BrownCream,
                 title: 'BLS Tulip Brown & Cream',
                 price: '35.00',
+                rating: 4,
+                isNew: false,
+                isSale: false,
+                hovered: false,
+                like: false
+            },
+            {
+                id: 5,
+                photo: Skinn_Celeste_Woman,
+                title: 'Skinn Celeste Woman EDP',
+                price: '56.00',
+                rating: 4,
+                isNew: false,
+                isSale: false,
+                hovered: false,
+                like: false
+            },
+            {
+                id: 6,
+                photo: IPhone7_32GB_Black,
+                title: 'Apple iPhone 7 (32GB)',
+                price: '289.00',
+                rating: 3,
+                isNew: true,
+                isSale: false,
+                hovered: false,
+                like: false
+            },
+            {
+                id: 7,
+                photo: Sasik_External_Disk_500GB,
+                title: 'Sasik External Disk-500GB',
+                price: '135.00',
+                rating: 5,
+                isNew: false,
+                isSale: true,
+                hovered: false,
+                like: false
+            },
+            {
+                id: 8,
+                photo: BLS_Tulip_BrownCream,
+                title: 'BLS Tulip Brown & Cream',
+                price: '49.00',
                 rating: 4,
                 isNew: false,
                 isSale: false,
@@ -605,6 +868,50 @@ const HomeState = {
         },
         {
             id: 4,
+            photo: BLS_Tulip_BrownCream,
+            title: 'BLS Tulip Brown & Cream',
+            price: '49.00',
+            rating: 4,
+            isNew: false,
+            isSale: false,
+            hovered: false,
+            like: false
+        },
+        {
+            id: 5,
+            photo: Skinn_Celeste_Woman,
+            title: 'Skinn Celeste Woman EDP',
+            price: '56.00',
+            rating: 4,
+            isNew: false,
+            isSale: false,
+            hovered: false,
+            like: false
+        },
+        {
+            id: 6,
+            photo: IPhone7_32GB_Black,
+            title: 'Apple iPhone 7 (32GB)',
+            price: '289.00',
+            rating: 3,
+            isNew: true,
+            isSale: false,
+            hovered: false,
+            like: false
+        },
+        {
+            id: 7,
+            photo: Sasik_External_Disk_500GB,
+            title: 'Sasik External Disk-500GB',
+            price: '135.00',
+            rating: 5,
+            isNew: false,
+            isSale: true,
+            hovered: false,
+            like: false
+        },
+        {
+            id: 8,
             photo: BLS_Tulip_BrownCream,
             title: 'BLS Tulip Brown & Cream',
             price: '49.00',

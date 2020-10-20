@@ -79,11 +79,13 @@
                 border-right: 1px solid #E5E5E5;
                 display: flex;
                 align-items: center;
+                cursor: pointer;
             }
             .shoppingBoughtItems {
                 padding:0 20px;
                 display: flex;
                 align-items: center;
+                cursor: pointer;
                 p {
                     font-size: 12px;
                     color: #555555;
