@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from './login.module.scss'
 import Heart from './img/heartWithOpacity.png'
+import { NavLink } from 'react-router-dom'
 
 const Login = (props) => {
     return (
@@ -22,7 +23,7 @@ const Login = (props) => {
                 <ul>
                     <li className={classes.navbarItem}>Help</li>
                     <li className={classes.vertical_line}>|</li>
-                    <li className={classes.navbarItem}><img className={classes.heartIcon} src={Heart} alt="" />Wishlist</li>
+                    <li className={classes.navbarItem}><NavLink to="/Wishlist"><img className={classes.heartIcon} src={Heart} alt="" />Wishlist</NavLink></li>
                 </ul>
                 <p className={classes.navbarItem}>
                     English

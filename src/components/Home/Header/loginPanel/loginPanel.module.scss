@@ -43,6 +43,13 @@
     .wishlist {
         display: flex;
         align-items: center;
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+        }
     }
     .language {
         display: flex;

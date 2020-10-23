@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { setDate, setTotalProductsCount } from './redux/reducers/reducerApp'
 import Shop from './components/Shop/shopContainer'
 import Blog from './components/Blog/blog'
+import Wishlist from './components/Wishlist/wishlist'
 
 class App extends Component {
   componentDidMount() {
@@ -32,6 +33,7 @@ class App extends Component {
           <Route path="/Home/Shop" render={() => <Shop />}/>
           <Route path="/Home/Blog" render={() => <Blog />}/>
           <Route path="/Home" render={() => <Home />} />
+          <Route path="/Wishlist" render={() => <Wishlist />}/>
           <Route path='/' render={() => <AboutUs />} />
         </Switch>
       </div >

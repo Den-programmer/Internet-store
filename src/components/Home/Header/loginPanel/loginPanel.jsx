@@ -3,6 +3,7 @@ import classes from './loginPanel.module.scss'
 import heart from './img/heart.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSortDown } from '@fortawesome/free-solid-svg-icons'
+import { NavLink } from 'react-router-dom'
 
 const LoginPanel = (props) => {
     return (
@@ -28,7 +29,7 @@ const LoginPanel = (props) => {
                     <div className={classes.vertical_line}>|</div>
                     <div className={classes.wishlist}>
                         <img className={classes.iconMargin} src={heart} alt=""/>
-                        <p>Wishlist</p>
+                        <NavLink to="/Wishlist">Wishlist</NavLink>
                     </div>
                     <div className={classes.vertical_line}>|</div>
                     <div className={classes.language}>
