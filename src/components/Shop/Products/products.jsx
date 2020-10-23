@@ -1,26 +1,26 @@
 import React from 'react'
 import classes from './products.module.scss'
-import ProductStandart from '../../../common/productStandart/productStandart'
-import { countRating } from '../../../../utils/function-helpers'
+import { countRating } from '../../../utils/function-helpers'
+import Product from './product/product'
 
 const Products = ({ popularProducts, onPopularProductMove, removePopularProductsHoveredStatus }) => {
     const products = popularProducts.map(item => {
         const data = countRating(item.rating)
         const { starsCount, greyStarsCount } = data
-        return <ProductStandart key={item.id} id={item.id}
-            title={item.title}
-            photo={item.photo}
-            price={item.price}
-            isNew={item.isNew}
-            isSale={item.isSale}
-            hovered={item.hovered}
-            like={item.like} 
-            starsCount={starsCount}
-            greyStarsCount={greyStarsCount}
-            onMouseMove={onPopularProductMove} 
-            onMouseLeave={removePopularProductsHoveredStatus}
-            likeProduct={() => null}
-            removeLike={() => null}/>
+        return <Product key={item.id} id={item.id} 
+        title={item.title} 
+        photo={item.photo}
+        price={item.price}
+        isNew={item.isNew}
+        isSale={item.isSale}
+        hovered={item.hovered}
+        like={item.like}
+        starsCount={starsCount}
+        greyStarsCount={greyStarsCount}
+        onMouseMove={onPopularProductMove}
+        onMouseLeave={removePopularProductsHoveredStatus}
+        likeProduct={() => null}
+        removeLike={() => null}/>
     })
     return (
         <section className={classes.products}>
