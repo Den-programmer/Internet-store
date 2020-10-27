@@ -2,6 +2,8 @@ import Sasik_External_Disk_500GB from '../../components/Home/MainArticle/Feature
 import macbookPro from '../../components/Home/Sidebar/Hot Deals/productsPhotos/macbookPro.png'
 import puma from '../../components/Home/Sidebar/NewProducts/img/puma.png'
 
+const DELETE_FROM_WISHLIST = 'DELETE_FROM_WISHLIST'
+
 const Wishlist = {
     products: [
         {
@@ -48,12 +50,20 @@ const Wishlist = {
 
 const reducerWishlist = (state = Wishlist, action) => {
     switch (action.type) {
-                    
+        case DELETE_FROM_WISHLIST:
+            return {
+                ...state,
+                products: state.products.filter(item => {
+                    if(action.itemId !== item.id) return true 
+                })
+            }            
         default:
             return state
     }
 }
 
 /* Action Creators! */
+
+export const deleteFromWishlist = (itemId) => ({ type: DELETE_FROM_WISHLIST, itemId })
 
 export default reducerWishlist

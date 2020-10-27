@@ -51,3 +51,13 @@
 .heartIcon {
     margin-right:5px;
 }
+
+.launguage {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    .faAngleDownIcon {
+        color: #9A9A9A;
+        margin-left: 5px;
+    }
+}
