@@ -8,6 +8,7 @@ import Shop from './components/Shop/shopContainer'
 import Blog from './components/Blog/blog'
 import Wishlist from './components/Wishlist/wishlist'
 import LoginPage from './components/LoginPage/loginPage'
+import ContactUs from './components/Contact Us/contactUs'
 
 class App extends Component {
   componentDidMount() {
@@ -32,6 +33,7 @@ class App extends Component {
       <div className="App">
         <Switch>
           <Route path="/MyAccount" render={() => <LoginPage />}/>
+          <Route path="/ContactUs" render={() => <ContactUs />}/>
           <Route path="/Home/Shop" render={() => <Shop />}/>
           <Route path="/Home/Blog" render={() => <Blog />}/>
           <Route path="/Home" render={() => <Home />} />

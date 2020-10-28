@@ -1,0 +1,25 @@
+.contactInfo {
+    margin-left: 48px;
+    width: 536px;
+    .contactInfo__title {
+        color: #232323;
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+    .contactInfo__subtitle {
+        color: #777777;
+        font-size: 15px;
+    }
+    .contact {
+        .contactItem {
+            p {
+                font-size: 14px;
+                color: #777777;
+            }
+            span {
+                color: #222222;
+                font-size: 14px;
+            }
+        }
+    }
+}

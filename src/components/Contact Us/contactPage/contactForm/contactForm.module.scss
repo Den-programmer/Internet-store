@@ -1,0 +1,45 @@
+@import '../../../../index.scss';
+
+.form {
+    .formItem {
+        p {
+            color: #666666;
+            font-size: 14px;
+        }
+        input {
+            height: 45px;
+            width: 555px;
+            border: 1px solid #E8E8E8;
+        }
+        span {
+            color: #FC4242;
+        }
+        textarea {
+            border: 1px solid #E8E8E8;
+            width: 555px;
+            height: 150px;
+            resize: none;
+            border-radius: 1px;
+        }
+    }
+    .btn_sendMessage {
+        margin: 20px 0px;
+        button {
+            padding: 18px 24px;
+            outline: none;
+            border: none;
+            border-radius: 1px;
+            background-color: #408DE4;
+            color: #FFF;
+            text-transform: uppercase;
+            font-family: $Raleway;
+            font-size: 12px;
+            font-weight: bold;
+            &:hover {
+                transition: all .4s ease-in;
+                color: #AE88DD;
+                border-radius: 25px;
+            }
+        }
+    }
+}

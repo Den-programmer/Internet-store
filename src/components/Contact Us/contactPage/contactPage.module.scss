@@ -1,0 +1,17 @@
+@import '../../../index.scss';
+
+.contactPage {
+    @extend .container;
+    .contactForm {
+        .title {
+            h3 {
+                color: #232323;
+                text-transform: uppercase;
+                font-size: 18px;
+            }
+        }
+        .mainContent {
+            display: flex;
+        }
+    }
+}

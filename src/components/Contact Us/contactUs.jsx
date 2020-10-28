@@ -1,27 +1,23 @@
 import React from 'react'
-import classes from './blog.module.scss'
-import BlogArticle from './BlogArticle/blogArticleContainer'
-import BlogSidebar from './BlogSidebar/blogSidebar'
-import Footer from '../common/Footer/footerContainer'
+import classes from './contactUs.module.scss'
 import Login from '../common/Login/login'
 import CommonMainHeader from '../common/CommonMainHeader/commonMainHeaderContainer'
 import HeaderNavbar from '../AboutUS/Header/HeaderNavbar/headerNavbar'
 import HeaderPageName from '../common/HeaderPageName/headerPageNameContainer'
+import Footer from '../common/Footer/footerContainer'
+import ContactPage from './contactPage/contactPageContainer'
 
-const Blog = (props) => {
+const ContactUs = (props) => {
     return (
-        <div className={classes.blog}>
+        <div className={classes.contactUs}>
             <Login />
             <CommonMainHeader />
             <HeaderNavbar />
             <HeaderPageName />
-            <div className={classes.dFlex}>
-                <BlogArticle />
-                <BlogSidebar />
-            </div>
+            <ContactPage />
             <Footer />
         </div>
     )
 }
 
-export default Blog
+export default ContactUs
