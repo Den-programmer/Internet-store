@@ -1,0 +1,107 @@
+@import '../../../../index.scss';
+
+.cartPopupWrapper {
+    width: 310px;
+    position: absolute;
+    background-color: #FFF;
+    padding: 25px;
+    top: 70px;
+    left: -145px;
+    user-select: none;
+    .cartPopup {
+        .products {
+            .product {
+                display: flex;
+                border-bottom: 1px solid #EEEEEE;
+                padding: 10px 0px;
+                width: 270px;
+                cursor: pointer;
+                &:hover {
+                    transition: all .5s ease;
+                    border-bottom: 1px solid #222222;
+                }
+                .image {
+                    position: relative;
+                    display: flex;
+                    z-index: 1;
+                    .delete {
+                        position: absolute;
+                        background-color: #fff;
+                        text-align: center;
+                        z-index: 999;
+                        border: 1px solid #E6E6E6;
+                        top: -9px;
+                        left: -5px;
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 50px;
+                        color: #505050;
+                        cursor: pointer;
+                        &:hover {
+                            transition: all .1s linear;
+                            border: 1px solid #777777;
+                        }
+                    }
+                    .productImage {
+                        width: 72px;
+                        height: 78px;
+                    }
+                }
+                .productInfo {
+                    padding: 0px 16px;
+                    .title {
+                        color: #444444;
+                        font-size: 14px;
+                    }
+                    h5 {
+                        color: #222222;
+                        font-family: $Roboto;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .total {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 270px;
+            h4 {
+                text-transform: uppercase;
+                color: #222222;
+                font-size: 12px;
+                font-family: $Roboto;
+            }
+            h5 {    
+                color: #222222;
+                font-size: 14px;
+                font-family: $Roboto;
+                font-weight: 500;
+            }           
+        }
+        .enterCartPage {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .enterCartPage__btns {
+                button {
+                    outline: none;
+                    padding: 16px 28px;
+                    border: 1px solid #E8E8E8;
+                    font-size: 12px;
+                    font-family: $Raleway;
+                    color: #191A1C;
+                    font-weight: 600;
+                    border-radius: 1px;
+                    text-transform: uppercase;
+                    &:hover {
+                        transition: all .4s linear;
+                        color: #FFF;
+                        background-color: #408DE4;
+                        border: 1px solid #408DE4;
+                    }
+                }
+            }
+        }
+    }
+}

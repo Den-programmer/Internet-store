@@ -6,24 +6,6 @@
     justify-content: space-between;
     @extend .container;
 }
-.logoWrapper {
-    text-decoration: none;
-    .logo {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        user-select: none;
-        img {
-            width: 45px;
-            height: 40px;
-        }
-        h3 {
-            font-size: 26px;
-            text-transform: uppercase;
-            color: #191A1C;
-        }
-    }
-}
 .search {
     display: flex;
     input {
@@ -77,6 +59,7 @@
     cursor: pointer;
 }
 .items {
+    position: relative;
     .shoppingInf {
         border: 1px solid #E8E8E8;
         padding:4px 15px;

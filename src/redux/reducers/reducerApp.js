@@ -8,6 +8,8 @@ const MOVE_HOME_PAGE = 'MOVE_HOME_PAGE'
 const MOVE_SHOP_PAGE = 'MOVE_SHOP_PAGE'
 const MOVE_BLOG_PAGE = 'MOVE_BLOG_PAGE'
 
+const SET_IS_CART_POPUP_OPEN_STATUS = 'SET_IS_CART_POPUP_OPEN_STATUS'
+
 const moveHomePage = () => ({ type: MOVE_HOME_PAGE })
 const moveShopPage = () => ({ type: MOVE_SHOP_PAGE })
 const moveBlogPage = () => ({ type: MOVE_BLOG_PAGE })
@@ -177,7 +179,34 @@ const AppState = {
             like: false
         }
     ],
-    totalProductsCount: 0
+    productsInCart: [
+        {
+            id: 1,
+            photo: templateBanner,
+            title: 'Halogen Room Handwear',
+            price: '125.00',
+            rating: 4,
+            isNew: false,
+            isSale: false,
+            hovered: false, 
+            like: false,
+            isInCart: true
+        },
+        {
+            id: 2,
+            photo: templateBanner,
+            title: 'Shaving Cream, 100 gm',
+            price: '75.00',
+            rating: 4,
+            isNew: false,
+            isSale: false,
+            hovered: false, 
+            like: false,
+            isInCart: true
+        }
+    ],
+    totalProductsCount: 0,
+    cartPopupStatus: false
 }
 
 const reducerApp = (state = AppState, action) => {
@@ -210,6 +239,11 @@ const reducerApp = (state = AppState, action) => {
                 currentPageName: 'Blog',
                 currentPath: 'Home/Blog'
             } 
+        case SET_IS_CART_POPUP_OPEN_STATUS:
+            return {
+                ...state,
+                cartPopupStatus: action.status
+            }    
         default:
             return state
     }
@@ -220,5 +254,7 @@ const reducerApp = (state = AppState, action) => {
 export const setDate = (date) => ({ type: SET_DATE, date })
 
 export const setTotalProductsCount = (count) => ({ type: SET_TOTAL_PRODUCTS_COUNT, count })
+
+export const setIsCartPopupOpenStatus = (status) => ({ type: SET_IS_CART_POPUP_OPEN_STATUS, status })
 
 export default reducerApp
