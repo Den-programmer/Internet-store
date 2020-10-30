@@ -20,7 +20,10 @@ const Products = ({ popularProducts, onPopularProductMove, removePopularProducts
         onMouseMove={onPopularProductMove}
         onMouseLeave={removePopularProductsHoveredStatus}
         likeProduct={() => null}
-        removeLike={() => null}/>
+        removeLike={() => null}
+        isInCart={item.isInCart}
+        isInStock={item.isInStock}
+        isCompare={item.isCompare}/>
     })
     return (
         <section className={classes.products}>

@@ -15,7 +15,10 @@ const ShopState = {
             isNew: false,
             isSale: false,
             hovered: false, 
-            like: false
+            like: false,
+            isInCart: false,
+            isInStock: true,
+            isCompare: false
         },
         {
             id: 2,
@@ -26,7 +29,10 @@ const ShopState = {
             isNew: false,
             isSale: false,
             hovered: false, 
-            like: false
+            like: false,
+            isInCart: false,
+            isInStock: true,
+            isCompare: false
         },
         {
             id: 3,
@@ -37,7 +43,10 @@ const ShopState = {
             isNew: false,
             isSale: false,
             hovered: false, 
-            like: false
+            like: false,
+            isInCart: false,
+            isInStock: true,
+            isCompare: false
         },
         {
             id: 4,
@@ -48,7 +57,10 @@ const ShopState = {
             isNew: false,
             isSale: false,
             hovered: false, 
-            like: false
+            like: false,
+            isInCart: false,
+            isInStock: true,
+            isCompare: false
         },
         {
             id: 5,
@@ -59,7 +71,10 @@ const ShopState = {
             isNew: false,
             isSale: false,
             hovered: false, 
-            like: false
+            like: false,
+            isInCart: false,
+            isInStock: true,
+            isCompare: false
         },
         {
             id: 6,
@@ -70,7 +85,10 @@ const ShopState = {
             isNew: false,
             isSale: false,
             hovered: false, 
-            like: false
+            like: false,
+            isInCart: false,
+            isInStock: true,
+            isCompare: false
         },
         {
             id: 7,
@@ -81,7 +99,10 @@ const ShopState = {
             isNew: false,
             isSale: false,
             hovered: false, 
-            like: false
+            like: false,
+            isInCart: false,
+            isInStock: true,
+            isCompare: false
         },
         {
             id: 8,
@@ -92,7 +113,10 @@ const ShopState = {
             isNew: false,
             isSale: false,
             hovered: false, 
-            like: false
+            like: false,
+            isInCart: false,
+            isInStock: true,
+            isCompare: false
         },
         {
             id: 9,
@@ -103,7 +127,10 @@ const ShopState = {
             isNew: false,
             isSale: false,
             hovered: false, 
-            like: false
+            like: false,
+            isInCart: false,
+            isInStock: true,
+            isCompare: false
         },
         {
             id: 10,
@@ -114,7 +141,10 @@ const ShopState = {
             isNew: false,
             isSale: false,
             hovered: false, 
-            like: false
+            like: false,
+            isInCart: false,
+            isInStock: true,
+            isCompare: false
         }
     ]
 }

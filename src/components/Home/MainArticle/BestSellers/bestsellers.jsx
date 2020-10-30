@@ -18,7 +18,9 @@ const BestSellers = ({ bestsellers }) => {
         photo={item.photo}
         title={item.title}
         price={item.price}
-        isInCart={item.isInCart}/>
+        isInCart={item.isInCart}
+        isInStock={item.isInStock}
+        isCompare={item.isCompare}/>
     })
     const previous = () => {
         slider.slickPrev()

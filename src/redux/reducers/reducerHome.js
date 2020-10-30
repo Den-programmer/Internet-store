@@ -119,6 +119,13 @@ const HomeState = {
                 price: "445.00",
                 photo: appleWatch,
                 rating: 5,
+                isNew: false,
+                isSale: true,
+                hovered: false,
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false,
                 date: {
                     days: "02",
                     hours: "12",
@@ -131,6 +138,13 @@ const HomeState = {
                 price: "124.00",
                 photo: blackTShirt,
                 rating: 4,
+                isNew: false,
+                isSale: true,
+                hovered: false,
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false,
                 date: {
                     days: "07",
                     hours: "04",
@@ -143,6 +157,13 @@ const HomeState = {
                 price: "1800.00",
                 photo: macbookPro,
                 rating: 5,
+                isNew: false,
+                isSale: true,
+                hovered: false,
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false,
                 date: {
                     days: "00",
                     hours: "00",
@@ -155,6 +176,13 @@ const HomeState = {
                 price: "720.00",
                 photo: phone_samsung_galaxy_note_20_ultra_8gb_256gb,
                 rating: 4,
+                isNew: false,
+                isSale: true,
+                hovered: false,
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false,
                 date: {
                     days: "03",
                     hours: "03",
@@ -169,42 +197,84 @@ const HomeState = {
                 title: 'Yunique Plus Hair Styler',
                 price: '56.00',
                 photo: Yunique_Plus_Hair_Styler,
-                rating: 5
+                rating: 5,
+                isNew: true,
+                isSale: false,
+                hovered: false,
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 2,
                 title: 'Apple iphone 5s - 16GB',
                 price: '175.00',
                 photo: Apple_Iphone_5s_16GB,
-                rating: 4
+                rating: 4,
+                isNew: true,
+                isSale: false,
+                hovered: false,
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 3,
                 title: 'Cyber shot Digital cable',
                 price: '49.00',
                 photo: CyberShotDigitalCable,
-                rating: 2
+                rating: 2,
+                isNew: true,
+                isSale: false,
+                hovered: false,
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 4,
                 title: 'Skinn Celeste Woman',
                 price: '75.00',
                 photo: Skinn_Celeste_Woman,
-                rating: 4
+                rating: 4,
+                isNew: true,
+                isSale: false,
+                hovered: false,
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 5,
                 title: 'Black Casual Sneaker Puma',
                 price: '105.00',
                 photo: puma,
-                rating: 4
+                rating: 4,
+                isNew: true,
+                isSale: false,
+                hovered: false,
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 6,
                 title: 'Huawei honour U19',
                 price: '259.00',
                 photo: Huawei_honour_U19,
-                rating: 4
+                rating: 4,
+                isNew: true,
+                isSale: false,
+                hovered: false,
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             }
         ],
         saleBanners: [
@@ -296,7 +366,10 @@ const HomeState = {
                 isSale: true,
                 isNew: false,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 2,
@@ -307,7 +380,10 @@ const HomeState = {
                 isSale: false,
                 isNew: false,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 3,
@@ -318,7 +394,10 @@ const HomeState = {
                 isSale: false,
                 isNew: true,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 4,
@@ -329,7 +408,10 @@ const HomeState = {
                 isSale: true,
                 isNew: false,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 5,
@@ -340,7 +422,10 @@ const HomeState = {
                 isNew: false,
                 isSale: false,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 6,
@@ -351,7 +436,10 @@ const HomeState = {
                 isNew: true,
                 isSale: false,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 7,
@@ -362,7 +450,10 @@ const HomeState = {
                 isNew: false,
                 isSale: true,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 8,
@@ -373,7 +464,10 @@ const HomeState = {
                 isNew: false,
                 isSale: false,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 9,
@@ -384,7 +478,10 @@ const HomeState = {
                 isNew: false,
                 isSale: true,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             }
         ],
         banners: [
@@ -410,7 +507,11 @@ const HomeState = {
                 rating: 3,
                 isSale: true,
                 isNew: false,
-                isInCart: true
+                isInCart: true,
+                hovered: false,
+                like: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 2,
@@ -420,7 +521,11 @@ const HomeState = {
                 rating: 4,
                 isSale: false,
                 isNew: false,
-                isInCart: false
+                isInCart: false,
+                hovered: false,
+                like: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 3,
@@ -430,7 +535,11 @@ const HomeState = {
                 rating: 2,
                 isSale: false,
                 isNew: false,
-                isInCart: false
+                isInCart: false,
+                hovered: false,
+                like: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 4,
@@ -440,7 +549,11 @@ const HomeState = {
                 rating: 3,
                 isSale: true,
                 isNew: false,
-                isInCart: false
+                isInCart: false,
+                hovered: false,
+                like: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 5,
@@ -450,7 +563,11 @@ const HomeState = {
                 rating: 5,
                 isSale: false,
                 isNew: true,
-                isInCart: false
+                isInCart: false,
+                hovered: false,
+                like: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 6,
@@ -460,7 +577,11 @@ const HomeState = {
                 rating: 4,
                 isSale: false,
                 isNew: false,
-                isInCart: false
+                isInCart: false,
+                hovered: false,
+                like: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 7,
@@ -470,7 +591,11 @@ const HomeState = {
                 rating: 3,
                 isSale: true,
                 isNew: false,
-                isInCart: true
+                isInCart: true,
+                hovered: false,
+                like: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 8,
@@ -480,7 +605,11 @@ const HomeState = {
                 rating: 4,
                 isSale: false,
                 isNew: false,
-                isInCart: false
+                isInCart: false,
+                hovered: false,
+                like: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 9,
@@ -490,7 +619,11 @@ const HomeState = {
                 rating: 2,
                 isSale: false,
                 isNew: false,
-                isInCart: false
+                isInCart: false,
+                hovered: false,
+                like: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 10,
@@ -500,7 +633,11 @@ const HomeState = {
                 rating: 3,
                 isSale: true,
                 isNew: false,
-                isInCart: false
+                isInCart: false,
+                hovered: false,
+                like: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 11,
@@ -510,7 +647,11 @@ const HomeState = {
                 rating: 5,
                 isSale: false,
                 isNew: true,
-                isInCart: false
+                isInCart: false,
+                hovered: false,
+                like: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 12,
@@ -520,7 +661,11 @@ const HomeState = {
                 rating: 4,
                 isSale: false,
                 isNew: false,
-                isInCart: false
+                isInCart: false,
+                hovered: false,
+                like: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 13,
@@ -530,7 +675,11 @@ const HomeState = {
                 rating: 3,
                 isSale: true,
                 isNew: false,
-                isInCart: true
+                isInCart: true,
+                hovered: false,
+                like: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 14,
@@ -540,7 +689,11 @@ const HomeState = {
                 rating: 4,
                 isSale: false,
                 isNew: false,
-                isInCart: false
+                isInCart: false,
+                hovered: false,
+                like: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 15,
@@ -550,7 +703,11 @@ const HomeState = {
                 rating: 2,
                 isSale: false,
                 isNew: false,
-                isInCart: false
+                isInCart: false,
+                hovered: false,
+                like: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 16,
@@ -560,7 +717,11 @@ const HomeState = {
                 rating: 3,
                 isSale: true,
                 isNew: false,
-                isInCart: false
+                isInCart: false,
+                hovered: false,
+                like: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 17,
@@ -570,7 +731,11 @@ const HomeState = {
                 rating: 5,
                 isSale: false,
                 isNew: true,
-                isInCart: false
+                isInCart: false,
+                hovered: false,
+                like: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 18,
@@ -580,7 +745,11 @@ const HomeState = {
                 rating: 4,
                 isSale: false,
                 isNew: false,
-                isInCart: false
+                isInCart: false,
+                hovered: false,
+                like: false,
+                isInStock: true,
+                isCompare: false
             }
         ],
         featuredProducts: [
@@ -593,7 +762,10 @@ const HomeState = {
                 isNew: false,
                 isSale: false,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 2,
@@ -604,7 +776,10 @@ const HomeState = {
                 isNew: true,
                 isSale: false,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 3,
@@ -615,7 +790,10 @@ const HomeState = {
                 isNew: false,
                 isSale: true,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 4,
@@ -626,7 +804,10 @@ const HomeState = {
                 isNew: false,
                 isSale: false,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 5,
@@ -637,7 +818,10 @@ const HomeState = {
                 isSale: true,
                 isNew: false,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 6,
@@ -648,7 +832,10 @@ const HomeState = {
                 isSale: false,
                 isNew: false,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 7,
@@ -659,7 +846,10 @@ const HomeState = {
                 isSale: false,
                 isNew: true,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 8,
@@ -670,7 +860,10 @@ const HomeState = {
                 isSale: true,
                 isNew: false,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             }
         ],
         enormousBanner: [
@@ -691,7 +884,10 @@ const HomeState = {
                 isNew: false,
                 isSale: false,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 2,
@@ -702,7 +898,10 @@ const HomeState = {
                 isNew: true,
                 isSale: false,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 3,
@@ -713,7 +912,10 @@ const HomeState = {
                 isNew: false,
                 isSale: true,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 4,
@@ -724,7 +926,10 @@ const HomeState = {
                 isNew: false,
                 isSale: false,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 5,
@@ -735,7 +940,10 @@ const HomeState = {
                 isNew: false,
                 isSale: false,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 6,
@@ -746,7 +954,10 @@ const HomeState = {
                 isNew: true,
                 isSale: false,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 7,
@@ -757,7 +968,10 @@ const HomeState = {
                 isNew: false,
                 isSale: true,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             },
             {
                 id: 8,
@@ -768,7 +982,10 @@ const HomeState = {
                 isNew: false,
                 isSale: false,
                 hovered: false,
-                like: false
+                like: false,
+                isInCart: false,
+                isInStock: true,
+                isCompare: false
             }
         ]
     },
@@ -842,7 +1059,10 @@ const HomeState = {
             isNew: false,
             isSale: false,
             hovered: false,
-            like: false
+            like: false,
+            isInCart: false,
+            isInStock:true,
+            isCompare: false
         },
         {
             id: 2,
@@ -853,7 +1073,10 @@ const HomeState = {
             isNew: true,
             isSale: false,
             hovered: false,
-            like: false
+            like: false,
+            isInCart: false,
+            isInStock:true,
+            isCompare: false
         },
         {
             id: 3,
@@ -864,7 +1087,10 @@ const HomeState = {
             isNew: false,
             isSale: true,
             hovered: false,
-            like: false
+            like: false,
+            isInCart: false,
+            isInStock:true,
+            isCompare: false
         },
         {
             id: 4,
@@ -875,7 +1101,10 @@ const HomeState = {
             isNew: false,
             isSale: false,
             hovered: false,
-            like: false
+            like: false,
+            isInCart: false,
+            isInStock:true,
+            isCompare: false
         },
         {
             id: 5,
@@ -886,7 +1115,10 @@ const HomeState = {
             isNew: false,
             isSale: false,
             hovered: false,
-            like: false
+            like: false,
+            isInCart: false,
+            isInStock:true,
+            isCompare: false
         },
         {
             id: 6,
@@ -897,7 +1129,10 @@ const HomeState = {
             isNew: true,
             isSale: false,
             hovered: false,
-            like: false
+            like: false,
+            isInCart: false,
+            isInStock:true,
+            isCompare: false
         },
         {
             id: 7,
@@ -908,7 +1143,10 @@ const HomeState = {
             isNew: false,
             isSale: true,
             hovered: false,
-            like: false
+            like: false,
+            isInCart: false,
+            isInStock:true,
+            isCompare: false
         },
         {
             id: 8,
@@ -919,7 +1157,10 @@ const HomeState = {
             isNew: false,
             isSale: false,
             hovered: false,
-            like: false
+            like: false,
+            isInCart: false,
+            isInStock:true,
+            isCompare: false
         }
     ],
     productCategoriesBanner: [

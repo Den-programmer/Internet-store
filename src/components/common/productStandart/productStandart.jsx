@@ -4,9 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart, faLongArrowAltRight, faLongArrowAltLeft, faHeart, faEye } from '@fortawesome/free-solid-svg-icons'
 import uncoloredHeart from '../../../images/heartUncolored.png'
 
-const ProductStandart= ({ 
+const ProductStandart = ({ 
     id, photo, title, price, isNew, isSale, hovered, starsCount, 
-    greyStarsCount, onMouseMove, onMouseLeave, likeProduct, removeLike, like 
+    greyStarsCount, onMouseMove, onMouseLeave, likeProduct, removeLike, like, 
+    isInCart, isInStock, isCompare
 }) => {
     const onMouseMoveHandler = () => onMouseMove(id)
     const onMouseLeaveHandler = () => onMouseLeave()

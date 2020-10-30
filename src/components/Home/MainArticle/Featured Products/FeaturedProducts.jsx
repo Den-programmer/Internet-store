@@ -25,7 +25,10 @@ const FeaturedProducts = ({ featuredProducts, changeFeaturedHoveredStatus, unset
         onMouseLeave={unsetFeaturedAsHovered}
         like={item.like}
         likeProduct={likeProduct}
-        removeLike={removeLike}/>
+        removeLike={removeLike}
+        isInCart={item.isInCart}
+        isCompare={item.isCompare}
+        isInStock={item.isInStock}/>
     })
     const settings = {
         slidesToShow: 4,

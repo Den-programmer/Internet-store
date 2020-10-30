@@ -77,7 +77,10 @@ const AppState = {
             isNew: false,
             isSale: false,
             hovered: false, 
-            like: false
+            like: false,
+            isInCart: false,
+            isCompare: false,
+            isInStock: true
         },
         {
             id: 2,
@@ -88,7 +91,10 @@ const AppState = {
             isNew: false,
             isSale: false,
             hovered: false, 
-            like: false
+            like: false,
+            isInCart: false,
+            isCompare: false,
+            isInStock: true
         },
         {
             id: 3,
@@ -99,7 +105,10 @@ const AppState = {
             isNew: false,
             isSale: false,
             hovered: false, 
-            like: false
+            like: false,
+            isInCart: false,
+            isCompare: false,
+            isInStock: true
         },
         {
             id: 4,
@@ -110,7 +119,10 @@ const AppState = {
             isNew: false,
             isSale: false,
             hovered: false, 
-            like: false
+            like: false,
+            isInCart: false,
+            isCompare: false,
+            isInStock: true
         },
         {
             id: 5,
@@ -121,7 +133,10 @@ const AppState = {
             isNew: false,
             isSale: false,
             hovered: false, 
-            like: false
+            like: false,
+            isInCart: false,
+            isCompare: false,
+            isInStock: true
         },
         {
             id: 6,
@@ -132,7 +147,10 @@ const AppState = {
             isNew: false,
             isSale: false,
             hovered: false, 
-            like: false
+            like: false,
+            isInCart: false,
+            isCompare: false,
+            isInStock: true
         },
         {
             id: 7,
@@ -143,7 +161,10 @@ const AppState = {
             isNew: false,
             isSale: false,
             hovered: false, 
-            like: false
+            like: false,
+            isInCart: false,
+            isCompare: false,
+            isInStock: true
         },
         {
             id: 8,
@@ -154,7 +175,10 @@ const AppState = {
             isNew: false,
             isSale: false,
             hovered: false, 
-            like: false
+            like: false,
+            isInCart: false,
+            isCompare: false,
+            isInStock: true
         },
         {
             id: 9,
@@ -165,7 +189,10 @@ const AppState = {
             isNew: false,
             isSale: false,
             hovered: false, 
-            like: false
+            like: false,
+            isInCart: false,
+            isCompare: false,
+            isInStock: true
         },
         {
             id: 10,
@@ -176,7 +203,10 @@ const AppState = {
             isNew: false,
             isSale: false,
             hovered: false, 
-            like: false
+            like: false,
+            isInCart: false,
+            isCompare: false,
+            isInStock: true
         }
     ],
     productsInCart: [
@@ -190,7 +220,9 @@ const AppState = {
             isSale: false,
             hovered: false, 
             like: false,
-            isInCart: true
+            isInCart: true,
+            isCompare: false,
+            isInStock: true,
         },
         {
             id: 2,
@@ -202,7 +234,9 @@ const AppState = {
             isSale: false,
             hovered: false, 
             like: false,
-            isInCart: true
+            isInCart: true,
+            isCompare: false,
+            isInStock: true
         }
     ],
     totalProductsCount: 0,

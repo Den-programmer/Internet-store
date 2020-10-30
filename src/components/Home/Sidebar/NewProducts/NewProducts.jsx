@@ -4,7 +4,9 @@ import NewProduct from './newProduct/newProduct'
 
 const NewProducts = ({ newProducts }) => {
     const products = newProducts.map(item => {
-        return <NewProduct key={item.id} photo={item.photo} title={item.title} price={item.price} rating={item.rating}/>
+        return <NewProduct key={item.id} photo={item.photo} title={item.title} price={item.price} rating={item.rating}
+        isNew={item.isNew} isSale={item.isSale} hovered={item.hovered} like={item.like} isInCart={item.isInCart} isInStock={item.isInStock}
+        isCompare={item.isCompare}/>
     })
     return (
         <div className={classes.newProducts}>

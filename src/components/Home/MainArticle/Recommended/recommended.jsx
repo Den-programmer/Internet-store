@@ -24,7 +24,10 @@ const Recommended = ({ recommended, changeRecommendedHoveredStatus, unsetRecomme
         onMouseLeave={unsetRecommendedAsHovered}
         like={item.like}
         likeProduct={likeProduct}
-        removeLike={removeLike}/>
+        removeLike={removeLike}
+        isInCart={item.isInCart}
+        isInStock={item.isInStock}
+        isCompare={item.isCompare}/>
     })
     const previous = () => {
         slider.slickPrev()

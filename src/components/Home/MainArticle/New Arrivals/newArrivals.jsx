@@ -25,7 +25,10 @@ const NewArrivals = ({ newArrivals, changeArrivalsHoveredStatus, unsetArrivalAsH
             onMouseLeave={unsetArrivalAsHovered}
             like={a.like}
             likeProduct={likeProduct}
-            removeLike={removeLike} />
+            removeLike={removeLike} 
+            isInCart={a.isInCart}
+            isInStock={a.isInStock}
+            isCompare={a.isCompare}/>
     })
     const clickPrev = () => {
         slider.slickPrev()
