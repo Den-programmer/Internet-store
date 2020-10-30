@@ -4,8 +4,10 @@ import basket from './img/basket.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faShoppingBasket, faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom'
+import CartPopup from '../../../common/CommonMainHeader/CartPopup/cartPopup'
 
-const MainHeader = (props) => {
+const MainHeader = ({ cartPopupStatus, productsInCart, setIsCartPopupOpenStatus }) => {
+    const openPopup = () => setIsCartPopupOpenStatus(!cartPopupStatus)
     return (
         <div className={classes.mainHeaderWrapper}>
             <div className={classes.mainHeader}>
@@ -30,10 +32,11 @@ const MainHeader = (props) => {
                         <div className={classes.shoppingBasketIcon}>
                             <FontAwesomeIcon icon={faShoppingBasket} />
                         </div>
-                        <div className={classes.shoppingBoughtItems}>
+                        <div onClick={openPopup} className={classes.shoppingBoughtItems}>
                             <p>0 item: </p>
                             <span>$0.00</span>
                         </div>
+                        {cartPopupStatus && <div className={classes.cartPopupContainer}><CartPopup productsInCart={productsInCart}/></div>}
                     </div>
                 </div>
             </div>

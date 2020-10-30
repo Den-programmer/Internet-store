@@ -1,6 +1,6 @@
 import React from 'react'
 import LoginPanel from './loginPanel/loginPanel'
-import MainHeader from './mainHeader/mainHeader'
+import MainHeader from './mainHeader/mainHeaderContainer'
 import Navbar from './Navbar/navbar'
 
 const Header = (props) => {
