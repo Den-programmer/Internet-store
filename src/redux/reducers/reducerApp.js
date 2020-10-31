@@ -10,6 +10,8 @@ const MOVE_BLOG_PAGE = 'MOVE_BLOG_PAGE'
 
 const SET_IS_CART_POPUP_OPEN_STATUS = 'SET_IS_CART_POPUP_OPEN_STATUS'
 
+const DELETE_FROM_CART = 'DELETE_FROM_CART'
+
 const moveHomePage = () => ({ type: MOVE_HOME_PAGE })
 const moveShopPage = () => ({ type: MOVE_SHOP_PAGE })
 const moveBlogPage = () => ({ type: MOVE_BLOG_PAGE })
@@ -277,7 +279,14 @@ const reducerApp = (state = AppState, action) => {
             return {
                 ...state,
                 cartPopupStatus: action.status
-            }    
+            }   
+        case DELETE_FROM_CART:
+            return {
+                ...state,
+                productsInCart: state.productsInCart.filter(item => {
+                    if(item.id !== action.itemId) return true
+                })
+            }     
         default:
             return state
     }
@@ -290,5 +299,7 @@ export const setDate = (date) => ({ type: SET_DATE, date })
 export const setTotalProductsCount = (count) => ({ type: SET_TOTAL_PRODUCTS_COUNT, count })
 
 export const setIsCartPopupOpenStatus = (status) => ({ type: SET_IS_CART_POPUP_OPEN_STATUS, status })
+
+export const deleteFromCart = (itemId) => ({ type: DELETE_FROM_CART, itemId })
 
 export default reducerApp

@@ -9,6 +9,7 @@ import Blog from './components/Blog/blog'
 import Wishlist from './components/Wishlist/wishlist'
 import LoginPage from './components/LoginPage/loginPage'
 import ContactUs from './components/Contact Us/contactUs'
+import CartPage from './components/CartPage/cartPage'
 
 class App extends Component {
   componentDidMount() {
@@ -32,6 +33,7 @@ class App extends Component {
     return (
       <div className="App">
         <Switch>
+          <Route path="/CartPage" render={() => <CartPage />}/>
           <Route path="/MyAccount" render={() => <LoginPage />}/>
           <Route path="/ContactUs" render={() => <ContactUs />}/>
           <Route path="/Home/Shop" render={() => <Shop />}/>

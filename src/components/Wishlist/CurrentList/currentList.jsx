@@ -17,6 +17,7 @@ const CurrentList = ({ products, deleteFromWishlist }) => {
         like={product.like}
         isInCard={product.isInCard}
         isInStock={product.isInStock}
+        isCompare={product.isCompare}
         deleteFromWishlist={deleteFromWishlist}/>
     })
     return (
