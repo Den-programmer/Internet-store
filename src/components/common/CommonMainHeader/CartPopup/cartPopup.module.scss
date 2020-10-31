@@ -85,8 +85,8 @@
             align-items: center;
             justify-content: space-between;
             .enterCartPage__btns {
-                button {
-                    outline: none;
+                a {
+                    text-decoration: none;
                     padding: 16px 28px;
                     border: 1px solid #E8E8E8;
                     font-size: 12px;

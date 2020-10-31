@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './cartPopup.module.scss'
+import { NavLink } from 'react-router-dom'
 
 const CartPopup = ({ productsInCart }) => {
     const Products = productsInCart.map(item => {
@@ -29,10 +30,10 @@ const CartPopup = ({ productsInCart }) => {
                 </div>
                 <div className={classes.enterCartPage}>
                     <div className={classes.btn_viewCart + ' ' + classes.enterCartPage__btns}>
-                        <button>View Cart</button>
+                        <NavLink to="/CartPage">View Cart</NavLink>
                     </div>
                     <div className={classes.btn_checkout + ' ' + classes.enterCartPage__btns}>
-                        <button>Checkout</button>
+                        <NavLink to="/Checkout">Checkout</NavLink>
                     </div>
                 </div>
             </div>
