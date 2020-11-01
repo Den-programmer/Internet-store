@@ -13,7 +13,6 @@ const CartPopup = ({ productsInCart }) => {
                 <div className={classes.productInfo}>
                     <p className={classes.title}>{item.title}</p>
                     <h5>${item.price}</h5> 
-                    {/* Don't forget count of products! */}
                 </div>
             </div>
         )

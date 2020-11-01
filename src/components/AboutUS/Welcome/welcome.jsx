@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from './welcome.module.scss'
 import supermarketPhoto from '../../../images/supermarketPhoto.jpg'
+import { NavLink } from 'react-router-dom'
 
 const Welcome = (props) => {
     return (
@@ -28,7 +29,7 @@ const Welcome = (props) => {
                     Flipper Flipper faster than lightning. No one you see is smarter.
                 </p>
                 <div className={classes.btn_contactUs}>
-                    <button>Contact Us</button>
+                    <NavLink to="/ContactUs">Contact Us</NavLink>
                 </div>
             </div>
         </section>
