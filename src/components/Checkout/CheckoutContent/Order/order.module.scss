@@ -1,0 +1,60 @@
+@import '../../../../index.scss';
+
+.order {
+    @extend .container;
+    .title {
+        h3 {
+            text-transform: uppercase;
+            font-size: 20px;
+            color: #222222;
+        }
+    }
+    .characteristics {
+        .characteristic {
+            border: 1px solid #E8E8E8;
+            padding: 22px 340px 22px 25px;
+            display: flex;
+            justify-content: space-between;
+            .characteristic__title {
+                color: #222222;
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: bold;
+                font-family: $Raleway;
+            }
+            .characteristic__text {
+                color: #666666;
+                font-size: 14px;
+            }
+            .characteristic__price {
+                color: #222222;
+                font-size: 14px;
+                font-weight: 500;
+            }
+            .shippingContent {
+                .shippingContent__choosing {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    .btn_placeOrder {
+        margin: 20px auto;
+        button {
+            outline: none;
+            border: none;
+            color: #FFF;
+            text-transform: uppercase;
+            padding: 20px 30px;
+            font-size: 15px;
+            font-weight: 900;
+            font-family: $Raleway;
+            background-color: #408DE4;
+            &:hover {
+                transition: all .4s linear;
+                color: #FFAE54;
+            }
+        }
+    }
+}

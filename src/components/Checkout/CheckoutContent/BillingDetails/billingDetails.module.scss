@@ -1,0 +1,65 @@
+@import '../../../../index.scss';
+
+.displayFlexContainer {
+    display: flex;
+}
+
+.starSign {
+    color: #FC4242;
+}
+
+.billingDetails {
+    @extend .container;
+    .title {
+        h3 {
+            text-transform: uppercase;
+            color: #222222;
+            font-size: 18px;
+            font-family: $Raleway;
+        }
+    }
+    .form {
+        display: flex;
+        .mainFormContent {
+            .formItem {
+                p {
+                    color: #666666;
+                    font-size: 14px;
+                }
+                input {
+                    border: 1px solid #E8E8E8;
+                    border-radius: 1px;
+                    margin: 10px 0px;
+                }
+                .shortInput {
+                    width: 266px;
+                    height: 45px;
+                }
+                .wideInput {
+                    width: 550px;
+                    height: 45px;
+                }
+            }
+            .country {
+                select {
+                    width: 550px;
+                    height: 45px;
+                    border: 1px solid #E8E8E8;
+                    color: #777777;
+                    padding: 0 15px;
+                }
+            }
+        }
+        .orderNotes {
+            p {
+                color: #666666;
+                font-size: 14px;
+            }
+            textarea {
+                width: 550px;
+                height: 80px;
+                resize: none;
+            }
+        }
+    }
+}

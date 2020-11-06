@@ -63,6 +63,8 @@ const UNSET_PRODUCTS_CATEGORIES_AS_HOVERED = 'UNSET_PRODUCTS_CATEGORIES_AS_HOVER
 const LIKE_PRODUCT = 'LIKE_PRODUCT'
 const REMOVE_LIKE = 'REMOVE_LIKE' 
 
+const HOT_DEALS_TIMER = 'HOT_DEALS_TIMER'
+
 
 const HomeState = {
     slider: {
@@ -127,9 +129,10 @@ const HomeState = {
                 isInStock: true,
                 isCompare: false,
                 date: {
-                    days: "02",
-                    hours: "12",
-                    minutes: "24"
+                    days: 2,
+                    hours: 12,
+                    minutes: 24,
+                    seconds: 40
                 }
             },
             {
@@ -146,9 +149,10 @@ const HomeState = {
                 isInStock: true,
                 isCompare: false,
                 date: {
-                    days: "07",
-                    hours: "04",
-                    minutes: "34"
+                    days: 7,
+                    hours: 4,
+                    minutes: 34,
+                    seconds: 40
                 }
             },
             {
@@ -165,9 +169,10 @@ const HomeState = {
                 isInStock: true,
                 isCompare: false,
                 date: {
-                    days: "00",
-                    hours: "00",
-                    minutes: "11"
+                    days: 0,
+                    hours: 0,
+                    minutes: 11,
+                    seconds: 40
                 }
             },
             {
@@ -184,9 +189,10 @@ const HomeState = {
                 isInStock: true,
                 isCompare: false,
                 date: {
-                    days: "03",
-                    hours: "03",
-                    minutes: "01"
+                    days: 3,
+                    hours: 3,
+                    minutes: 1,
+                    seconds: 40
                 }
             }
         ],
@@ -1175,6 +1181,35 @@ const HomeState = {
 
 const reducerHome = (state = HomeState, action) => {
     switch (action.type) {
+        // case HOT_DEALS_TIMER:
+        //     return {
+        //         ...state,
+        //         sidebar: { ...state.sidebar, sliderItems: state.sidebar.sliderItems.map(item => {
+        //                 // const days = item.date.days
+        //                 // const hours = item.date.hours
+        //                 // const minutes = item.date.minutes
+        //                 // const dayHours = days * 24
+        //                 // const condition = (60 * minutes * (hours + dayHours)) + item.date.seconds
+        //                 // let seconds = hours === 0 ? 
+        //                 // minutes === 0 ? item.date.seconds : 
+        //                 // (60 * minutes) + item.date.seconds : 
+        //                 // minutes === 0 ? item.date.seconds : 
+        //                 // condition
+        //                 // seconds--
+        //                 // const currentDays = Math.floor(seconds / 86400) < 1 ? 0 : Math.floor(seconds / 86400)
+        //                 // const currentHours = Math.floor(seconds % 86400) / 3600 < 1 ? 0 : Math.floor(seconds / 3600)
+        //                 // const currentMinutes = Math.floor((seconds % 86400) % 3600) / 60 < 1 ? 0 : Math.floor(seconds / 60)
+        //                 // const currentSeconds = Math.floor((seconds % 86400) % 3600) % 60
+        //                 // item.date.seconds - 1 !== 0 ? Math.floor(item.date.seconds - 1) : 59
+        //                 if(seconds !== 0) {
+        //                     return { ...item, date: { ...item.date, 
+        //                         days: currentDays, 
+        //                         hours: currentHours,
+        //                          minutes: currentMinutes, 
+        //                          seconds: currentSeconds } }
+        //                 } 
+        //         }) }
+        //     }
         case CHANGE_SLIDER_PAGE:
             return {
                 ...state,
@@ -1341,5 +1376,7 @@ export const unsetProductsCategoriesAsHovered = () => ({ type: UNSET_PRODUCTS_CA
 
 export const likeProduct = (itemId) => ({ type: LIKE_PRODUCT, itemId })
 export const removeLike = (itemId) => ({ type: REMOVE_LIKE, itemId }) 
+
+export const hotDealsTimer = () => ({ type: HOT_DEALS_TIMER })
 
 export default reducerHome

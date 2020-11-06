@@ -1,0 +1,37 @@
+@import '../../../../index.scss';
+
+.horizontal_line {
+    background-color: #408DE4;
+    height: 2px;
+    width: 100%;
+}
+
+.checkoutContentHeader {
+    @extend .container;
+    .title {
+        h3 {
+            color: #232323;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 22px;
+        }
+    }
+    .returningCustomer {
+        .content {
+            background-color: #F6F6F6;
+            padding: 25px;
+            p {
+                color: #606060;
+                font-size: 14px;
+            }
+            a {
+                text-decoration: none;
+                color: #303030;
+                font-family: $Roboto;
+                font-size: 14px;
+                margin-left: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+}
