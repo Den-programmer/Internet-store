@@ -5,11 +5,19 @@ import { faShoppingCart, faLongArrowAltRight, faLongArrowAltLeft, faHeart, faEye
 import uncoloredHeart from '../../../../images/heartUncolored.png'
 
 const Product = ({ id, photo, title, price, isNew, isSale, hovered, starsCount, 
-    greyStarsCount, onMouseMove, onMouseLeave, likeProduct, removeLike, like }) => {
+    greyStarsCount, onMouseMove, onMouseLeave, likeProduct, removeLike, like, productsPerRow }) => {
+    const commonProductWidth = '230px'
+
+    const styleWdthFive = { width: commonProductWidth } 
+    const styleWdthFour = { width: '210px' }
+    const styleWdthOne = { width: 'auto' } 
+
+    const chosenProductStyle = productsPerRow === 5 ? styleWdthFive : productsPerRow === 4 ? styleWdthFour : styleWdthOne
+
     const onMouseMoveHandler = () => onMouseMove(id)
     const onMouseLeaveHandler = () => onMouseLeave()
     return (
-        <div onMouseMove={onMouseMoveHandler} onMouseLeave={onMouseLeaveHandler} className={classes.product}>
+        <div style={chosenProductStyle} onMouseMove={onMouseMoveHandler} onMouseLeave={onMouseLeaveHandler} className={classes.product}>
             {isNew && <div className={classes.new}>
                 New
             </div>}
@@ -17,7 +25,7 @@ const Product = ({ id, photo, title, price, isNew, isSale, hovered, starsCount,
                 Sale
             </div>}
             <img className={classes.product__photo} src={photo} alt="" />
-            {hovered && <div className={classes.additional_functions_Wrapper}><div className={classes.additional_functions}>
+            {hovered && <div style={chosenProductStyle} className={classes.additional_functions_Wrapper}><div className={classes.additional_functions}>
                     <div className={classes.basket}>
                         <FontAwesomeIcon icon={faShoppingCart} />
                     </div>

@@ -2,6 +2,9 @@
 
 .products {
     @extend .container;
+    .products_mainContent {
+        display: flex;
+    }
     .productsContent {
         display: flex;
         justify-content: center;

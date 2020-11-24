@@ -3,30 +3,6 @@
 .cartList {
     @extend .container;
     padding: 30px 0px;
-    .noProducts {
-        min-height: 200px;
-        border: 1px solid #E8E8E8;
-        border-top: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        .sadSmile {
-            height: 100px;
-            width: 100px;
-        }
-        h4 {
-            font-weight: 25px;
-            a {
-                text-decoration: none;
-                color: #81D9FA;
-                &:hover {
-                    color: #58C9EA;
-                    border-bottom: 1px solid #81D9FA;
-                }
-            }
-        }
-    }
     .title {
         h3 {
             color: #232323;

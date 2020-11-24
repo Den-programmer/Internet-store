@@ -1,0 +1,36 @@
+.categoriesItem {
+    border: 1px solid #E8E8E8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    width: 265px;
+    cursor: pointer;
+    p {
+        color: #777777;
+        font-size: 14px;
+        &:hover {
+            transition: all .1s ease;
+            text-decoration: underline;
+        }
+    }
+    .plus {
+        color: #777777;
+        font-size: 15px;
+        height: 21px;
+        width: 21px;
+        border-radius: 25px;
+        background-color: #F8F8F8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #E8E8E8;
+        cursor: pointer;
+        &:hover {
+            transition: all .2s linear;
+            background-color: #F9F9F9;
+            border: 1px solid #888888;
+            color: #333333;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.menuOptionText {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #444444;
+}
+
+.brandsMenu {
+    border: 1px solid #E5E5E5;
+    width: 255px;
+    padding: 20px;
+    .optionItem {
+        display: flex;
+        align-items: center;
+        p {
+            @extend .menuOptionText;
+        }
+    }
+}
+
+.priceMenu {
+    border: 1px solid #E5E5E5;
+    .priceMenuItem {
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        .priceMenuItem__text {
+            @extend .menuOptionText;
+        }
+    }
+}
+
+.colourMenuWrapper {
+    height: 120px;
+    width: 295px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #E5E5E5;
+    .colourMenu {
+        width: 270px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        .colourMenuItem {
+            width: 25px;
+            height: 25px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+.typeMenu {
+    border: 1px solid #E5E5E5;
+    width: 295px;
+    padding: 20px 0px;
+    .typeMenuItem {
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        .typeMenuItem__text {
+            @extend .menuOptionText;
+        }
+    }
+}

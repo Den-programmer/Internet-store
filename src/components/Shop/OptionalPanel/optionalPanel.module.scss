@@ -31,16 +31,31 @@
             border: 1px solid #E8E8E8;
             color: #8D8D8D;
         }
-        .productsCount {
-            display: flex;
-            align-items: center;
-            padding: 10px 14px;
-            border-radius: 1px;
-            cursor: pointer;
-            &:hover {
+        .productsCountMenuWrapper { 
+            position: relative;
+            z-index: 1;
+            .active {
                 transition: all .3s linear;
                 color: #444444;
                 background-color: #F5F5F5;
+            }
+            .productsCountMenu {
+                position: absolute;
+                top: -18px;
+                left: -50px;
+                .productsCount {
+                    display: flex;
+                    align-items: center;
+                    padding: 10px 14px;
+                    border-radius: 1px;
+                    background-color: #fff;
+                    cursor: pointer;
+                    &:hover {
+                        transition: all .3s linear;
+                        color: #444444;
+                        background-color: #F5F5F5;
+                    }
+                }
             }
         }
         .sort {

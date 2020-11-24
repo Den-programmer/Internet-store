@@ -1,0 +1,10 @@
+@import '../../index.scss';
+
+.shop {
+    display: flex;
+    justify-content: space-between;
+    @extend .container;
+    .shopContent {
+        margin-right: 30px;
+    }
+}

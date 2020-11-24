@@ -1,8 +1,8 @@
 import React from 'react'
 import classes from './cartList.module.scss'
 import sadSmile from '../../../images/Smiles/sadSmile.jpg'
-import { NavLink } from 'react-router-dom'
 import CartProduct from './CartProduct/cartProduct'
+import NoProducts from '../../common/NoProducts/noProducts'
 
 const CartList = ({ productsInCart, deleteFromCart }) => {
     const Products = productsInCart.map(item => {
@@ -27,10 +27,7 @@ const CartList = ({ productsInCart, deleteFromCart }) => {
                 </div>
                 {Products.length !== 0 ? <div className={classes.products}>
                     {Products}
-                </div> : <div className={classes.noProducts}>
-                        <img className={classes.sadSmile} src={sadSmile} alt="" />
-                        <h4>To add here some products go to the <NavLink to="/Home/Shop">shop page</NavLink>!</h4>
-                    </div>}
+                </div> : <NoProducts bordered={true} image={sadSmile} title={"To add here some products go to the "} link={"shop page"} path={"/Home/Shop"}/>}
             </div>
             <div className={classes.cartTotals}>
                 <div className={classes.title}>

@@ -1,6 +1,8 @@
 import React from 'react'
 import classes from './cartPopup.module.scss'
 import { NavLink } from 'react-router-dom'
+import NoProducts from '../../NoProducts/noProducts'
+import sadSmile from '../../../../images/Smiles/sadSmile.jpg'
 
 const CartPopup = ({ productsInCart }) => {
     const Products = productsInCart.map(item => {
@@ -20,9 +22,9 @@ const CartPopup = ({ productsInCart }) => {
     return (
         <div className={classes.cartPopupWrapper}>
             <div className={classes.cartPopup}>
-                <div className={classes.products}>
+                {Products.length !== 0 ? <div className={classes.products}>
                     {Products}
-                </div>
+                </div> : <NoProducts bordered={false} image={sadSmile} title={"Go to the "} link={"shop page"} path={"/Home/Shop"}/>}
                 <div className={classes.total}>
                     <h4>Order Total</h4>
                     <h5>$350.00</h5>

@@ -8,16 +8,24 @@ import OptionalPanel from './OptionalPanel/optionalPanelContainer'
 import Products from './Products/productsContainer'
 import Footer from '../common/Footer/footerContainer'
 
-const Shop = (props) => {
+const Shop = ({ productsPerRow }) => {
     return (
-        <div className={classes.shop}>
-            <Login />
-            <CommonMainHeader />
-            <HeaderNavbar />
-            <PageTitle />
-            <OptionalPanel />
-            <Products />
-            <Footer />
+        <div className={classes.shopPage}>
+            <div className={classes.shopHeader}>
+                <Login />
+                <CommonMainHeader />
+                <HeaderNavbar />
+                <PageTitle />
+            </div>
+            <div className={classes.shop}>
+                <div className={classes.shopContent}>
+                    <OptionalPanel productsPerRow={productsPerRow}/>
+                    <Products />
+                </div>
+            </div>
+            <div className={classes.shopFooter}>
+                <Footer />
+            </div>
         </div>
     )
 }
