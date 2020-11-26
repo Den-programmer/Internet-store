@@ -6,7 +6,7 @@ import { faSearch, faShoppingBasket, faAngleDown } from '@fortawesome/free-solid
 import { NavLink } from 'react-router-dom'
 import CartPopup from '../../../common/CommonMainHeader/CartPopup/cartPopup'
 
-const MainHeader = ({ cartPopupStatus, productsInCart, setIsCartPopupOpenStatus }) => {
+const MainHeader = ({ deleteFromCart, cartPopupStatus, productsInCart, setIsCartPopupOpenStatus, total }) => {
     const openPopup = () => setIsCartPopupOpenStatus(!cartPopupStatus)
     return (
         <div className={classes.mainHeaderWrapper}>
@@ -29,14 +29,20 @@ const MainHeader = ({ cartPopupStatus, productsInCart, setIsCartPopupOpenStatus 
                         </div>
                     </div>
                     <div className={classes.basket}>
-                        <div className={classes.shoppingBasketIcon}>
-                            <FontAwesomeIcon icon={faShoppingBasket} />
-                        </div>
+                        <NavLink className={classes.navlink} to="/CartPage">
+                            <div className={classes.shoppingBasketIcon}>
+                                <FontAwesomeIcon icon={faShoppingBasket} />
+                            </div>
+                        </NavLink>
                         <div onClick={openPopup} className={classes.shoppingBoughtItems}>
-                            <p>0 item: </p>
-                            <span>$0.00</span>
+                            <p>{productsInCart.length} item: </p>
+                            <span>${total}</span>
                         </div>
-                        {cartPopupStatus && <div className={classes.cartPopupContainer}><CartPopup productsInCart={productsInCart}/></div>}
+                        {cartPopupStatus && <div className={classes.cartPopupContainer}><CartPopup
+                            total={total}
+                            deleteFromCart={deleteFromCart}
+                            setIsCartPopupOpenStatus={setIsCartPopupOpenStatus}
+                            productsInCart={productsInCart} productsInCart={productsInCart} /></div>}
                     </div>
                 </div>
             </div>

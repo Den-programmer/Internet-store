@@ -48,13 +48,16 @@
     justify-content: center;
     align-items: center;
     margin-left: 30px;
+    .navlink {
+        color: #000000;
+    }
     >div {
         display: flex;
         align-items: center;
     }
 }
 .shoppingBasket {
-    padding: 19px;
+    padding: 17.5px;
     border: 1px solid #E8E8E8;
     cursor: pointer;
 }

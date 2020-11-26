@@ -74,6 +74,12 @@
             border-radius: 1px;
             background-color: #fff;
             height: 50px;
+            .navlink {
+                color: #000000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
             .shoppingBasketIcon {
                 padding:0 15px;
                 border-right: 1px solid #E5E5E5;

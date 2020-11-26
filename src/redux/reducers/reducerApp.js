@@ -10,6 +10,12 @@ const MOVE_BLOG_PAGE = 'MOVE_BLOG_PAGE'
 
 const SET_IS_CART_POPUP_OPEN_STATUS = 'SET_IS_CART_POPUP_OPEN_STATUS'
 
+const CHANGE_FREE_SHIPPING = 'CHANGE_FREE_SHIPPING'
+const CHANGE_FLAT_SHIPPING = 'CHANGE_FLAT_SHIPPING'
+
+const COUNT_TOTAL = 'COUNT_TOTAL'
+const COUNT_SHIPPING_TOTAL = 'COUNT_SHIPPING_TOTAL'
+
 const DELETE_FROM_CART = 'DELETE_FROM_CART'
 
 const moveHomePage = () => ({ type: MOVE_HOME_PAGE })
@@ -241,6 +247,10 @@ const AppState = {
             isInStock: true
         }
     ],
+    total: '0.00',
+    shippingTotal: '0.00',
+    isFreeShipping: false,
+    isFlatShipping: false,
     totalProductsCount: 0,
     cartPopupStatus: false
 }
@@ -286,7 +296,29 @@ const reducerApp = (state = AppState, action) => {
                 productsInCart: state.productsInCart.filter(item => {
                     if(item.id !== action.itemId) return true
                 })
+            }
+        case CHANGE_FREE_SHIPPING:
+            return {
+                ...state,
+                isFreeShipping: action.status,
+                isFlatShipping: action.status ? false : true
             }     
+        case CHANGE_FLAT_SHIPPING:
+            return {
+                ...state,
+                isFlatShipping: action.status,
+                isFreeShipping: action.status ? false : true
+            }  
+        case COUNT_TOTAL:
+            return {
+                ...state,
+                total: action.total
+            }  
+        case COUNT_SHIPPING_TOTAL:
+            return {
+                ...state,
+                shippingTotal: action.price
+            }            
         default:
             return state
     }
@@ -299,6 +331,12 @@ export const setDate = (date) => ({ type: SET_DATE, date })
 export const setTotalProductsCount = (count) => ({ type: SET_TOTAL_PRODUCTS_COUNT, count })
 
 export const setIsCartPopupOpenStatus = (status) => ({ type: SET_IS_CART_POPUP_OPEN_STATUS, status })
+
+export const changeFreeShippingStatus = (status) => ({ type: CHANGE_FREE_SHIPPING, status })
+export const changeFlatShippingStatus = (status) => ({ type: CHANGE_FLAT_SHIPPING, status })
+
+export const countTotal = (total) => ({ type: COUNT_TOTAL, total })
+export const countShippingTotal = (price) => ({ type: COUNT_SHIPPING_TOTAL, price })
 
 export const deleteFromCart = (itemId) => ({ type: DELETE_FROM_CART, itemId })
 

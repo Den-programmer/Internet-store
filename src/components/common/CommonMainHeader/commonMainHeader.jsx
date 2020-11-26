@@ -1,11 +1,12 @@
 import React from 'react'
 import classes from './commonMainHeader.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { NavLink } from 'react-router-dom'
 import { faSearch, faShoppingBasket, faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import Logo from './Logo/logo'
 import CartPopup from './CartPopup/cartPopup'
 
-const CommonMainHeader = ({ cartPopupStatus, setIsCartPopupOpenStatus, productsInCart }) => {
+const CommonMainHeader = ({ cartPopupStatus, setIsCartPopupOpenStatus, productsInCart, deleteFromCart, total }) => {
     const openPopup = () => setIsCartPopupOpenStatus(!cartPopupStatus)
     return (
         <div className={classes.mainHeader}>
@@ -22,16 +23,18 @@ const CommonMainHeader = ({ cartPopupStatus, setIsCartPopupOpenStatus, productsI
                     </div>
                     <div className={classes.items}>
                         <div className={classes.bag}>
-                            <div className={classes.shoppingBasket}>
-                                <FontAwesomeIcon icon={faShoppingBasket} />
-                            </div>
+                            <NavLink className={classes.navlink} to="/CartPage">
+                                <div className={classes.shoppingBasket}>
+                                    <FontAwesomeIcon icon={faShoppingBasket} />
+                                </div>
+                            </NavLink>
                             <div onClick={openPopup} className={classes.shoppingInf}>
                                 <p>
-                                    0 item:
+                                    {productsInCart.length} item:
                                 </p>
-                                <span>$0.00</span>
+                                <span>${total}</span>
                             </div>
-                            {cartPopupStatus && <CartPopup productsInCart={productsInCart}/>}
+                            {cartPopupStatus && <CartPopup total={total} deleteFromCart={deleteFromCart} setIsCartPopupOpenStatus={setIsCartPopupOpenStatus} productsInCart={productsInCart} />}
                         </div>
                     </div>
                 </div>

@@ -1,12 +1,13 @@
 import { connect } from 'react-redux'
 import CommonMainHeader from './commonMainHeader'
-import { setIsCartPopupOpenStatus } from '../../../redux/reducers/reducerApp'
+import { setIsCartPopupOpenStatus, deleteFromCart } from '../../../redux/reducers/reducerApp'
 
 const mapStateToProps = (state) => ({
     cartPopupStatus: state.app.cartPopupStatus,
-    productsInCart: state.app.productsInCart
+    productsInCart: state.app.productsInCart,
+    total: state.app.total
 })
 
-const CommonMainHeaderContainer = connect(mapStateToProps, { setIsCartPopupOpenStatus })(CommonMainHeader)
+const CommonMainHeaderContainer = connect(mapStateToProps, { setIsCartPopupOpenStatus, deleteFromCart })(CommonMainHeader)
 
 export default CommonMainHeaderContainer
