@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTv, faMobile, faFutbol, faLeaf, faShoppingBasket, faCameraRetro, faPlug, faHeadphones, faAppleAlt, faTags } from '@fortawesome/free-solid-svg-icons'
 
 const Departments = ({ setIsDepartmentsMenuOpenStatus, isDepartmentsMenuOpen }) => {
+    const departmentsMenu = React.createRef()
     const departmentsData = [
         {
             id: 1,
@@ -69,8 +70,13 @@ const Departments = ({ setIsDepartmentsMenuOpenStatus, isDepartmentsMenuOpen }) 
     const departmentItems = departmentsData.map(d => {
         return <li key={d.id}><FontAwesomeIcon className={classes.menuIcon} icon={d.icon} /><a href={d.path}>{d.title}</a></li>
     })
+
+    document.addEventListener('click', e => {
+        if(departmentsMenu.current && !departmentsMenu.current.contains(e.target)) setIsDepartmentsMenuOpenStatus(false)
+    })
+
     return (
-        <div onClick={() => setIsDepartmentsMenuOpenStatus(!isDepartmentsMenuOpen)} className={classes.departments}>
+        <div ref={departmentsMenu} onClick={() => setIsDepartmentsMenuOpenStatus(!isDepartmentsMenuOpen)} className={classes.departments}>
             <h3>Departments</h3>
             {isDepartmentsMenuOpen && <div className={classes.menu}>
                 <ul className={classes.menuList}>

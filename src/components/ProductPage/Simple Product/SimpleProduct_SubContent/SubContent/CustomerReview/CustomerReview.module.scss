@@ -1,0 +1,78 @@
+@import '../../../../../../index.scss';
+
+.require_mark {
+    color: #FC4242;
+    margin: 0px 5px;
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+    .errorText {
+        color: red;
+    }
+}
+
+
+.user_rating_content {
+    margin: 0px 30px;
+}
+
+.customerReview {
+    padding: 40px;
+    .customerReview__title {
+        color: #222222;
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+    .addReviewForm {
+        padding: 40px;
+        .addReviewForm__text {
+            color: #777777;
+            font-size: 15px;
+        }
+        .addReviewForm__item {
+            display: flex;
+            align-items: center;
+            padding: 30px 0px;
+            p {
+                display: flex;
+                align-items: center;
+            }
+        }
+        .title {
+            font-size: 18px;
+            text-transform: uppercase;
+            color: #222222;
+        }
+        .userName {
+            input {
+               margin-left: 30px;
+               width: 600px;
+            }
+        }
+        textarea {
+            width: 600px;
+            height: 120px;
+            border-radius: 1px;
+            resize: none;
+        }
+        input {
+            width: 600px;
+            height: 45px;
+            border-radius: 1px;
+        }
+        .btn_submit {
+            button {
+                padding: 18px 26px;
+                background-color: #222222;
+                border-radius: 1px;
+                text-transform: uppercase;
+                color: #FFF;
+                font-weight: bold;
+                font-size: 13px;
+                font-family: $Raleway;
+            }
+        }
+    }
+}

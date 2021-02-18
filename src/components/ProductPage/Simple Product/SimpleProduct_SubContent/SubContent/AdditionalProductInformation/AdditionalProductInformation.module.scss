@@ -1,0 +1,20 @@
+.additionalInformation {
+    padding: 40px;
+    .item {
+        display: flex;
+        align-items: center;
+        border-top: 1px dashed #E4E4E4;
+        .property {
+            margin-right: 90px;
+            color: #444444;
+            font-size: 14px;
+        }
+        .value {
+            color: #777777;
+            font-size: 14px;
+        }
+    }
+    .item:first-child {
+        border-top: none;
+    }
+}

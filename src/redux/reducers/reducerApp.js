@@ -18,6 +18,8 @@ const COUNT_SHIPPING_TOTAL = 'COUNT_SHIPPING_TOTAL'
 
 const DELETE_FROM_CART = 'DELETE_FROM_CART'
 
+const SET_TEXT_ERROR = 'SET_TEXT_ERROR'
+
 const moveHomePage = () => ({ type: MOVE_HOME_PAGE })
 const moveShopPage = () => ({ type: MOVE_SHOP_PAGE })
 const moveBlogPage = () => ({ type: MOVE_BLOG_PAGE })
@@ -84,7 +86,7 @@ const AppState = {
             rating: 5,
             isNew: false,
             isSale: false,
-            hovered: false, 
+            hovered: false,
             like: false,
             isInCart: false,
             isCompare: false,
@@ -98,7 +100,7 @@ const AppState = {
             rating: 5,
             isNew: false,
             isSale: false,
-            hovered: false, 
+            hovered: false,
             like: false,
             isInCart: false,
             isCompare: false,
@@ -112,7 +114,7 @@ const AppState = {
             rating: 5,
             isNew: false,
             isSale: false,
-            hovered: false, 
+            hovered: false,
             like: false,
             isInCart: false,
             isCompare: false,
@@ -126,7 +128,7 @@ const AppState = {
             rating: 5,
             isNew: false,
             isSale: false,
-            hovered: false, 
+            hovered: false,
             like: false,
             isInCart: false,
             isCompare: false,
@@ -140,7 +142,7 @@ const AppState = {
             rating: 5,
             isNew: false,
             isSale: false,
-            hovered: false, 
+            hovered: false,
             like: false,
             isInCart: false,
             isCompare: false,
@@ -154,7 +156,7 @@ const AppState = {
             rating: 5,
             isNew: false,
             isSale: false,
-            hovered: false, 
+            hovered: false,
             like: false,
             isInCart: false,
             isCompare: false,
@@ -168,7 +170,7 @@ const AppState = {
             rating: 5,
             isNew: false,
             isSale: false,
-            hovered: false, 
+            hovered: false,
             like: false,
             isInCart: false,
             isCompare: false,
@@ -182,7 +184,7 @@ const AppState = {
             rating: 5,
             isNew: false,
             isSale: false,
-            hovered: false, 
+            hovered: false,
             like: false,
             isInCart: false,
             isCompare: false,
@@ -196,7 +198,7 @@ const AppState = {
             rating: 5,
             isNew: false,
             isSale: false,
-            hovered: false, 
+            hovered: false,
             like: false,
             isInCart: false,
             isCompare: false,
@@ -210,7 +212,7 @@ const AppState = {
             rating: 5,
             isNew: false,
             isSale: false,
-            hovered: false, 
+            hovered: false,
             like: false,
             isInCart: false,
             isCompare: false,
@@ -226,7 +228,7 @@ const AppState = {
             rating: 4,
             isNew: false,
             isSale: false,
-            hovered: false, 
+            hovered: false,
             like: false,
             isInCart: true,
             isCompare: false,
@@ -240,7 +242,7 @@ const AppState = {
             rating: 4,
             isNew: false,
             isSale: false,
-            hovered: false, 
+            hovered: false,
             like: false,
             isInCart: true,
             isCompare: false,
@@ -252,7 +254,9 @@ const AppState = {
     isFreeShipping: false,
     isFlatShipping: false,
     totalProductsCount: 0,
-    cartPopupStatus: false
+    cartPopupStatus: false,
+    productId: 1,
+    errorText: ''
 }
 
 const reducerApp = (state = AppState, action) => {
@@ -266,13 +270,13 @@ const reducerApp = (state = AppState, action) => {
             return {
                 ...state,
                 totalProductsCount: action.count
-            }    
+            }
         case MOVE_HOME_PAGE:
             return {
                 ...state,
                 currentPageName: 'Home',
                 currentPath: 'Home'
-            }    
+            }
         case MOVE_SHOP_PAGE:
             return {
                 ...state,
@@ -284,17 +288,17 @@ const reducerApp = (state = AppState, action) => {
                 ...state,
                 currentPageName: 'Blog',
                 currentPath: 'Home/Blog'
-            } 
+            }
         case SET_IS_CART_POPUP_OPEN_STATUS:
             return {
                 ...state,
                 cartPopupStatus: action.status
-            }   
+            }
         case DELETE_FROM_CART:
             return {
                 ...state,
                 productsInCart: state.productsInCart.filter(item => {
-                    if(item.id !== action.itemId) return true
+                    if (item.id !== action.itemId) return true
                 })
             }
         case CHANGE_FREE_SHIPPING:
@@ -302,23 +306,28 @@ const reducerApp = (state = AppState, action) => {
                 ...state,
                 isFreeShipping: action.status,
                 isFlatShipping: action.status ? false : true
-            }     
+            }
         case CHANGE_FLAT_SHIPPING:
             return {
                 ...state,
                 isFlatShipping: action.status,
                 isFreeShipping: action.status ? false : true
-            }  
+            }
         case COUNT_TOTAL:
             return {
                 ...state,
                 total: action.total
-            }  
+            }
         case COUNT_SHIPPING_TOTAL:
             return {
                 ...state,
                 shippingTotal: action.price
-            }            
+            }
+        case SET_TEXT_ERROR:
+            return {
+                ...state,
+                errorText: action.text
+            }
         default:
             return state
     }
@@ -339,5 +348,7 @@ export const countTotal = (total) => ({ type: COUNT_TOTAL, total })
 export const countShippingTotal = (price) => ({ type: COUNT_SHIPPING_TOTAL, price })
 
 export const deleteFromCart = (itemId) => ({ type: DELETE_FROM_CART, itemId })
+
+export const setTextError = (text) => ({ type: SET_TEXT_ERROR, text })
 
 export default reducerApp

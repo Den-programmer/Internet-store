@@ -11,6 +11,7 @@ import LoginPage from './components/LoginPage/loginPage'
 import ContactUs from './components/Contact Us/contactUs'
 import CartPage from './components/CartPage/cartPage'
 import CheckoutPage from './components/Checkout/checkoutPage'
+import ProductPage from './components/ProductPage/productPage'
 
 class App extends Component {
   componentDidMount() {
@@ -48,6 +49,7 @@ class App extends Component {
           <Route path="/Checkout" render={() => <CheckoutPage />}/>
           <Route path="/CartPage" render={() => <CartPage />}/>
           <Route path="/MyAccount" render={() => <LoginPage />}/>
+          <Route path={"/Product/" + this.props.productId} render={() => <ProductPage />}/>
           <Route path="/ContactUs" render={() => <ContactUs />}/>
           <Route path="/Home/Shop" render={() => <Shop />}/>
           <Route path="/Home/Blog" render={() => <Blog />}/>
@@ -62,7 +64,8 @@ class App extends Component {
 
 const mapStateToProps = (state) => ({
   products: state.app.products,
-  productsInCart: state.app.productsInCart
+  productsInCart: state.app.productsInCart,
+  productId: state.app.productId
 })
 
 const AppContainer = connect(mapStateToProps, { setDate, setTotalProductsCount, countTotal })(App)

@@ -1,0 +1,189 @@
+@import '../../../../../index.scss';
+
+.productContent {
+    width: 528px;
+    .title {
+        h2 {
+            color: #232323;
+            font-size: 30px;
+        }
+    }
+    .rating {
+        display: flex;
+        margin: 15px 0px;
+        img {
+            margin-left: 2px;
+        }
+    }
+    .price {
+        h3 {
+            color: #222222;
+            font-weight: 500;
+            font-family: $Roboto;
+            font-size: 20px;
+        }
+    }
+    .description {
+        width: 482px;
+        p {
+            color: #8D8D8D;
+            font-size: 14px;
+        }
+    }
+    .quantity {
+        display: flex;
+        margin: 20px 0px;
+        .count {
+            border: 1px solid #E5E5E5;
+            width: 54px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            input {
+                color: #222222;
+                font-size: 16px;  
+                width: 14px;
+                height: 14px;
+                text-align: center;  
+                outline: none;
+                border: none;
+            }
+        }
+        .control {
+            .controlSign {
+                border: 1px solid #E5E5E5;
+                width: 24px;
+                height: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                user-select: none;
+                p {
+                    color: #999999;
+                    font-size: 18px;
+                }
+                &:hover {
+                    transition: all .4s linear;
+                    background: rgba(245, 245, 245, 0.884);
+                }
+            }
+        }
+    }
+    .productOptions {
+        display: flex;
+        .btn_addToCart {
+            border-radius: 1px;
+            background: #222222;
+            display: flex;
+            align-items: center;
+            .button {
+                text-transform: uppercase;
+                padding: 20px;
+                font-family: $Raleway;
+                font-weight: bold;
+                font-size: 12px;
+                cursor: pointer;
+                color: #FFF;
+                &:hover { 
+                    transition: all .3s ease;
+                    color: #61DAFB;
+                }
+            }   
+            .cartIcon {
+                padding: 16px;
+                border-left: 1px solid #424242;
+                cursor: pointer;
+                color: #FFF;
+                &:hover { 
+                    transition: all .3s ease;
+                    color: #61DAFB;
+                }
+            }  
+        }
+        .like {
+            margin-left: 15px;
+            width: 52px;
+            height: 52px;
+            border: 1px solid #E5E5E5;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+                transition: all .3s linear;
+                background: #408DE4;
+            }
+        }
+        .compare {
+            width: 52px;
+            height: 52px;
+            border: 1px solid #E5E5E5;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+                transition: background .3s linear;
+                background: #408DE4;
+                color: #FFF;
+            }
+        }
+    }
+    .horizontal_line {
+        width: 522px;
+        height: 1px;
+        background-color:#EEEEEE;
+        margin: 40px 0px;
+    }
+    .technicalContent {
+        .characteristic {
+            color: #777777;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .property {
+            color: #222222;
+            font-size: 13px;
+            font-weight: 700;
+            margin-right: 5px;
+        }
+    }
+    .share {
+        display: flex;
+        align-items: center;
+        h4 {
+            color: #222222;
+            font-family: $Roboto;
+            font-size: 14px;
+        }
+        .shareBlocks {
+            display: flex;
+            align-items: center;
+            margin: 0px 10px;
+            .shareItem {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 65px;
+                height: 24px;
+                border: 1px solid #E5E5E5;
+                margin: 0px 7px;
+                cursor: pointer;
+                img {
+                    margin: 0px 5px;
+                }
+                p {
+                    color: #555555;
+                }
+                &:hover {
+                    transition: all .4s linear;
+                    border: 1px solid rgb(255, 226, 226);
+                    background: #F5F5F5;
+                }
+            }
+        }
+    }
+}
