@@ -1,18 +1,20 @@
 import React from 'react'
 import classes from './productStandart.module.scss'
+import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart, faLongArrowAltRight, faLongArrowAltLeft, faHeart, faEye } from '@fortawesome/free-solid-svg-icons'
 import uncoloredHeart from '../../../images/heartUncolored.png'
 
 const ProductStandart = ({ 
     id, photo, title, price, isNew, isSale, hovered, starsCount, 
-    greyStarsCount, onMouseMove, onMouseLeave, likeProduct, removeLike, like, 
+    greyStarsCount, onMouseMove, onMouseLeave, likeProduct, removeLike, like, setProductId,
     isInCart, isInStock, isCompare
 }) => {
     const onMouseMoveHandler = () => onMouseMove(id)
     const onMouseLeaveHandler = () => onMouseLeave()
+    const productHandler = () => setProductId(id)
     return (
-        <div onMouseMove={onMouseMoveHandler} onMouseLeave={onMouseLeaveHandler} key={id} className={classes.product}>
+        <NavLink to={"/Product/" + id} onClick={productHandler} onMouseMove={onMouseMoveHandler} onMouseLeave={onMouseLeaveHandler} key={id} className={classes.product}>
             {isNew && <div className={classes.new}>
                 New
             </div>}
@@ -42,7 +44,7 @@ const ProductStandart = ({
                     {greyStarsCount}
                 </div>
             </div>
-        </div>
+        </NavLink>
     )
 }
 

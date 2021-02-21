@@ -1,11 +1,11 @@
 import React from 'react'
 import classes from './SimpleProduct__Description.module.scss'
 
-const SimpleProduct__Description = (props) => {
+const SimpleProduct__Description = ({ description, title }) => {
     return (
         <div className={classes.description}>
-            <h4>Description title</h4>
-            <p>Full description</p>
+            <h4>Description for {title}</h4>
+            <p>{description}</p>
         </div>
     )
 }

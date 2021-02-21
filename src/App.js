@@ -49,7 +49,7 @@ class App extends Component {
           <Route path="/Checkout" render={() => <CheckoutPage />}/>
           <Route path="/CartPage" render={() => <CartPage />}/>
           <Route path="/MyAccount" render={() => <LoginPage />}/>
-          <Route path={"/Product/" + this.props.productId} render={() => <ProductPage />}/>
+          <Route path={"/Product/:id?"} render={() => <ProductPage />}/>
           <Route path="/ContactUs" render={() => <ContactUs />}/>
           <Route path="/Home/Shop" render={() => <Shop />}/>
           <Route path="/Home/Blog" render={() => <Blog />}/>

@@ -12,9 +12,16 @@
         justify-content: space-between;
         margin-top: 20px;
         img {
+            box-sizing: border-box;
             width: 125px;
             height: 135px;
+            padding: 20px;
             border: 1px solid #E8E8E8;
+            &:hover {
+                transition: all .1s linear;
+                border: 1px solid #408DE4;
+                border-radius: 4px;
+            }
         }
     }
 }

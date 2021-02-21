@@ -8,7 +8,7 @@ import Slider from 'react-slick'
 import Btn_Prev from '../MainArticle/CommonSliderBtns/Btn_Prev/Btn_Prev'
 import Btn_Next from '../MainArticle/CommonSliderBtns/Btn_Next/Btn_Next'
 
-const ProductCategories = ({ categoriesProducts, categories, banner, changeProductsCategoriesHoveredStatus, unsetProductsCategoriesAsHovered, likeProduct, removeLike }) => {
+const ProductCategories = ({ categoriesProducts, categories, banner, changeProductsCategoriesHoveredStatus, unsetProductsCategoriesAsHovered, likeProduct, removeLike, setProductId }) => {
     let slider = React.createRef()
     const navItems = categories.map(item => {
         return <NavItem key={item.id} id={item.id} title={item.title} icon={item.icon}/>
@@ -30,7 +30,8 @@ const ProductCategories = ({ categoriesProducts, categories, banner, changeProdu
             onMouseLeave={unsetProductsCategoriesAsHovered} 
             like={item.like}
             likeProduct={likeProduct}
-            removeLike={removeLike}/>
+            removeLike={removeLike} 
+            setProductId={setProductId}/>
     })
     const banners = banner.map(item => {
         return <BannerComponent key={item.id} id={item.id} 

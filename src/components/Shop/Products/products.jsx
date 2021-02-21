@@ -4,38 +4,39 @@ import { countRating } from '../../../utils/function-helpers'
 import Product from './product/product'
 import ShopSidebar from '../SidebarComponents/ShopSidebar/shopSidebar'
 
-const Products = ({ popularProducts, onPopularProductMove, removePopularProductsHoveredStatus, productsPortion, productsPerRow, isSidebarShown
+const Products = ({ products, productsPortion, productsPerRow, isSidebarShown, 
+    setProductId, changeProductHoveredStatus, unsetProductAsHovered
  }) => {
     const wdthFiveProductsToShow = { width: '100%', justifyContent: 'center' }
     const wdthFourProductsToShow = { width: '100%', justifyContent: 'left' }
     const wdthOneProductToShow = { flexDirection: 'column' }
     const mainWidthStyle = productsPerRow === 5 ? wdthFiveProductsToShow : productsPerRow === 4 ? wdthFourProductsToShow : wdthOneProductToShow
     
-    const products = popularProducts.map(item => {
+    const productsData = products.map(item => {
         const data = countRating(item.rating)
         const { starsCount, greyStarsCount } = data
         return <Product key={item.id} id={item.id}
             title={item.title}
-            photo={item.photo}
+            photos={item.photos}
             price={item.price}
             isNew={item.isNew}
             isSale={item.isSale}
             hovered={item.hovered}
             like={item.like}
             starsCount={starsCount}
+            onMouseMove={changeProductHoveredStatus}
+            onMouseLeave={unsetProductAsHovered}
             greyStarsCount={greyStarsCount}
-            onMouseMove={onPopularProductMove}
-            onMouseLeave={removePopularProductsHoveredStatus}
             likeProduct={() => null}
             removeLike={() => null}
             isInCart={item.isInCart}
             isInStock={item.isInStock}
             isCompare={item.isCompare} 
-            productsPerRow={productsPerRow}/>
+            productsPerRow={productsPerRow} setProductId={setProductId}/>
     })
     const productsToShow = []
     for (let i = 1; i <= productsPortion; i++) {
-        productsToShow.push(products[i - 1])
+        productsToShow.push(productsData[i - 1])
     }
     return (
         <section className={classes.products}>

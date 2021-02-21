@@ -1,14 +1,14 @@
 import { connect } from "react-redux"
 import Products from "./products"
-import { onPopularProductMove, removePopularProductsHoveredStatus } from '../../../redux/reducers/reducerShop'
+import { setProductId, changeProductHoveredStatus, unsetProductAsHovered } from '../../../redux/reducers/reducerApp'
 
 const mapStateToProps = (state) => ({
-    popularProducts: state.shopPage.popularProducts,
+    products: state.app.products,
     productsPortion: state.shopPage.productsPortion,
     productsPerRow: state.shopPage.productsPerRow,
     isSidebarShown: state.shopPage.isSidebarShown
 })
 
-const ProductsContainer = connect(mapStateToProps, { onPopularProductMove, removePopularProductsHoveredStatus })(Products)
+const ProductsContainer = connect(mapStateToProps, { setProductId, changeProductHoveredStatus, unsetProductAsHovered })(Products)
 
 export default ProductsContainer

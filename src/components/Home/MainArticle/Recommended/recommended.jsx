@@ -6,7 +6,7 @@ import Slider from 'react-slick'
 import Btn_Prev from '../CommonSliderBtns/Btn_Prev/Btn_Prev'
 import Btn_Next from '../CommonSliderBtns/Btn_Next/Btn_Next'
 
-const Recommended = ({ recommended, changeRecommendedHoveredStatus, unsetRecommendedAsHovered, likeProduct, removeLike }) => {
+const Recommended = ({ recommended, changeRecommendedHoveredStatus, unsetRecommendedAsHovered, likeProduct, removeLike, setProductId }) => {
     let slider = React.createRef()
     const products = recommended.map(item => {
         const data = countRating(item.rating)
@@ -27,7 +27,8 @@ const Recommended = ({ recommended, changeRecommendedHoveredStatus, unsetRecomme
         removeLike={removeLike}
         isInCart={item.isInCart}
         isInStock={item.isInStock}
-        isCompare={item.isCompare}/>
+        isCompare={item.isCompare} 
+        setProductId={setProductId}/>
     })
     const previous = () => {
         slider.slickPrev()

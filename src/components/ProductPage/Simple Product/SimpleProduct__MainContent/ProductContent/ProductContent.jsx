@@ -9,23 +9,30 @@ import twitter from '../../images/twitter.png'
 import pinterest from '../../images/pinterest.png'
 import { countRating } from '../../../../../utils/function-helpers'
 
-const ProductContent = (props) => {
+const ProductContent = ({ currentProduct }) => {
+    const currentStyle = { display: 'inline-flex', alignItems: 'center' }
     const data = countRating(4)
     const { starsCount, greyStarsCount } = data
+    const categoties = currentProduct.category.map((item, index) => {
+        return <span key={index}>{item}</span>
+    })
+    const tags = currentProduct.tags.map((item, index) => {
+        return <div style={ currentStyle } key={index}><span>{item}</span>{index + 1 !== currentProduct.tags.length && <span>,</span>}</div>
+    })
     const onProductCountChange = (e) => {
         console.log(e.currentTarget.value)
     }
     return (
         <div className={classes.productContent}>
             <div className={classes.title}>
-                <h2>Grey Stripped Hoodies</h2>
+                <h2>{currentProduct.title}</h2>
             </div>
             <div className={classes.rating}>
                 {starsCount}
                 {greyStarsCount}
             </div>
             <div className={classes.price}>
-                <h3>$150.00</h3>
+                <h3>${currentProduct.price}</h3>
             </div>
             <div className={classes.description}>
                 <p>
@@ -61,9 +68,9 @@ const ProductContent = (props) => {
             </div>
             <div className={classes.horizontal_line}></div>
             <div className={classes.technicalContent}>
-                <p className={classes.characteristic}><span className={classes.property}>Sku:</span>017</p>
-                <p className={classes.characteristic}><span className={classes.property}>Category:</span>Outerwear, Hoodies</p>
-                <p className={classes.characteristic}><span className={classes.property}>Tags:</span>Clothing, Mens</p>
+                <p className={classes.characteristic}><span className={classes.property}>Sku:</span>0{currentProduct.id}</p>
+                <p className={classes.characteristic}><span className={classes.property}>Category:</span>{categoties}</p>
+                <p className={classes.characteristic}><span className={classes.property}>Tags:</span>{tags}</p>
             </div>
             <div className={classes.horizontal_line}></div>
             <div className={classes.share}>

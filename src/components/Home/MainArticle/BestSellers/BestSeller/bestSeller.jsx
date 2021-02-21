@@ -1,9 +1,11 @@
 import React from 'react'
 import classes from './bestSeller.module.scss'
+import { NavLink } from 'react-router-dom'
 
 const BestSeller = (props) => {
+    const productHandler = () => props.setProductId(props.id)
     return (
-        <div className={classes.bestseller}>
+        <NavLink to={"/Product/" + props.id} onClick={productHandler} className={classes.bestseller}>
             {props.isNew && <div className={classes.new}>
                 New
             </div>}
@@ -20,7 +22,7 @@ const BestSeller = (props) => {
                 </div>
                 <div className={classes.bestseller__btn}><button>{props.isInCart ? 'Select Options' : 'Add to cart'}</button></div>
             </div>
-        </div>
+        </NavLink>
     )
 }
 

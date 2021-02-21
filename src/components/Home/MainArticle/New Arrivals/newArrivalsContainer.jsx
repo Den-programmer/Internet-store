@@ -1,11 +1,12 @@
 import { connect } from "react-redux"
 import NewArrivals from "./newArrivals"
-import { changeArrivalsHoveredStatus, unsetArrivalAsHovered, likeProduct, removeLike } from '../../../../redux/reducers/reducerHome'
+import { changeArrivalsHoveredStatus, unsetArrivalAsHovered, setProductId } from '../../../../redux/reducers/reducerApp'
+import { likeProduct, removeLike } from '../../../../redux/reducers/reducerHome'
 
 const mapStateToProps = (state) => ({
-    newArrivals: state.homePage.article.newArrivals
+    newArrivals: state.app.newArrivals
 })
 
-const NewArrivalscontainer = connect(mapStateToProps, { changeArrivalsHoveredStatus, unsetArrivalAsHovered, likeProduct, removeLike })(NewArrivals)
+const NewArrivalscontainer = connect(mapStateToProps, { changeArrivalsHoveredStatus, unsetArrivalAsHovered, likeProduct, removeLike, setProductId })(NewArrivals)
 
 export default NewArrivalscontainer

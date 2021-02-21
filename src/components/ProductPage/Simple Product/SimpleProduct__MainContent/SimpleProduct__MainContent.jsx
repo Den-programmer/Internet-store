@@ -3,11 +3,11 @@ import classes from './SimpleProduct__MainContent.module.scss'
 import Pictures from './Pictures/pictures'
 import ProductContent from './ProductContent/ProductContent'
 
-const SimpleProduct__MainContent = (props) => {
+const SimpleProduct__MainContent = ({ currentProduct }) => {
     return (
         <div className={classes.simpleProduct__mainContent}>
-            <Pictures />
-            <ProductContent />
+            <Pictures currentProduct={currentProduct}/>
+            <ProductContent currentProduct={currentProduct}/>
         </div>
     )
 }

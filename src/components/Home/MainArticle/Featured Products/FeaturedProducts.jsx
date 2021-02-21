@@ -6,7 +6,7 @@ import Btn_Prev from '../CommonSliderBtns/Btn_Prev/Btn_Prev'
 import Btn_Next from '../CommonSliderBtns/Btn_Next/Btn_Next'
 import Slider from 'react-slick'
 
-const FeaturedProducts = ({ featuredProducts, changeFeaturedHoveredStatus, unsetFeaturedAsHovered, likeProduct, removeLike }) => {
+const FeaturedProducts = ({ featuredProducts, changeFeaturedHoveredStatus, unsetFeaturedAsHovered, likeProduct, removeLike, setProductId }) => {
     let slider = React.createRef()
     const products = featuredProducts.map(item => {
         const data = countRating(item.rating)
@@ -28,7 +28,8 @@ const FeaturedProducts = ({ featuredProducts, changeFeaturedHoveredStatus, unset
         removeLike={removeLike}
         isInCart={item.isInCart}
         isCompare={item.isCompare}
-        isInStock={item.isInStock}/>
+        isInStock={item.isInStock}
+        setProductId={setProductId}/>
     })
     const settings = {
         slidesToShow: 4,
