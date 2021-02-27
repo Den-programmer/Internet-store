@@ -3,14 +3,14 @@ import classes from './cartProduct.module.scss'
 import removeBtn from '../../../../images/remove.png'
 import removeBtnHovered from '../../../../images/remove2.png'
 
-const CartProduct = ({ title, id, photo, price, deleteFromCart }) => {
+const CartProduct = ({ title, id, photos, price, deleteFromCart }) => {
     const [isRemoveBtnHovered, setRemoveBtnStatus] = useState(false)
     const removeBtnHoverHandler = () => setRemoveBtnStatus(true)
     const removeBtnUnHoveredHandler = () => setRemoveBtnStatus(false)
     return (
         <div className={classes.product}>
             <div className={classes.item}>
-                <img src={photo} alt="" />
+                <img src={photos[0]} alt="" />
                 <p>{title}</p>
             </div>
             <div className={classes.price}>

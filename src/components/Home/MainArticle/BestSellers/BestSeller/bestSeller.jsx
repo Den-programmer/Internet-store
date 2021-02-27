@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 const BestSeller = (props) => {
     const productHandler = () => props.setProductId(props.id)
+    const addProductHandler = () => props.addToCart(props.id)
     return (
         <NavLink to={"/Product/" + props.id} onClick={productHandler} className={classes.bestseller}>
             {props.isNew && <div className={classes.new}>
@@ -20,7 +21,9 @@ const BestSeller = (props) => {
                     {props.starsCount}
                     {props.greyStarsCount}
                 </div>
-                <div className={classes.bestseller__btn}><button>{props.isInCart ? 'Select Options' : 'Add to cart'}</button></div>
+                <div className={classes.bestseller__btn}>
+                    {props.isInCart ? <button>Select Options</button> : <button onClick={addProductHandler}>Add to cart</button>}
+                </div>
             </div>
         </NavLink>
     )

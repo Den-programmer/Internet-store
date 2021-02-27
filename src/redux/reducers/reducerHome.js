@@ -27,9 +27,6 @@ const CHANGE_SHOWN_TESTIMONIAL = 'CHANGE_SHOWN_TESTIMONIAL'
 
 const CHANGE_NEWS = 'CHANGE_NEWS'
 
-const LIKE_PRODUCT = 'LIKE_PRODUCT'
-const REMOVE_LIKE = 'REMOVE_LIKE' 
-
 const HOT_DEALS_TIMER = 'HOT_DEALS_TIMER'
 
 
@@ -412,24 +409,7 @@ const reducerHome = (state = HomeState, action) => {
                     ...state.sidebar, newsShown: action.newsId === 0 ? state.sidebar.news.length : action.newsId <= state.sidebar.news.length ?
                         action.newsId : 1
                 }
-            }
-        // Следующие строчки должны быть в reducerApp!
-        // case LIKE_PRODUCT:
-        //     return {
-        //         ...state,
-        //         products: state.products.map(item => {
-        //             if(action.itemId === item.id) return { ...item, like: true }
-        //             return item
-        //         })
-        //     } 
-        // case REMOVE_LIKE:
-        //     return {
-        //         ...state,
-        //         products: state.products.map(item => {
-        //             if(action.itemId === item.id) return { item, like: false }
-        //             return item
-        //         })
-        //     }             
+            }  
         default:
             return state
     }
@@ -446,9 +426,6 @@ export const chooseTestimonial = (currentPage) => ({ type: CHOOSE_TESTIMONIAL, c
 export const changeShownTestimonial = (itemId) => ({ type: CHANGE_SHOWN_TESTIMONIAL, itemId })
 
 export const changeNews = (newsId) => ({ type: CHANGE_NEWS, newsId })
-
-export const likeProduct = (itemId) => ({ type: LIKE_PRODUCT, itemId })
-export const removeLike = (itemId) => ({ type: REMOVE_LIKE, itemId }) 
 
 export const hotDealsTimer = () => ({ type: HOT_DEALS_TIMER })
 

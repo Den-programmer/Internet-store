@@ -7,7 +7,7 @@ import uncoloredHeart from '../../../images/heartUncolored.png'
 
 const ProductStandart = ({ 
     id, photo, title, price, isNew, isSale, hovered, starsCount, 
-    greyStarsCount, onMouseMove, onMouseLeave, likeProduct, removeLike, like, setProductId,
+    greyStarsCount, onMouseMove, onMouseLeave, likeProduct, removeLike, addToCart, like, setProductId,
     isInCart, isInStock, isCompare
 }) => {
     const onMouseMoveHandler = () => onMouseMove(id)
@@ -23,7 +23,7 @@ const ProductStandart = ({
             </div>}
             <img className={classes.product__photo} src={photo} alt="" />
             {hovered && <div className={classes.additional_functions_Wrapper}><div className={classes.additional_functions}>
-                    <div className={classes.basket}>
+                    <div onClick={() => addToCart(id)} className={classes.basket}>
                         <FontAwesomeIcon icon={faShoppingCart} />
                     </div>
                         {like ? <div onClick={() => removeLike(id)} className={classes.like}><FontAwesomeIcon icon={faHeart} /></div> :

@@ -16,7 +16,7 @@ const CartPopup = ({ productsInCart, setIsCartPopupOpenStatus, deleteFromCart, t
             <div key={item.id} className={classes.product}>
                 <div className={classes.image}>
                     <div onClick={() => deleteFromCart(item.id)} className={classes.delete}>&times;</div>
-                    <img className={classes.productImage} src={item.photo} alt="" />
+                    <img className={classes.productImage} src={item.photos[0]} alt="" />
                 </div>
                 <div className={classes.productInfo}>
                     <p className={classes.title}>{item.title}</p>

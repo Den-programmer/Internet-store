@@ -6,7 +6,7 @@ import Btn_Next from '../CommonSliderBtns/Btn_Next/Btn_Next'
 import Btn_Prev from '../CommonSliderBtns/Btn_Prev/Btn_Prev'
 import Slider from 'react-slick'
 
-const BestSellers = ({ bestsellers, setProductId }) => {
+const BestSellers = ({ bestsellers, setProductId, addToCart }) => {
     let slider = React.createRef()
     const BestSellers = bestsellers.map(item => {
         const data = countRating(item.rating)
@@ -21,7 +21,8 @@ const BestSellers = ({ bestsellers, setProductId }) => {
         isInCart={item.isInCart}
         isInStock={item.isInStock}
         isCompare={item.isCompare} 
-        setProductId={setProductId}/>
+        setProductId={setProductId}
+        addToCart={addToCart}/>
     })
     const previous = () => {
         slider.slickPrev()

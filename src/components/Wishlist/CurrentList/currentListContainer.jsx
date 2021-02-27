@@ -1,11 +1,11 @@
 import { connect } from 'react-redux'
 import CurrentList from './currentList'
-import { deleteFromWishlist } from '../../../redux/reducers/reducerWishlist'
+import { addToCart, removeLike } from '../../../redux/reducers/reducerApp'
 
 const mapStateToProps = (state) => ({
-    products: state.wishlist.products
+    products: state.app.wishlist
 })
 
-const CurrentListContainer = connect(mapStateToProps, { deleteFromWishlist })(CurrentList)
+const CurrentListContainer = connect(mapStateToProps, { addToCart, removeLike })(CurrentList)
 
 export default CurrentListContainer

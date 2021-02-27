@@ -7,7 +7,7 @@ import CartTotals from './CartTotals/cartTotals'
 
 const CartList = ({ productsInCart, deleteFromCart, changeFreeShippingStatus, changeFlatShippingStatus, isFreeShipping, isFlatShipping, total, shippingTotal, countShippingTotal }) => {
     const Products = productsInCart.map(item => {
-        return <CartProduct deleteFromCart={deleteFromCart} key={item.id} id={item.id} title={item.title} price={item.price} photo={item.photo} />
+        return <CartProduct deleteFromCart={deleteFromCart} key={item.id} id={item.id} title={item.title} price={item.price} photos={item.photos} />
     })
     return (
         <div className={classes.cartList}>

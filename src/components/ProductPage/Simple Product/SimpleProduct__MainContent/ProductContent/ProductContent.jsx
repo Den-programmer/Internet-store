@@ -4,20 +4,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart, faLongArrowAltRight, faLongArrowAltLeft, } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom'
 import uncoloredHeart from '../../../../../images/heartUncolored.png'
+import coloredHeart from '../../../../../images/heartColored.png'
 import facebook from '../../images/facebook.png'
 import twitter from '../../images/twitter.png'
 import pinterest from '../../images/pinterest.png'
 import { countRating } from '../../../../../utils/function-helpers'
 
-const ProductContent = ({ currentProduct }) => {
+const ProductContent = ({ currentProduct, addToCart, removeLike, likeProduct }) => {
     const currentStyle = { display: 'inline-flex', alignItems: 'center' }
     const data = countRating(4)
     const { starsCount, greyStarsCount } = data
     const categoties = currentProduct.category.map((item, index) => {
-        return <span key={index}>{item}</span>
+        return <span style={ currentStyle } key={index}><span>{item}</span>{index + 1 !== currentProduct.category.length && <span style={{ marginRight: '4px' }}>,</span>}</span>
     })
     const tags = currentProduct.tags.map((item, index) => {
-        return <div style={ currentStyle } key={index}><span>{item}</span>{index + 1 !== currentProduct.tags.length && <span>,</span>}</div>
+        return <span style={ currentStyle } key={index}><span>{item}</span>{index + 1 !== currentProduct.tags.length && <span style={{ marginRight: '4px' }}>,</span>}</span>
     })
     const onProductCountChange = (e) => {
         console.log(e.currentTarget.value)
@@ -55,12 +56,14 @@ const ProductContent = ({ currentProduct }) => {
             </div>
             <div className={classes.productOptions}>
                 <div className={classes.btn_addToCart}>
-                    <div className={classes.button}>Add to Cart</div>
+                    <div className={classes.button} onClick={() => addToCart(currentProduct.id)}>Add to Cart</div>
                     <NavLink to="/CartPage"><FontAwesomeIcon className={classes.cartIcon} icon={faShoppingCart} /></NavLink>
                 </div>
-                <div className={classes.like}>
+                {currentProduct.like ?  <div onClick={() => removeLike(currentProduct.id)} className={classes.like}>
+                    <img className={classes.likeIcon} src={coloredHeart} alt="" />
+                </div> : <div onClick={() => likeProduct(currentProduct.id)} className={classes.like}>
                     <img className={classes.likeIcon} src={uncoloredHeart} alt="" />
-                </div>
+                </div>}
                 <div className={classes.compare}>
                     <FontAwesomeIcon className={classes.left} icon={faLongArrowAltLeft} />
                     <FontAwesomeIcon className={classes.right} icon={faLongArrowAltRight} />

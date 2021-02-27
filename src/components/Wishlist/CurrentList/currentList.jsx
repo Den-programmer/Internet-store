@@ -4,11 +4,11 @@ import Product from './Product/product'
 import sadSmile from '../../../images/Smiles/sadSmile.jpg'
 import { NavLink } from 'react-router-dom'
 
-const CurrentList = ({ products, deleteFromWishlist }) => {
+const CurrentList = ({ products, addToCart, removeLike }) => {
     const Products = products.map(product => {
         return <Product key={product.id} id={product.id} 
         title={product.title} 
-        photo={product.photo}
+        photos={product.photos}
         price={product.price}
         rating={product.rating}
         isNew={product.isNew}
@@ -18,7 +18,8 @@ const CurrentList = ({ products, deleteFromWishlist }) => {
         isInCard={product.isInCard}
         isInStock={product.isInStock}
         isCompare={product.isCompare}
-        deleteFromWishlist={deleteFromWishlist}/>
+        addToCart={addToCart}
+        removeLike={removeLike}/>
     })
     return (
         <div className={classes.currentList}>

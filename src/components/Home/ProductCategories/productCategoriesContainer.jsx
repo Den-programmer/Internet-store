@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import ProductCategories from './productCategories'
-import { changeProductsCategoriesHoveredStatus, unsetProductsCategoriesAsHovered, setProductId } from '../../../redux/reducers/reducerApp'
-import { likeProduct, removeLike } from '../../../redux/reducers/reducerHome'
+import { likeProduct, removeLike, changeProductsCategoriesHoveredStatus, unsetProductsCategoriesAsHovered, setProductId } 
+from '../../../redux/reducers/reducerApp'
 
 const mapStateToProps = (state) => ({
     categoriesProducts: state.app.categoriesProducts,

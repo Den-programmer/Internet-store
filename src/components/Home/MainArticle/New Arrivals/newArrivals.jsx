@@ -6,7 +6,7 @@ import Slider from 'react-slick'
 import Btn_Prev from '../CommonSliderBtns/Btn_Prev/Btn_Prev'
 import Btn_Next from '../CommonSliderBtns/Btn_Next/Btn_Next'
 
-const NewArrivals = ({ newArrivals, changeArrivalsHoveredStatus, unsetArrivalAsHovered, likeProduct, removeLike, setProductId }) => {
+const NewArrivals = ({ newArrivals, changeArrivalsHoveredStatus, unsetArrivalAsHovered, likeProduct, removeLike, setProductId, addToCart }) => {
     let slider = React.createRef()
     const arrivals = newArrivals.map(a => {
         const data = countRating(a.rating)
@@ -29,7 +29,8 @@ const NewArrivals = ({ newArrivals, changeArrivalsHoveredStatus, unsetArrivalAsH
             isInCart={a.isInCart}
             isInStock={a.isInStock}
             isCompare={a.isCompare}
-            setProductId={setProductId}/>
+            setProductId={setProductId}
+            addToCart={addToCart}/>
     })
     const clickPrev = () => {
         slider.slickPrev()

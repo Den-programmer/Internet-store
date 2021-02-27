@@ -1,13 +1,13 @@
 import { connect } from 'react-redux'
 import Recommended from './recommended'
-import { changeRecommendedHoveredStatus, unsetRecommendedAsHovered, setProductId } from '../../../../redux/reducers/reducerApp'
-import { likeProduct, removeLike } from '../../../../redux/reducers/reducerHome'
+import { likeProduct, removeLike, changeRecommendedHoveredStatus, unsetRecommendedAsHovered, setProductId, addToCart } 
+from '../../../../redux/reducers/reducerApp'
 
 const mapStateToProps = (state) => ({
     recommended: state.app.recommended
 })
 
 const RecommendedContainer = connect(mapStateToProps, 
-    { changeRecommendedHoveredStatus, unsetRecommendedAsHovered, likeProduct, removeLike, setProductId })(Recommended)
+    { changeRecommendedHoveredStatus, unsetRecommendedAsHovered, likeProduct, removeLike, setProductId, addToCart })(Recommended)
 
 export default RecommendedContainer

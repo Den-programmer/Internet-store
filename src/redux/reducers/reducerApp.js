@@ -47,6 +47,11 @@ const COUNT_SHIPPING_TOTAL = 'COUNT_SHIPPING_TOTAL'
 const CHANGE_PRODUCT_HOVERED_STATUS = 'CHANGE_PRODUCTS_PRODUCT_HOVERED_STATUS'
 const UNSET_PRODUCT_AS_HOVERED = 'UNSET_PRODUCT_AS_HOVERED'
 
+const ADD_TO_CART = 'ADD_TO_CART'
+
+const LIKE_PRODUCT = 'LIKE_PRODUCT'
+const REMOVE_LIKE = 'REMOVE_LIKE' 
+
 const CHANGE_ARRIVALS_HOVERED_STATUS = 'CHANGE_ARRIVALS_HOVERED_STATUS'
 const UNSET_ARRIVAL_AS_HOVERED = 'UNSET_ARRIVAL_AS_HOVERED'
 
@@ -3751,6 +3756,7 @@ const AppState = {
             date: null
         },
     ],
+    wishlist: [],
     productsInCart: [],
     total: '0.00',
     shippingTotal: '0.00',
@@ -3760,12 +3766,6 @@ const AppState = {
     cartPopupStatus: false,
     productId: 1,
     errorText: ''
-}
-
-// Rewrite unique id!
-
-for (let i = 1; i <= AppState.products.length; i++) {
-    AppState.products[i - 1].id = i
 }
 
 const reducerApp = (state = AppState, action) => {
@@ -3804,11 +3804,18 @@ const reducerApp = (state = AppState, action) => {
                 cartPopupStatus: action.status
             }
         case DELETE_FROM_CART:
+            const cproduct = state.products.filter(item => item.id === action.itemId).find(item => item)
+            let totalPr = Number(state.total) - Number(cproduct.price) + '00'
             return {
                 ...state,
                 productsInCart: state.productsInCart.filter(item => {
                     if (item.id !== action.itemId) return true
-                })
+                }),
+                products: state.products.map(item => {
+                    if(action.itemId === item.id) return { ...item, isInCart: false }
+                    return item
+                }),
+                total: totalPr <= 0 ? 0 : totalPr
             }
         case CHANGE_FREE_SHIPPING:
             return {
@@ -3917,7 +3924,41 @@ const reducerApp = (state = AppState, action) => {
                 products: state.products.map(item => {
                     return { ...item, hovered: false }
                 })
-            }          
+            } 
+        case ADD_TO_CART:
+            const currentProduct = state.products.filter(item => item.id === action.itemId && true).find(item => item)
+            currentProduct.isInCart = true
+            let totalPrice = Number(state.total) + Number(currentProduct.price) + '.00'
+            return {
+                ...state,
+                productsInCart: [ ...state.productsInCart, currentProduct ],
+                products: state.products.map(item => {
+                    if(action.itemId === item.id) return { ...item, isInCart: true }
+                    return item
+                }),
+                total: totalPrice
+            }   
+        case LIKE_PRODUCT:
+            const currentProd = state.products.filter(item => item.id === action.itemId && true).find(item => item)
+            currentProd.like = true
+            return {
+                ...state,
+                products: state.products.map(item => {
+                    if(action.itemId === item.id) return { ...item, like: true }
+                    return item
+                }),
+                wishlist: [ ...state.wishlist, currentProd ]
+
+            } 
+        case REMOVE_LIKE:
+            return {
+                ...state,
+                products: state.products.map(item => {
+                    if(action.itemId === item.id) return { ...item, like: false }
+                    return item
+                }),
+                wishlist: state.wishlist.filter(item => item.id !== action.itemId && true)
+            }                    
         default:
             return state
     }
@@ -3929,6 +3970,11 @@ export const setProductId = (itemId) => ({ type: SET_PRODUCT_ID, itemId })
 
 export const changeProductHoveredStatus = (itemId) => ({ type: CHANGE_PRODUCT_HOVERED_STATUS, itemId })
 export const unsetProductAsHovered = () => ({ type: UNSET_PRODUCT_AS_HOVERED })
+
+export const addToCart = (itemId) => ({ type: ADD_TO_CART, itemId })
+
+export const likeProduct = (itemId) => ({ type: LIKE_PRODUCT, itemId })
+export const removeLike = (itemId) => ({ type: REMOVE_LIKE, itemId }) 
 
 export const setDate = (date) => ({ type: SET_DATE, date })
 
