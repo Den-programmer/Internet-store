@@ -1,5 +1,10 @@
 @import '../../../../../index.scss';
 
+.navLink {
+    text-decoration: none;
+    color: #222222;
+}
+
 .bestseller {
     position: relative;
     display: flex;

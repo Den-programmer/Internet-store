@@ -22,7 +22,7 @@ const BestSeller = (props) => {
                     {props.greyStarsCount}
                 </div>
                 <div className={classes.bestseller__btn}>
-                    {props.isInCart ? <button>Select Options</button> : <button onClick={addProductHandler}>Add to cart</button>}
+                    {props.isInCart ? <button><NavLink className={classes.navLink} to="/CartPage">Select Options</NavLink></button> : <button onClick={addProductHandler}>Add to cart</button>}
                 </div>
             </div>
         </NavLink>

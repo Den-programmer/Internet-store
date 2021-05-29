@@ -8,7 +8,6 @@ import { NavLink } from 'react-router-dom'
 const Product = ({ id, photos, title, price, isNew, isSale, hovered, starsCount, 
     greyStarsCount, onMouseMove, onMouseLeave, likeProduct, removeLike, like, productsPerRow, setProductId }) => {
     const commonProductWidth = '230px'
-
     const styleWdthFive = { width: commonProductWidth } 
     const styleWdthFour = { width: '210px' }
     const styleWdthOne = { width: 'auto' } 
@@ -18,7 +17,6 @@ const Product = ({ id, photos, title, price, isNew, isSale, hovered, starsCount,
     const onMouseMoveHandler = () => onMouseMove(id)
     const onMouseLeaveHandler = () => onMouseLeave()
     const ProductHandler = () => setProductId(id)
-    debugger
     return (
         <NavLink to={"/Product/" + id} style={chosenProductStyle} onClick={ProductHandler} onMouseMove={onMouseMoveHandler} onMouseLeave={onMouseLeaveHandler} className={classes.product}>
             {isNew && <div className={classes.new}>

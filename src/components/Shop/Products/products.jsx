@@ -1,17 +1,19 @@
 import React from 'react'
 import classes from './products.module.scss'
+import pclasses from './../../common/Paginator/paginator.module.scss'
 import { countRating } from '../../../utils/function-helpers'
 import Product from './product/product'
 import ShopSidebar from '../SidebarComponents/ShopSidebar/shopSidebar'
+import ReactPaginate from 'react-paginate'
 
-const Products = ({ products, productsPortion, productsPerRow, isSidebarShown, 
-    setProductId, changeProductHoveredStatus, unsetProductAsHovered
- }) => {
+const Products = React.memo(({ products, productsPortion, productsPerRow, isSidebarShown,
+    setProductId, changeProductHoveredStatus, unsetProductAsHovered, totalItemsCount, currentPage,
+    changePage
+}) => {
     const wdthFiveProductsToShow = { width: '100%', justifyContent: 'center' }
     const wdthFourProductsToShow = { width: '100%', justifyContent: 'left' }
     const wdthOneProductToShow = { flexDirection: 'column' }
     const mainWidthStyle = productsPerRow === 5 ? wdthFiveProductsToShow : productsPerRow === 4 ? wdthFourProductsToShow : wdthOneProductToShow
-    
     const productsData = products.map(item => {
         const data = countRating(item.rating)
         const { starsCount, greyStarsCount } = data
@@ -31,13 +33,17 @@ const Products = ({ products, productsPortion, productsPerRow, isSidebarShown,
             removeLike={() => null}
             isInCart={item.isInCart}
             isInStock={item.isInStock}
-            isCompare={item.isCompare} 
-            productsPerRow={productsPerRow} setProductId={setProductId}/>
+            isCompare={item.isCompare}
+            productsPerRow={productsPerRow} setProductId={setProductId} />
     })
-    const productsToShow = []
-    for (let i = 1; i <= productsPortion; i++) {
+    const startProductsPortion = currentPage === 1 ? 0 : (productsPortion + 1) * (currentPage - 1)
+    const currentProductsPortion = currentPage * productsPortion
+    const productsToShow = []                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+    for (let i = startProductsPortion; i <= currentProductsPortion; i++) {
         productsToShow.push(productsData[i - 1])
     }
+    const pagesCount = Math.ceil(totalItemsCount / productsPortion)
+    const forcePage = currentPage - 1
     return (
         <section className={classes.products}>
             <div className={classes.products_mainContent}>
@@ -48,22 +54,22 @@ const Products = ({ products, productsPortion, productsPerRow, isSidebarShown,
                     <ShopSidebar />
                 </div>}
             </div>
-            <div className={classes.paginator}>
-                <div className={classes.btn_page}>
-                    <button>1</button>
-                </div>
-                <div className={classes.btn_page}>
-                    <button>2</button>
-                </div>
-                <div className={classes.btn_page}>
-                    <button>3</button>
-                </div>
-                <div className={classes.btn_page}>
-                    <button>&#62;</button>
-                </div>
-            </div>
+            <ReactPaginate
+                breakLabel={'...'}
+                disabledClassName={pclasses.disabledClassName}
+                previousClassName={pclasses.previous}
+                nextClassName={pclasses.next}
+                pageCount={pagesCount}
+                marginPagesDisplayed={2}
+                pageRangeDisplayed={4}
+                forcePage={forcePage}
+                onPageChange={(e) => changePage(e.selected + 1)}
+                containerClassName={pclasses.paginator}
+                activeClassName={pclasses.btn_pageActive}
+                pageClassName={pclasses.btn_page}
+            />
         </section>
     )
-}
+})
 
-export default Products
+export default Products                                                                                         

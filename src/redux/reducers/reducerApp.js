@@ -72,6 +72,8 @@ const moveHomePage = () => ({ type: MOVE_HOME_PAGE })
 const moveShopPage = () => ({ type: MOVE_SHOP_PAGE })
 const moveBlogPage = () => ({ type: MOVE_BLOG_PAGE })
 
+// All products must be with renamed property photos - not photo!
+
 const AppState = {
     navigationLinks: [
         {
@@ -2218,7 +2220,7 @@ const AppState = {
         },
         {
             id: 47,
-            photo: [Slooven_Stripped_T_shirt],
+            photos: [Slooven_Stripped_T_shirt],
             title: 'Slooven Stripped T-shirt',
             price: '75.00',
             rating: 4,
@@ -2398,7 +2400,7 @@ const AppState = {
         },
         {
             id: 51,
-            photo: [IPhone7_32GB_Black],
+            photos: [IPhone7_32GB_Black],
             title: 'Apple iPhone 7 (32GB)',
             price: '289.00',
             rating: 3,
@@ -2443,7 +2445,7 @@ const AppState = {
         },
         {
             id: 52,
-            photo: [Sasik_External_Disk_500GB],
+            photos: [Sasik_External_Disk_500GB],
             title: 'Sasik External Disk-500GB',
             price: '135.00',
             rating: 5,
@@ -3767,6 +3769,8 @@ const AppState = {
     productId: 1,
     errorText: ''
 }
+
+AppState.totalProductsCount = AppState.products.length
 
 const reducerApp = (state = AppState, action) => {
     switch (action.type) {

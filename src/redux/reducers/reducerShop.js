@@ -1,5 +1,4 @@
 import React from 'react'
-import templateBanner from '../../images/photoTemplate.jpg'
 import BrandsMenu from '../../components/Shop/SidebarComponents/ShopFilter/FilterMenus/BrandsMenu/brandsMenuContainer'
 import PriceMenu from '../../components/Shop/SidebarComponents/ShopFilter/FilterMenus/PriceMenu/priceMenuContainer'
 import ColourMenu from '../../components/Shop/SidebarComponents/ShopFilter/FilterMenus/ColourMenu/colourMenuContainer'
@@ -12,11 +11,14 @@ const CHANGE_PRODUCTS_PORTION = 'CHANGE_PRODUCTS_PORTION'
 
 const CHANGE_SIDEBAR_SHOWN_STATUS = 'CHANGE_SIDEBAR_SHOWN_STATUS'
 
+const CHANGE_PAGE = 'CHANGE_PAGE'
+
 const ShopState = {
     currentShopPage: 'Shop Without Sidebar',
     isSidebarShown: false,
     productsPortion: 25,
     productsPerRow: 5,
+    currentPage: 1,
     isProductsPortionOptionListOpen: false,
     productsCountMenu: [
         {
@@ -258,6 +260,12 @@ const reducerShop = (state = ShopState, action) => {
                 }),
                 isSidebarShown: action.portion === 25 ? false : true
             }  
+        case CHANGE_PAGE:
+            debugger
+            return {
+                ...state,
+                currentPage: action.currentPage
+            }    
         case CHANGE_SIDEBAR_SHOWN_STATUS:
             return {
                 ...state,
@@ -265,7 +273,7 @@ const reducerShop = (state = ShopState, action) => {
                 currentShopPage: action.status ? 'Shop Sidebar' : 'Shop Without Sidebar',
                 productsPerRow: action.status ? state.productsPerRow === 5 ? 4 : state.productsPerRow : 5,
                 productsPortion: action.status ? state.productsPortion === 25 ? 16 : state.productsPortion : 25
-            }            
+            }                
         default:
             return state
     }
@@ -279,5 +287,7 @@ export const openProductsPortionOptionList = (status) => ({ type: OPEN_PRODUCTS_
 export const changeProductsPortion = (portion) => ({ type: CHANGE_PRODUCTS_PORTION, portion })
 
 export const changeSidebarShownStatus = (status) => ({ type: CHANGE_SIDEBAR_SHOWN_STATUS, status })
+
+export const changePage = (currentPage) => ({ type: CHANGE_PAGE, currentPage })
 
 export default reducerShop
