@@ -21,7 +21,7 @@
             .sliderBtns {
                 display: flex;
                 .btn_prev, .btn_next {
-                    margin: 0px 3px;
+                    margin: 0em 0.1875em;
                     button {
                         border-radius: 50px;
                         width: 27px;
@@ -94,4 +94,8 @@
             }
         }
     }
+}
+
+.productWrapper {
+    text-decoration: none;
 }

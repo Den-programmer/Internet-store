@@ -10,26 +10,28 @@ import instagram from './images/instagram.png'
 import facebook from './images/facebook.png'
 import twitter from './images/twitter.png'
 import pinterest from './images/pinterest.png'
+import { useTranslation } from 'react-i18next'
 
 const Footer = (props) => {
+    const { t } = useTranslation()
     const featuresData = [
         {
             id: 1,
             photo: basket,
-            title: 'Free Shipping',
-            text: 'Free Shipping on World wide Order Over $99'
+            title: t("free_shipping"),
+            text: t("free_shipping_inf")
         },
         {
             id: 2,
             photo: shield,
-            title: 'Trusted Pay',
-            text: '100% Payment Protection & Easy Return'
+            title: t("trusted_pay"),
+            text: t("trusted_pay_inf")
         },
         {
             id: 3,
             photo: cards,
-            title: 'Secured Payment',
-            text: 'All Major Credit & Debit Cards Accepted'
+            title: t("secured_payment"),
+            text: t("secured_payment_inf")
         }
     ]
     const features = featuresData.map(f => {
@@ -50,14 +52,14 @@ const Footer = (props) => {
                 <div className={classes.newsShare}>
                     <div className={classes.newsShare__logo}>
                         <img src={envelope} alt="" />
-                        <h4>Singup to Newsletter</h4>
+                        <h4>{t("signup_to_newsletter")}</h4>
                     </div>
                     <form className={classes.submittingForm}>
-                        <input placeholder={"Enter Your Email Address"} type="text" />
-                        <button>Submit</button>
+                        <input placeholder={t("enter_your_email_address")} type="text" />
+                        <button>{t("submit")}</button>
                     </form>
                     <div className={classes.social_medias}>
-                        <h4 className={classes.keepInTouchTitle}>Keep in touch</h4>
+                        <h4 className={classes.keepInTouchTitle}>{t("keep_in_touch")}</h4>
                         <img src={twitter} alt="twitter" />
                         <img src={facebook} alt="facebook" />
                         <img src={instagram} alt="instagram" />
@@ -74,50 +76,49 @@ const Footer = (props) => {
                             <h3>SuperMart</h3>
                         </div>
                         <p>
-                            Many say exploration is part of our dest but
-                            it’s actually our duty to future and their.
+                           {t("footer_inf")}
                         </p>
                         <div className={classes.about_inf}>
-                            <span>Address:</span>
-                            <p>868 Fake Street, New York</p>
+                            <span>{t("address")}:</span>
+                            <p>{t("address_content")}</p>
                         </div>
                         <div className={classes.about_inf}>
-                            <span>Phone:</span>
+                            <span>{t("phone")}:</span>
                             <p>(08) 08 4752 1499</p>
                         </div>
                         <div className={classes.about_inf}>
-                            <span>Email:</span>
+                            <span>{t("email")}:</span>
                             <p>info@supermart.com</p>
                         </div>
                     </div>
                     <div className={classes.foot_company + ' ' + classes.additionalLinks}>
-                        <h4>Company</h4>
+                        <h4>{t("company")}</h4>
                         <ul>
-                            <li>Discount Vouches</li>
-                            <li>Spring Collection</li>
-                            <li>Trending</li>
-                            <li>Best Sellers</li>
-                            <li>Special Deals</li>
+                            <li>{t("discount_vouches")}</li>
+                            <li>{t("spring_collection")}</li>
+                            <li>{t("trending")}</li>
+                            <li>{t("best_sellers")}</li>
+                            <li>{t("special_deals")}</li>
                         </ul>
                     </div>
                     <div className={classes.foot_policyInfo + ' ' + classes.additionalLinks}>
-                        <h4>Policy Info</h4>
+                        <h4>{t("policy_info")}</h4>
                         <ul>
-                            <li>Orders &#38; Returns</li>
-                            <li>Advanced Search</li>
-                            <li>Help &#38; FAQs</li>
-                            <li>Consultant</li>
-                            <li>Store Locations</li>
+                            <li>{t("ordersAndReturns")}</li>
+                            <li>{t("advanced_search")}</li>
+                            <li>{t("helpAndFAQs")}</li>
+                            <li>{t("consultant")}</li>
+                            <li>{t("store_locations")}</li>
                         </ul>
                     </div>
                     <div className={classes.foot_myAccount + ' ' + classes.additionalLinks}>
-                        <h4>My Account</h4>
+                        <h4>{t("my_account")}</h4>
                         <ul>
-                            <li>About Us</li>
-                            <li>Delivery Information</li>
-                            <li>Privacy Policy</li>
-                            <li>Terms &#38; Conditions</li>
-                            <li>Custom Link</li>
+                            <li>{t("about_us")}</li>
+                            <li>{t("delivery_information")}</li>
+                            <li>{t("privacy_policy")}</li>
+                            <li>{t("termsAndConditions")}</li>
+                            <li>{t("custom_link")}</li>
                         </ul>
                     </div>
                 </div>

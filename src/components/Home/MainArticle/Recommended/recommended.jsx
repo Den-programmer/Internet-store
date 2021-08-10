@@ -5,8 +5,10 @@ import { countRating } from '../../../../utils/function-helpers'
 import Slider from 'react-slick'
 import Btn_Prev from '../CommonSliderBtns/Btn_Prev/Btn_Prev'
 import Btn_Next from '../CommonSliderBtns/Btn_Next/Btn_Next'
+import { useTranslation } from 'react-i18next'
 
 const Recommended = ({ recommended, changeRecommendedHoveredStatus, unsetRecommendedAsHovered, likeProduct, removeLike, setProductId, addToCart }) => {
+    const { t } = useTranslation()
     let slider = React.createRef()
     const products = recommended.map(item => {
         const data = countRating(item.rating)
@@ -49,7 +51,7 @@ const Recommended = ({ recommended, changeRecommendedHoveredStatus, unsetRecomme
         <section className={classes.recommended}>
             <div className={classes.recommended__header}>
                 <div className={classes.title}>
-                    <h3>Recommended for you</h3>
+                    <h3>{t("recommended_for_you")}</h3>
                 </div>
                 <div className={classes.control_btns}>
                     <Btn_Prev click={previous}/>

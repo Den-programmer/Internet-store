@@ -2,8 +2,10 @@ import React from 'react'
 import classes from './welcome.module.scss'
 import supermarketPhoto from '../../../images/supermarketPhoto.jpg'
 import { NavLink } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const Welcome = (props) => {
+    const { t } = useTranslation()
     return (
         <section className={classes.welcome}>
             <div className={classes.storeImg}>
@@ -11,25 +13,16 @@ const Welcome = (props) => {
             </div>
             <div className={classes.welcome__text}>
                 <h3 className={classes.welcome__text_title}>
-                    Hello, We are Supermart Established
-                    2006 – Newyork
+                    {t("about_us_page_greeting")}
                 </h3>
                 <p className={classes.welcome__text_subTitle}>
-                    Love boat soon will be making another run the love boat promises someone 
-                    thing for everyone two good old boys Wouldn't change.
+                    {t("about_us_page_greeting_subtext")}
                 </p>
                 <p className={classes.welcome__text_maintext}>
-                    That's just a little bit more than the law will allow. 
-                    Love exciting and new. Come aboard were expecting you. 
-                    Love life's sweetest reward Let it flow it floats back to you. 
-                    They're creepy and they're kooky mysterious and spooky. 
-                    They're all gether ooky the Addams Family. 
-                    Straightnin' the curves 
-                    Here's the story of a man named Brady who was busy with three boys of his own they call him 
-                    Flipper Flipper faster than lightning. No one you see is smarter.
+                    {t("about_us_page_greeting_text")}
                 </p>
                 <div className={classes.btn_contactUs}>
-                    <NavLink to="/ContactUs">Contact Us</NavLink>
+                    <NavLink to="/ContactUs">{t("contact_us")}</NavLink>
                 </div>
             </div>
         </section>

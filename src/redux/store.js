@@ -6,6 +6,7 @@ import reducerBlog from "./reducers/reducerBlog"
 import reducerShop from "./reducers/reducerShop"
 import reducerProductPage from "./reducers/reducerProductPage"
 import reducerProfile from "./reducers/reducerProfile"
+import reducerLogin from "./reducers/reducerLogin"
 
 const reducers = combineReducers({
     app: reducerApp,
@@ -14,7 +15,8 @@ const reducers = combineReducers({
     shopPage: reducerShop,
     blogPage: reducerBlog,
     productPage: reducerProductPage,
-    profile: reducerProfile
+    profile: reducerProfile,
+    auth: reducerLogin
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose

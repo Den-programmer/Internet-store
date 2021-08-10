@@ -1,0 +1,103 @@
+$border: #cfd7d9;
+
+.loginPage {
+    background: #408de4;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .loginWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .storeTitle {
+            h1 {
+                color: #fff;
+            }
+        }
+        .login {
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 400px;
+            height: 465px;
+            .loginTitle {
+                color: #404041;
+                letter-spacing: 0.25px;
+            }
+            .textField {
+                width: 90%;
+                .textField_calling {
+                    font-size: 0.8rem;
+                    font-family: "Raleway", sans-serif;
+                    color: #404041;
+                    font-weight: bold;
+                    letter-spacing: 0.25px;
+                }
+                .passwordField {
+                    display: flex;
+                    align-items: center;
+                    input {
+                        width: 85%;
+                        border-top-right-radius: 0px;
+                        border-bottom-right-radius: 0px;
+                    }
+                    .iconWrapper {
+                        box-sizing: border-box;
+                        width: 15%;
+                        height: 48px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 1px solid $border;
+                        border-top-right-radius: 4px;
+                        border-bottom-right-radius: 4px;
+                        border-left: none;
+                        cursor: pointer;
+                    }
+                }
+                input {
+                    box-sizing: border-box;
+                    width: 100%;
+                    border-radius: 4px;
+                    padding: 15px;
+                    outline: none;
+                    border: 1px solid $border;
+                    &:focus {
+                        outline: none;
+                        border: 1px solid #ea1686;
+                    }
+                }
+            }
+            .signUpAndLogin {
+                border-radius: 25px;
+                background: #ea1686;
+                color: #fff;
+                display: inline-block;
+                padding: 0px 15px;
+                height: 30px;
+                line-height: 30px;
+                border-radius: 15px;
+                cursor: pointer;
+                color: #fff;
+                border: 1px solid #fff;
+                margin: 10px;
+                user-select: none;
+                &:hover {
+                    transition: all .2s linear;
+                    background: #C51170;
+                }
+            }
+        }
+        .hint {
+            .hintText {
+                color: #fff;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+}

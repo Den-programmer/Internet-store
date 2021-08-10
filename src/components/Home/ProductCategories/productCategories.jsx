@@ -7,8 +7,10 @@ import BannerComponent from '../../common/BannerComponent/bannerComponent'
 import Slider from 'react-slick'
 import Btn_Prev from '../MainArticle/CommonSliderBtns/Btn_Prev/Btn_Prev'
 import Btn_Next from '../MainArticle/CommonSliderBtns/Btn_Next/Btn_Next'
+import { useTranslation } from 'react-i18next'
 
 const ProductCategories = ({ categoriesProducts, categories, banner, changeProductsCategoriesHoveredStatus, unsetProductsCategoriesAsHovered, likeProduct, removeLike, setProductId }) => {
+    const { t } = useTranslation()
     let slider = React.createRef()
     const navItems = categories.map(item => {
         return <NavItem key={item.id} id={item.id} title={item.title} icon={item.icon}/>
@@ -58,7 +60,7 @@ const ProductCategories = ({ categoriesProducts, categories, banner, changeProdu
         <section className={classes.productCategories}>
             <div className={classes.productCategories__header}>
                 <div className={classes.title}>
-                    <h3>Product Categories</h3>
+                    <h3>{t("product_categories")}</h3>
                 </div>
                 <div className={classes.control_btns}>
                     <Btn_Prev click={previous}/>

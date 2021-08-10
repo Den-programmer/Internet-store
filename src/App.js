@@ -7,7 +7,7 @@ import { setDate, setTotalProductsCount, countTotal } from './redux/reducers/red
 import Shop from './components/Shop/shopContainer'
 import Blog from './components/Blog/blog'
 import Wishlist from './components/Wishlist/wishlist'
-import LoginPage from './components/LoginPage/loginPage'
+import LoginPage from './components/LoginPage/loginPageContainer'
 import ContactUs from './components/Contact Us/contactUs'
 import CartPage from './components/CartPage/cartPage'
 import CheckoutPage from './components/Checkout/checkoutPage'

@@ -5,8 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faShoppingBasket, faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom'
 import CartPopup from '../../../common/CommonMainHeader/CartPopup/cartPopup'
+import { useTranslation } from 'react-i18next'
 
 const MainHeader = ({ deleteFromCart, cartPopupStatus, productsInCart, setIsCartPopupOpenStatus, total }) => {
+    const { t } = useTranslation()
     const openPopup = () => setIsCartPopupOpenStatus(!cartPopupStatus)
     return (
         <div className={classes.mainHeaderWrapper}>
@@ -19,9 +21,9 @@ const MainHeader = ({ deleteFromCart, cartPopupStatus, productsInCart, setIsCart
                 </NavLink>
                 <div className={classes.mainPanel}>
                     <div className={classes.searchPanel}>
-                        <input placeholder="Search..." type="text" />
+                        <input placeholder={t("search")} type="text" />
                         <div className={classes.categories}>
-                            <h4>All Categories</h4>
+                            <h4>{t("all_categories")}</h4>
                             <FontAwesomeIcon className={classes.angleDownIcon} icon={faAngleDown} />
                         </div>
                         <div className={classes.searchIcon}>
@@ -35,7 +37,7 @@ const MainHeader = ({ deleteFromCart, cartPopupStatus, productsInCart, setIsCart
                             </div>
                         </NavLink>
                         <div onClick={openPopup} className={classes.shoppingBoughtItems}>
-                            <p>{productsInCart.length} item: </p>
+                            <p>{productsInCart.length}: </p>
                             <span>${total}</span>
                         </div>
                         {cartPopupStatus && <div className={classes.cartPopupContainer}><CartPopup

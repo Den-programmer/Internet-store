@@ -3,7 +3,8 @@ import ShopFilter from './shopFilter'
 import { openShopFiltersMenu } from '../../../../redux/reducers/reducerShop'
 
 const mapStateToProps = (state) => ({
-    shopFilters: state.shopPage.shopFilters
+    shopFilters: state.shopPage.shopFilters,
+    productsPortion: state.shopPage.productsPortion
 })
 
 const ShopFilterContainer = connect(mapStateToProps, { openShopFiltersMenu })(ShopFilter)

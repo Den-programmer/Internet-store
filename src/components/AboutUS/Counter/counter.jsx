@@ -1,25 +1,27 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import classes from './counter.module.scss'
 
 const Counter = (props) => {
+    const { t } = useTranslation()
     return (
         <section className={classes.countersWrapper}>
             <div className={classes.counters}>
                 <div className={classes.counter}>
                     <h5>{props.totalEmployees}</h5>
-                    <p>Total Employees</p>
+                    <p>{t("total_employees")}</p>
                 </div>
                 <div className={classes.counter}>
                     <h5>{props.satisfaction}</h5>
-                    <p>% Satisfaction</p>
+                    <p>% {t("Satisfaction")}</p>
                 </div>
                 <div className={classes.counter}>
                     <h5>{props.cupsOfCoffee}</h5>
-                    <p>Cups of Coffee</p>
+                    <p>{t("Cups_of_Coffee")}</p>
                 </div>
                 <div className={classes.counter}>
                     <h5>{props.buyersRating}</h5>
-                    <p>Buyers Rating</p>
+                    <p>{t("Buyers_Rating")}</p>
                 </div>
             </div>
         </section>

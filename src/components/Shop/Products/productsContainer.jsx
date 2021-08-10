@@ -9,7 +9,9 @@ const mapStateToProps = (state) => ({
     productsPerRow: state.shopPage.productsPerRow,
     isSidebarShown: state.shopPage.isSidebarShown,
     currentPage: state.shopPage.currentPage,
-    totalItemsCount: state.app.totalProductsCount
+    totalItemsCount: state.app.totalProductsCount,
+    priceFilter: state.shopPage.priceFilter,
+    colorFilter: state.shopPage.colorFilter
 })
 
 const ProductsContainer = connect(mapStateToProps, { setProductId, changeProductHoveredStatus, unsetProductAsHovered, changePage })(Products)

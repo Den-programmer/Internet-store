@@ -67,6 +67,9 @@ const UNSET_PRODUCTS_CATEGORIES_AS_HOVERED = 'UNSET_PRODUCTS_CATEGORIES_AS_HOVER
 const DELETE_FROM_CART = 'DELETE_FROM_CART'
 
 const SET_TEXT_ERROR = 'SET_TEXT_ERROR'
+                    
+const SET_IS_LAUNGUAGE_SELECT_LIST_OPEN_STATUS = 'SET_IS_LAUNGUAGE_SELECT_LIST_OPEN_STATUS'
+const SET_LANGUAGE = 'SET_LANGUAGE' 
 
 const moveHomePage = () => ({ type: MOVE_HOME_PAGE })
 const moveShopPage = () => ({ type: MOVE_SHOP_PAGE })
@@ -74,6 +77,7 @@ const moveBlogPage = () => ({ type: MOVE_BLOG_PAGE })
 
 // All products must be with renamed property photos - not photo!
 
+ 
 const AppState = {
     navigationLinks: [
         {
@@ -109,17 +113,17 @@ const AppState = {
         {
             id: 6,
             path: '/',
-            title: 'Features',
+            title:'Features',
             method: () => null
         },
         {
             id: 7,
             path: '/Home/Blog',
-            title: 'Blog',
+            title:'Blog',
             method: moveBlogPage
         }
     ],
-    currentPageName: 'About Us',
+    currentPageName: "About Us",
     currentPath: 'Home/About Us',
     date: {
         year: '',
@@ -3767,7 +3771,29 @@ const AppState = {
     totalProductsCount: 0,
     cartPopupStatus: false,
     productId: 1,
-    errorText: ''
+    errorText: '',
+    isLaunguageSelectListOpenStatus: false,
+    language: 'English',
+    languages: [
+        {
+            id: 1,
+            name: 'English',
+            tag: 'en',
+            isActive: true
+        },
+        {  
+            id: 2,
+            name: 'Русский',
+            tag: 'ru',
+            isActive: false
+        },
+        {
+            id: 3,
+            name: 'Українська',
+            tag: 'ua',
+            isActive: false
+        }
+    ]
 }
 
 AppState.totalProductsCount = AppState.products.length
@@ -3962,7 +3988,21 @@ const reducerApp = (state = AppState, action) => {
                     return item
                 }),
                 wishlist: state.wishlist.filter(item => item.id !== action.itemId && true)
-            }                    
+            }    
+        case SET_IS_LAUNGUAGE_SELECT_LIST_OPEN_STATUS:
+            return {
+                ...state,
+                isLaunguageSelectListOpenStatus: action.status
+            }        
+        case SET_LANGUAGE:
+            return {
+                ...state,
+                language: action.lang,
+                languages: state.languages.map(item => {
+                    if(item.id === action.itemId) return { ...item, isActive: true }
+                    return { ...item, isActive: false }
+                }) 
+            }            
         default:
             return state
     }
@@ -4007,5 +4047,8 @@ export const unsetRecommendedAsHovered = () => ({ type: UNSET_RECOMMENDED_AS_HOV
 
 export const changeProductsCategoriesHoveredStatus = (itemId) => ({ type: CHANGE_PRODUCTS_CATEGORIES_HOVERED_STATUS, itemId })
 export const unsetProductsCategoriesAsHovered = () => ({ type: UNSET_PRODUCTS_CATEGORIES_AS_HOVERED })
+
+export const setIsLaunguageSelectListOpenStatus = (status) => ({ type: SET_IS_LAUNGUAGE_SELECT_LIST_OPEN_STATUS, status })
+export const setLanguage = (lang, itemId) => ({ type: SET_LANGUAGE, lang, itemId })
 
 export default reducerApp

@@ -4,6 +4,12 @@ import PriceMenu from '../../components/Shop/SidebarComponents/ShopFilter/Filter
 import ColourMenu from '../../components/Shop/SidebarComponents/ShopFilter/FilterMenus/ColourMenu/colourMenuContainer'
 import TypeMenu from '../../components/Shop/SidebarComponents/ShopFilter/FilterMenus/TypeMenu/TypeMenuContainer'
 
+const CHANGE_PRICE_FILTER = 'CHANGE_PRICE_FILTER' 
+const SET_COLOR_FILTER = 'SET_COLOR_FILTER'
+
+export const changePriceFilter = (price) => ({ type: CHANGE_PRICE_FILTER, price })
+export const setColorFilter = (color) => ({ type: SET_COLOR_FILTER, color })
+
 const OPEN_SHOP_FILTERS_MENU = 'OPEN_SHOP_FILTERS_MENU'
 
 const OPEN_PRODUCTS_PORTION_OPTION_LIST = 'OPEN_PRODUCTS_PORTION_OPTION_LIST'
@@ -43,49 +49,49 @@ const ShopState = {
     shopCategories: [
         {
             id: 1,
-            title: 'Fashion Clothing',
+            title: 'fashionAndClothing',
             productsCount: 128,
             isAdded: true
         },
         {
             id: 2,
-            title: 'Mobile Phones',
+            title: 'Mobile_phones',
             productsCount: 89,
             isAdded: true
         },
         {
             id: 3,
-            title: 'Electronics & Hitech',
+            title: 'ElectronicsAndHitech',
             productsCount: 205,
             isAdded: true
         },
         {
             id: 4,
-            title: 'Foods & Fruits',
+            title: 'FoodsAndFruits',
             productsCount: 118,
             isAdded: true
         },
         {
             id: 5,
-            title: 'Beauty & Health',
+            title: 'BeautyAndHealth',
             productsCount: 45,
             isAdded: true
         },
         {
             id: 6,
-            title: 'Shoes & Bags',
+            title: 'ShoesAndBags',
             productsCount: 23,
             isAdded: true
         },
         {
             id: 7,
-            title: 'Decors & Home',
+            title: 'DecorsAndHome',
             productsCount: 19,
             isAdded: true
         },
         {
             id: 8,
-            title: 'Sports & Outerwear',
+            title: 'SportsAndOuterwear',
             productsCount: 34,
             isAdded: true
         }
@@ -131,7 +137,6 @@ const ShopState = {
         },
         {
             id: 2,
-            price: 50,
             title: 'Price',
             isOptionOpen: false,
             menuOptions: [
@@ -156,52 +161,60 @@ const ShopState = {
                     price: '600'
                 }
             ],
-            menu: <PriceMenu />
+            menu: <PriceMenu changePriceFilter={changePriceFilter}/>
         },
         {
             id: 3,
             title: 'Colour',
             isOptionOpen: false,
-            // installedColour: "#000000",
             menuOptions: [
                 {
                     id: 1,
-                    colourHex: '#000000'
+                    colourHex: '#000000',
+                    color: 'black'
                 },
                 {
                     id: 2,
-                    colourHex: '#34AADC'
+                    colourHex: '#34AADC',
+                    color: 'blue'
                 },
                 {
                     id: 3,
-                    colourHex: '#B0865B'
+                    colourHex: '#B0865B',
+                    color: 'brown'
                 },
                 {
                     id: 4,
-                    colourHex: '#F7E6A1'
+                    colourHex: '#F7E6A1',
+                    color: 'beige'
                 },
                 {
                     id: 5,
-                    colourHex: '#969495'
+                    colourHex: '#969495',
+                    color: 'grey'
                 },
                 {
                     id: 6,
-                    colourHex: '#26DC2B'
+                    colourHex: '#26DC2B',
+                    color: 'green'
                 },
                 {
                     id: 7,
-                    colourHex: '#FD8603'
+                    colourHex: '#FD8603',
+                    color: 'orange'        
                 },
                 {
                     id: 8,
-                    colourHex: '#F678B0'
+                    colourHex: '#F678B0',
+                    color: 'pink'
                 },
                 {
                     id: 9,
-                    colourHex: '#F1F03F'
+                    colourHex: '#F1F03F',
+                    color: 'yellow'
                 }
             ],
-            menu: <ColourMenu />
+            menu: <ColourMenu setColorFilter={setColorFilter}/>
         },
         {
             id: 4,
@@ -231,7 +244,12 @@ const ShopState = {
             ],
             menu: <TypeMenu />
         },
-    ]
+    ],
+    priceFilter: 0,
+    colorFilter: '',
+    colours: [],
+    brands: [],
+    types: []
 }
 
 const reducerShop = (state = ShopState, action) => {
@@ -273,7 +291,19 @@ const reducerShop = (state = ShopState, action) => {
                 currentShopPage: action.status ? 'Shop Sidebar' : 'Shop Without Sidebar',
                 productsPerRow: action.status ? state.productsPerRow === 5 ? 4 : state.productsPerRow : 5,
                 productsPortion: action.status ? state.productsPortion === 25 ? 16 : state.productsPortion : 25
-            }                
+            }   
+        case CHANGE_PRICE_FILTER:
+            debugger
+            return {
+                ...state,
+                priceFilter: action.price
+            }              
+        case SET_COLOR_FILTER:
+            debugger
+            return {
+                ...state,
+                colorFilter: action.color
+            }       
         default:
             return state
     }

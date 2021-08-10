@@ -1,7 +1,9 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import classes from './testimonials.module.scss'
 
 const Testimonials = ({ testimonials, testimonialShown, chooseTestimonial, changeShownTestimonial }) => {
+    const { t } = useTranslation()
     const SwitchBtns = testimonials.map(item => {
         const checkout = item.id === testimonialShown ? item.isShown ? classes.active_switch_btn : classes.switch_btn : classes.switch_btn
         const chooseSliderElement = () => {
@@ -31,7 +33,7 @@ const Testimonials = ({ testimonials, testimonialShown, chooseTestimonial, chang
     return (
         <div className={classes.testimonials}>
             <div className={classes.title}>
-                <h2>Testimonials</h2>
+                <h2>{t("testimonials")}</h2>
             </div>
             {Testimonials[testimonialShown-1]}
         </div>

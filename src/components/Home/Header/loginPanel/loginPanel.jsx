@@ -4,19 +4,22 @@ import heart from './img/heart.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSortDown } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom'
+import LaunguageSelectList from '../../../../components/common/Login/LaunguageSelectList/launguageSelectList'
+import { useTranslation } from 'react-i18next'
 
-const LoginPanel = (props) => {
+const LoginPanel = ({ setIsLoginStatus, language, languages, setIsLaunguageSelectListOpenStatus, setLanguage, selectListStatus }) => {
+    const { t } = useTranslation()
     return (
         <div className={classes.loginPanelWrapper}>
             <div className={classes.loginPanel}>
                 <div className={classes.login}>
-                    <div className={classes.login_btn}>
-                        <p>Login</p>
-                    </div>
+                    <NavLink onClick={() => setIsLoginStatus(true)} to="/MyAccount" className={classes.login_btn}>
+                        <p>{t("login")}</p>
+                    </NavLink>
                     <div className={classes.slash}>/</div>
-                    <div className={classes.singup}>
-                        <p>Signup</p>
-                    </div>
+                    <NavLink onClick={() => setIsLoginStatus(false)} to="/MyAccount" className={classes.signup}>
+                        <p>{t("signup")}</p>
+                    </NavLink>
                     <div className={classes.vertical_line}>|</div>
                     <div className={classes.currency}>
                         <p>USD</p>
@@ -24,17 +27,18 @@ const LoginPanel = (props) => {
                 </div>
                 <div className={classes.helpPanel}>
                     <div className={classes.help_btn}>
-                        <p>Help</p>
+                        <p>{t("help")}</p>
                     </div>
                     <div className={classes.vertical_line}>|</div>
                     <div className={classes.wishlist}>
                         <img className={classes.iconMargin} src={heart} alt=""/>
-                        <NavLink to="/Wishlist">Wishlist</NavLink>
+                        <NavLink to="/Wishlist">{t("wishlist")}</NavLink>
                     </div>
                     <div className={classes.vertical_line}>|</div>
-                    <div className={classes.language}>
-                        <p>English</p>
+                    <div onClick={() => setIsLaunguageSelectListOpenStatus(!selectListStatus)} className={classes.language}>
+                        <p>{language}</p>
                         <FontAwesomeIcon className={classes.iconMargin + ' ' + classes.sortDownIcon} icon={faSortDown}/>
+                        {selectListStatus && <LaunguageSelectList setLanguage={setLanguage} languages={languages}/>}
                     </div>
                 </div>
             </div>

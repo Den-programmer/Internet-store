@@ -2,9 +2,11 @@ import React from 'react'
 import classes from './optionalPanel.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown, faTh, faList } from '@fortawesome/free-solid-svg-icons'
+import { useTranslation } from 'react-i18next'
 
 const OptionalPanel = ({ productsPortion, changeProductsPortion, productsPerRow, productsCountMenu, changeSidebarShownStatus, openProductsPortionOptionList, isPortionListOpen }) => {
-    
+    const { t } = useTranslation()
+
     const setProductsPortion = (portion) => {
         openProductsPortionOptionList(!isPortionListOpen)
         changeProductsPortion(portion)
@@ -27,7 +29,7 @@ const OptionalPanel = ({ productsPortion, changeProductsPortion, productsPerRow,
     return (
         <section className={classes.optionalPanel}>
             <div className={classes.showing_title}>
-                <h3>Showing 1-16 of 24 Products</h3>
+                <h3>{t("showing")} 1-16 {t("of")} 24 {t("from_products")}</h3>
             </div>
             <div className={classes.options}>
                 <div className={classes.productsCountMenuWrapper}>
@@ -39,7 +41,7 @@ const OptionalPanel = ({ productsPortion, changeProductsPortion, productsPerRow,
                     </div>
                 </div>
                 <div className={classes.sort}>
-                    <p>Default Sorting</p><FontAwesomeIcon className={classes.iconAngleDown} icon={faAngleDown} />
+                    <p>{t("default_sorting")}</p><FontAwesomeIcon className={classes.iconAngleDown} icon={faAngleDown} />
                 </div>
                 <div className={classes.contentConvenience}>
                     <div onClick={() => changeSidebarShownStatus(false)}><FontAwesomeIcon className={classes.optionIcons} icon={faTh} /></div>

@@ -3,26 +3,28 @@ import classes from './services.module.scss'
 import service1 from './images/service1.png'
 import service2 from './images/service2.png'
 import service3 from './images/service3.png'
+import { useTranslation } from 'react-i18next'
 
 const Services = (props) => {
+    const { t }= useTranslation()
     const servicesData = [
         {
             id: 1,
             photo: service1,
-            title: 'Strategy & Marketing',
-            text: 'We choose to go to the moon in this decade and the other things because they are easy they are hard goal section.'
+            title: t("strategyAndMarketing"),
+            text: t("strategyAndMarketing_inf")
         },
         {
             id: 2,
             photo: service2,
-            title: 'Interaction Design',
-            text: 'We choose to go to the moon in this decade and the other things because they are easy they are hard goal section.'
+            title: t("Interaction_Design"),
+            text: t("Interaction_Design_inf")
         },
         {
             id: 3,
             photo: service3,
-            title: 'Web Developemnt',
-            text: 'We choose to go to the moon in this decade and the other things because they are easy they are hard goal section.'
+            title: t("web_development"),
+            text: t("web_development_inf")
         }
     ]
     const services = servicesData.map(s => {

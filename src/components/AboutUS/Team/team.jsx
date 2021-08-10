@@ -1,8 +1,10 @@
 import React from 'react'
 import classes from './team.module.scss'
 import Member from './Member/member'
+import { useTranslation } from 'react-i18next'
 
 const Team = (props) => {
+    const { t } = useTranslation()
     const Team = props.team.map(m => {
         return <Member key={m.id} id={m.id} 
         name={m.name} 
@@ -16,9 +18,9 @@ const Team = (props) => {
     return (
         <section className={classes.team}>
             <div className={classes.title}>
-                <h3>Meet The Team</h3>
+                <h3>{t("Meet_the_Team")}</h3>
                 <p>
-                    That's just a little bit more than the law will allow love exciting and new come.
+                    {t("Team_subtext")}
                 </p>
             </div>
             <div className={classes.members}>

@@ -10,6 +10,7 @@
     color: #9A9A9A;
     font-size: 12px;
     @extend .container;
+    user-select: none;
 }
 .login {
     display: flex;
@@ -17,6 +18,8 @@
     align-items: center;
     .btn_login, .signup {
         cursor: pointer;
+        text-decoration: none;
+        color: #9A9A9A;
     } 
     .border {
         margin:0 20px;

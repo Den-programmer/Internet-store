@@ -2,67 +2,69 @@ import React from 'react'
 import classes from './departments.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTv, faMobile, faFutbol, faLeaf, faShoppingBasket, faCameraRetro, faPlug, faHeadphones, faAppleAlt, faTags } from '@fortawesome/free-solid-svg-icons'
+import { useTranslation } from 'react-i18next'
 
-const Departments = ({ setIsDepartmentsMenuOpenStatus, isDepartmentsMenuOpen }) => {
+const Departments = ({ setIsDepartmentsMenuOpenStatus, isDepartmentsMenuOpen, language }) => {
+    const { t } = useTranslation()
     const departmentsMenu = React.createRef()
     const departmentsData = [
         {
             id: 1,
-            title: 'Fashion & Clothing',
+            title: t("fashionAndClothing"),
             icon: faTv,
             path: '/'
         },
         {
             id: 2,
-            title: 'Mobile Phones',
+            title: t("Mobile_phones"),
             icon: faMobile,
             path: '/'
         },
         {
             id: 3,
-            title: 'Sports & Outerwear',
+            title: t("SportsAndOuterwear"),
             icon: faFutbol,
             path: '/'
         },
         {
             id: 4,
-            title: 'Foods & Fruits',
+            title: t("FoodsAndFruits"),
             icon: faLeaf,
             path: '/'
         },
         {
             id: 5,
-            title: 'Beauty & Health',
+            title: t("BeautyAndHealth"),
             icon: faTags,
             path: '/'
         },
         {
             id: 6,
-            title: 'Shoes & Bags',
+            title: t("ShoesAndBags"),
             icon: faShoppingBasket,
             path: '/'
         },
         {
             id: 7,
-            title: 'Decors & Home',
+            title: t("DecorsAndHome"),
             icon: faCameraRetro,
             path: '/'
         },
         {
             id: 8,
-            title: 'Electronics & Hitech',
+            title: t("ElectronicsAndHitech"),
             icon: faPlug,
             path: '/'
         },
         {
             id: 9,
-            title: 'Accessories',
+            title: t("Accessories"),
             icon: faHeadphones,
             path: '/'
         },
         {
             id: 10,
-            title: 'Digital Software',
+            title: t("Digital_Software"),
             icon: faAppleAlt,
             path: '/'
         }
@@ -76,10 +78,10 @@ const Departments = ({ setIsDepartmentsMenuOpenStatus, isDepartmentsMenuOpen }) 
     })
 
     return (
-        <div ref={departmentsMenu} onClick={() => setIsDepartmentsMenuOpenStatus(!isDepartmentsMenuOpen)} className={classes.departments}>
-            <h3>Departments</h3>
+        <div style={language === "English" ? { width: '270px' } : language === "Русский" ? { width: '353.5px' } : { width: '302.5px' } } ref={departmentsMenu} onClick={() => setIsDepartmentsMenuOpenStatus(!isDepartmentsMenuOpen)} className={classes.departments}>
+            <h3>{t("departments")}</h3>
             {isDepartmentsMenuOpen && <div className={classes.menu}>
-                <ul className={classes.menuList}>
+                <ul style={language === "English" ? { right: '-84px' } : language === "Русский" ? { right: '-106.5px' } : { right: '-105.5px' } } className={classes.menuList}>
                     {departmentItems}
                 </ul>
             </div>}

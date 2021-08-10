@@ -1,7 +1,9 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import classes from './sidebarSaleBanner.module.scss'
 
 const SidebarSaleBanner = ({ saleBanners }) => {
+    const { t } = useTranslation()
     const products = saleBanners.map(item => {
         return (
             <div key={item.id} className={classes.sidebarSaleBanner}>
@@ -14,7 +16,7 @@ const SidebarSaleBanner = ({ saleBanners }) => {
                         <p>{item.subtitle}</p>
                     </div>
                     <div className={classes.btn_shopNow}>
-                        <button>Shop Now</button>
+                        <button>{t("shop_now")}</button>
                     </div>
                 </div>
             </div>

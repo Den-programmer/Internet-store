@@ -3,8 +3,10 @@ import classes from './cartPopup.module.scss'
 import { NavLink } from 'react-router-dom'
 import NoProducts from '../../NoProducts/noProducts'
 import sadSmile from '../../../../images/Smiles/sadSmile.jpg'
+import { useTranslation } from 'react-i18next'
 
 const CartPopup = ({ productsInCart, setIsCartPopupOpenStatus, deleteFromCart, total }) => {
+    const { t } = useTranslation()
     const cartPopupRef = createRef()
 
     document.addEventListener('click', e => {
@@ -30,17 +32,17 @@ const CartPopup = ({ productsInCart, setIsCartPopupOpenStatus, deleteFromCart, t
             <div className={classes.cartPopup}>
                 {Products.length !== 0 ? <div className={classes.products}>
                     {Products}
-                </div> : <NoProducts bordered={false} image={sadSmile} title={"Go to the "} link={"shop page"} path={"/Home/Shop"}/>}
+                </div> : <NoProducts bordered={false} image={sadSmile} title={t("go_to_the")} link={t("shop_page")} path={"/Home/Shop"}/>}
                 <div className={classes.total}>
-                    <h4>Order Total</h4>
+                    <h4>{t("order_total")}</h4>
                     <h5>${total}</h5>
                 </div>
                 <div className={classes.enterCartPage}>
                     <div className={classes.btn_viewCart + ' ' + classes.enterCartPage__btns}>
-                        <NavLink to="/CartPage">View Cart</NavLink>
+                        <NavLink to="/CartPage">{t("view_cart")}</NavLink>
                     </div>
                     <div className={classes.btn_checkout + ' ' + classes.enterCartPage__btns}>
-                        <NavLink to="/Checkout">Checkout</NavLink>
+                        <NavLink to="/Checkout">{t("checkout")}</NavLink>
                     </div>
                 </div>
             </div>

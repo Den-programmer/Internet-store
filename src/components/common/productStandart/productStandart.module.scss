@@ -6,6 +6,7 @@
     text-decoration: none;
     user-select: none;
     .new, .sale {
+        z-index: 999;
         position: absolute;
         top: 5%;
         left: 5%;

@@ -5,12 +5,12 @@ import { faShoppingCart, faLongArrowAltRight, faLongArrowAltLeft, faHeart, faEye
 import uncoloredHeart from '../../../../images/heartUncolored.png'
 import { NavLink } from 'react-router-dom'
 
-const Product = ({ id, photos, title, price, isNew, isSale, hovered, starsCount, 
+const Product = ({ id, photos, title, price, isNew, isSale, hovered, starsCount, productsPortion,
     greyStarsCount, onMouseMove, onMouseLeave, likeProduct, removeLike, like, productsPerRow, setProductId }) => {
     const commonProductWidth = '230px'
-    const styleWdthFive = { width: commonProductWidth } 
+    const styleWdthFive = { width: commonProductWidth }
     const styleWdthFour = { width: '210px' }
-    const styleWdthOne = { width: 'auto' } 
+    const styleWdthOne = { width: 'auto' }
 
     const chosenProductStyle = productsPerRow === 5 ? styleWdthFive : productsPerRow === 4 ? styleWdthFour : styleWdthOne
 
@@ -18,20 +18,21 @@ const Product = ({ id, photos, title, price, isNew, isSale, hovered, starsCount,
     const onMouseLeaveHandler = () => onMouseLeave()
     const ProductHandler = () => setProductId(id)
     return (
-        <NavLink to={"/Product/" + id} style={chosenProductStyle} onClick={ProductHandler} onMouseMove={onMouseMoveHandler} onMouseLeave={onMouseLeaveHandler} className={classes.product}>
-            {isNew && <div className={classes.new}>
-                New
-            </div>}
-            {isSale && <div className={classes.sale}>
-                Sale
-            </div>}
-            <img className={classes.product__photo} src={photos[0]} alt="" />
-            {hovered && <div style={chosenProductStyle} className={classes.additional_functions_Wrapper}><div className={classes.additional_functions}>
+        <NavLink to={"/Product/" + id} style={chosenProductStyle} onClick={ProductHandler} onMouseMove={onMouseMoveHandler} onMouseLeave={onMouseLeaveHandler} className={productsPortion !== 10 ? classes.product : classes.productAnother}>
+            <div className={classes.productProfile}>
+                {isNew && <div className={classes.new}>
+                    New
+                </div>}
+                {isSale && <div className={classes.sale}>
+                    Sale
+                </div>}
+                <img className={classes.product__photo} src={photos[0]} alt="" />
+                {hovered && <div style={chosenProductStyle} className={classes.additional_functions_Wrapper}><div className={classes.additional_functions}>
                     <div className={classes.basket}>
                         <FontAwesomeIcon icon={faShoppingCart} />
                     </div>
-                        {like ? <div onClick={() => removeLike(id)} className={classes.like}><FontAwesomeIcon icon={faHeart} /></div> :
-                        <div onClick={() => likeProduct(id)} className={classes.like}><img src={uncoloredHeart} alt=""/></div>}
+                    {like ? <div onClick={() => removeLike(id)} className={classes.like}><FontAwesomeIcon icon={faHeart} /></div> :
+                        <div onClick={() => likeProduct(id)} className={classes.like}><img src={uncoloredHeart} alt="" /></div>}
                     <div className={classes.comprison}>
                         <FontAwesomeIcon className={classes.rightArrow} icon={faLongArrowAltRight} />
                         <FontAwesomeIcon className={classes.leftArrow} icon={faLongArrowAltLeft} />
@@ -39,7 +40,8 @@ const Product = ({ id, photos, title, price, isNew, isSale, hovered, starsCount,
                     <div className={classes.view}>
                         <FontAwesomeIcon icon={faEye} />
                     </div>
-            </div></div>}
+                </div></div>}
+            </div>
             <div className={classes.product__information}>
                 <h4>{title}</h4>
                 <p>${price}</p>
@@ -48,7 +50,7 @@ const Product = ({ id, photos, title, price, isNew, isSale, hovered, starsCount,
                     {greyStarsCount}
                 </div>
             </div>
-        </NavLink> 
+        </NavLink>
     )
 }
 

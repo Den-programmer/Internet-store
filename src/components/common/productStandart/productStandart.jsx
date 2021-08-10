@@ -4,22 +4,25 @@ import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart, faLongArrowAltRight, faLongArrowAltLeft, faHeart, faEye } from '@fortawesome/free-solid-svg-icons'
 import uncoloredHeart from '../../../images/heartUncolored.png'
+import { useTranslation } from 'react-i18next'
 
 const ProductStandart = ({ 
     id, photo, title, price, isNew, isSale, hovered, starsCount, 
     greyStarsCount, onMouseMove, onMouseLeave, likeProduct, removeLike, addToCart, like, setProductId,
     isInCart, isInStock, isCompare
 }) => {
+    const { t } = useTranslation()  
+
     const onMouseMoveHandler = () => onMouseMove(id)
     const onMouseLeaveHandler = () => onMouseLeave()
     const productHandler = () => setProductId(id)
     return (
         <NavLink to={"/Product/" + id} onClick={productHandler} onMouseMove={onMouseMoveHandler} onMouseLeave={onMouseLeaveHandler} key={id} className={classes.product}>
             {isNew && <div className={classes.new}>
-                New
+                {t("new")}
             </div>}
             {isSale && <div className={classes.sale}>
-                Sale
+                {t("sale")}
             </div>}
             <img className={classes.product__photo} src={photo} alt="" />
             {hovered && <div className={classes.additional_functions_Wrapper}><div className={classes.additional_functions}>

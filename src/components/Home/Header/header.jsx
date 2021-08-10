@@ -1,5 +1,5 @@
 import React from 'react'
-import LoginPanel from './loginPanel/loginPanel'
+import LoginPanel from './loginPanel/loginPanelContainer'
 import MainHeader from './mainHeader/mainHeaderContainer'
 import Navbar from './Navbar/navbar'
 

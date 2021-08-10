@@ -5,8 +5,10 @@ import BestSeller from './BestSeller/bestSeller'
 import Btn_Next from '../CommonSliderBtns/Btn_Next/Btn_Next'
 import Btn_Prev from '../CommonSliderBtns/Btn_Prev/Btn_Prev'
 import Slider from 'react-slick'
+import { useTranslation } from 'react-i18next'
 
 const BestSellers = ({ bestsellers, setProductId, addToCart }) => {
+    const { t } = useTranslation()
     let slider = React.createRef()
     const BestSellers = bestsellers.map(item => {
         const data = countRating(item.rating)
@@ -45,7 +47,7 @@ const BestSellers = ({ bestsellers, setProductId, addToCart }) => {
         <section className={classes.bestsellers}>
             <div className={classes.bestsellers__header}>
                 <div className={classes.title}>
-                    <h3>Best Sellers</h3>
+                    <h3>{t("best_sellers")}</h3>
                 </div>
                 <div className={classes.control_btns}>
                     <Btn_Prev click={previous}/>

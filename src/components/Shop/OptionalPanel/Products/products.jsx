@@ -1,4 +1,4 @@
-import React from 'react'
+ import React from 'react'
 import classes from './products.module.scss'
 import ProductStandart from '../../common/productStandart/productStandart'
 import { countRating } from '../../../utils/function-helpers'

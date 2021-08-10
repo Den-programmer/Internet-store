@@ -3,8 +3,10 @@ import classes from './currentList.module.scss'
 import Product from './Product/product'
 import sadSmile from '../../../images/Smiles/sadSmile.jpg'
 import { NavLink } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const CurrentList = ({ products, addToCart, removeLike }) => {
+    const { t } = useTranslation()
     const Products = products.map(product => {
         return <Product key={product.id} id={product.id} 
         title={product.title} 
@@ -24,25 +26,25 @@ const CurrentList = ({ products, addToCart, removeLike }) => {
     return (
         <div className={classes.currentList}>
             <div className={classes.title}>
-                <h3>Wishlist</h3>
+                <h3>{t("wishlist")}</h3>
             </div>
             <div className={classes.productContainer}>
                 <div className={classes.controls}>
                     <div className={classes.title}>
-                        <h5>Product</h5>
+                        <h5>{t("product")}</h5>
                     </div>
                     <div className={classes.price}>
-                        <h5>Price</h5>
+                        <h5>{t("price")}</h5>
                     </div>
                     <div className={classes.stockStatus}>
-                        <h5>Stock Status</h5>
+                        <h5>{t("stock_status")}</h5>
                     </div>
                 </div>
                 {products.length !== 0 ? <div className={classes.products}>
                     {Products}
                 </div> : <div className={classes.noProducts}>
                     <img className={classes.sadSmile} src={sadSmile} alt=""/>
-                    <h4>To add here some products go to the <NavLink to="/Home/Shop">shop page</NavLink>!</h4>
+                    <h4>{t("to_add_products_go_to_the")} <NavLink to="/Home/Shop">{t("shop_page_wishlist")}</NavLink>!</h4>
                 </div>}
             </div>
         </div>

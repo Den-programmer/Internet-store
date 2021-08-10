@@ -5,8 +5,10 @@ import ProductStandart from '../../../common/productStandart/productStandart'
 import Btn_Prev from '../CommonSliderBtns/Btn_Prev/Btn_Prev'
 import Btn_Next from '../CommonSliderBtns/Btn_Next/Btn_Next'
 import Slider from 'react-slick'
+import { useTranslation } from 'react-i18next'
 
 const FeaturedProducts = ({ featuredProducts, changeFeaturedHoveredStatus, unsetFeaturedAsHovered, likeProduct, removeLike, setProductId, addToCart }) => {
+    const { t } = useTranslation()
     let slider = React.createRef()
     const products = featuredProducts.map(item => {
         const data = countRating(item.rating)
@@ -50,7 +52,7 @@ const FeaturedProducts = ({ featuredProducts, changeFeaturedHoveredStatus, unset
         <section className={classes.featuredProducts}>
             <div className={classes.featuredProducts__header}>
                 <div className={classes.title}>
-                    <h3>Featured Products</h3>
+                    <h3>{t("featured_products")}</h3>
                 </div>
                 <div className={classes.control_btns}>
                    <Btn_Prev click={previous}/>
