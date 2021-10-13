@@ -12,7 +12,21 @@
         h3 {
             font-size: 26px;
             text-transform: uppercase;
-            color: #191A1C;
+            color: #191a1c;
+        }
+    }
+}
+
+@media only screen and (max-device-width: 1024px) {
+    .logo {
+        img {
+            width: 30px !important;
+            height: 25px !important;
+        }
+        h3 {
+            font-size: 20px !important;
+            text-transform: uppercase;
+            color: #191a1c;
         }
     }
 }

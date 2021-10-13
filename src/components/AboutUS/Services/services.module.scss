@@ -25,3 +25,12 @@
         }   
     }
 }
+
+@media screen and (max-device-width: 1024px) {
+    .services {
+        width: 840px;
+        .service {
+            width: 220px;  
+        }
+    }
+}

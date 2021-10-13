@@ -74,3 +74,88 @@
         margin-left: 5px;
     }
 }
+
+@media only screen and (max-device-width: 1024px) {
+    .container1024 {
+        width: 840px;
+        margin: 0 auto;
+    }
+    .mainHeader {
+        display: flex;
+        align-items: center;
+        @extend .container1024;
+    }
+    .search {
+        display: flex;
+        align-items: center;
+        input {
+            width: 270px;
+            height: 30px;
+            border: 1px solid #E8E8E8;
+            padding-left: 10px;
+        }
+        .categories {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            padding:0 15px;
+            border: 1px solid #E8E8E8;
+            color: #191A1C;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 12px;
+            height: 33.5px;
+        }
+        .categoriesArrowDown {
+            margin: 0px 5px;
+            font-size: 14px;
+            color: #333333;
+        }
+    }
+    .searchIcon {
+        width: 3px;
+        height: 3.5px;
+        background-color: #FFD200;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        >*{
+            color:#333333;
+        }
+    }
+    .bag {
+        padding: 0px 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 30px;
+        .navlink {
+            color: #000000;
+        }
+        >div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .shoppingBasket {
+        padding: 7.5px;
+        border: 1px solid #E8E8E8;
+        cursor: pointer;
+    }
+    .items {
+        position: relative;
+        .shoppingInf {
+            border: 1px solid #E8E8E8;
+            width: 34px;
+            height: 25px;
+            cursor: pointer;
+        }
+        span {
+            color: #408DE4;
+            margin-left: 5px;
+        }
+    }
+}

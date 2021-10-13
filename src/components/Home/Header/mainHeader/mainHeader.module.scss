@@ -112,3 +112,53 @@
     top: -20px;
     left: -215px;
 }
+
+@media screen and (max-device-width: 1024px) {
+    .mainHeader {
+        width: 840px;
+        .logo {
+            img {
+                width: 35px;
+                height: 35px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+        }
+        .mainPanel {
+            display: flex;
+            align-self: center;
+            .searchPanel {
+                display: flex;
+                margin:0 30px;
+                .categories {
+                    h4 {
+                        font-family: $Roboto;
+                        font-size: 13px;
+                    }
+                    .angleDownIcon {
+                        padding: 0px 12px;
+    
+                    }
+                }
+                input {
+                    box-sizing: border-box;
+                    padding-left: 15px;
+                    width: 310px;
+                    height: 50px;
+                    border-radius: 1px;
+                    border: none;
+                    outline: none;
+                }
+                .searchIcon {
+                    background-color: #FFD200;
+                    padding:0 20px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

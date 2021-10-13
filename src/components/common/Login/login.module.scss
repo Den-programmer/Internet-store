@@ -1,4 +1,4 @@
-@import '../../../index.scss';
+@import "../../../index.scss";
 
 .vertical_line {
     margin: 0px 10px;
@@ -7,7 +7,7 @@
 .loginPanel {
     display: flex;
     align-items: center;
-    color: #9A9A9A;
+    color: #9a9a9a;
     font-size: 12px;
     @extend .container;
     user-select: none;
@@ -16,13 +16,14 @@
     display: flex;
     margin: 0px 20px;
     align-items: center;
-    .btn_login, .signup {
+    .btn_login,
+    .signup {
         cursor: pointer;
         text-decoration: none;
-        color: #9A9A9A;
-    } 
+        color: #9a9a9a;
+    }
     .border {
-        margin:0 20px;
+        margin: 0 20px;
     }
     span {
         margin: 0px 4px;
@@ -47,12 +48,12 @@
 .navbarItem {
     cursor: pointer;
     a {
-        color: #9A9A9A;
+        color: #9a9a9a;
         text-decoration: none;
     }
 }
 .heartIcon {
-    margin-right:5px;
+    margin-right: 5px;
 }
 
 .launguage {
@@ -60,7 +61,17 @@
     align-items: center;
     cursor: pointer;
     .faAngleDownIcon {
-        color: #9A9A9A;
+        color: #9a9a9a;
         margin-left: 5px;
+    }
+}
+
+@media only screen and (max-device-width: 1024px) {
+    .container1024 {
+        width: 840px;
+        margin: 0 auto;
+    }
+    .loginPanel {
+        @extend .container1024;
     }
 }

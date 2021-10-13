@@ -9,3 +9,12 @@
     align-items: center;
 }
 
+@media only screen and (max-device-width: 1024px) {
+    .container1024 {
+        width: 840px;
+        margin: 0 auto;
+    }
+    .navbar {
+        @extend .container1024;
+    }
+}

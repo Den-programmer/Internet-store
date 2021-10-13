@@ -8,7 +8,6 @@ import LaunguageSelectList from './LaunguageSelectList/launguageSelectList'
 import { useTranslation } from 'react-i18next'
 
 const Login = React.memo(({ setIsLoginStatus, setIsLaunguageSelectListOpenStatus, selectListStatus, language, setLanguage, languages }) => {
-    debugger
     const { t } = useTranslation()
     const popup = React.createRef()
     document.addEventListener('click', e => {

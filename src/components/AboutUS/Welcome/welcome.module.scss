@@ -51,3 +51,38 @@
         }
     }
 }
+
+@media screen and (max-device-width: 1024px) {
+    .welcome {
+        width: 840px;
+        >div {
+            margin: 0px 20px;
+        }
+    }
+    .storeImg {
+        img {
+            width: 400px;
+            height: 300px;
+        }
+    }
+    .welcome__text {
+        .welcome__text_title {
+            font-weight: 600;
+            color: #222222;
+            font-size: 16px;
+        }
+        .welcome__text_subTitle {
+            color: #7B7B7B;
+            font-size: 12px;
+        }
+        .welcome__text_maintext {
+            font-size: 12px;
+            color: #8D8D8D;
+        }
+        .btn_contactUs {
+            a {
+                font-size: 10px;
+            }
+        }
+    }
+}

@@ -18,3 +18,25 @@
         margin-left: 5px;
     }
 }
+
+@media only screen and (max-device-width: 1024px) {
+    .contacts {
+        font-family: $Roboto;
+        display: flex;
+        align-items: center;
+        padding-left: 0;
+        box-sizing: border-box;
+        p {
+            text-transform: uppercase;
+            color: #FFF;
+            font-size: 10px;
+        }
+        span {
+            color: #333333;
+            background-color: #FFD200;
+            padding: 5px;
+            margin-left: 5px;
+            font-size: 10px;
+        }
+    }
+}

@@ -48,3 +48,55 @@
     margin-left: 20px;
     color: #555555;
 }
+
+@media only screen and (max-device-width: 1024px) {
+    .departments {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #FFD200;
+        box-sizing: border-box;
+        width: 200px;
+        height: 50px;
+        color: #222222;
+        user-select: none;
+        cursor: pointer;
+        z-index: 1;
+        font-size: 10px;
+        font-family: $Roboto;
+        h3 {
+            text-transform: uppercase;
+        }
+    }
+    .menu {
+        position: relative;
+        .menuList {
+            position: absolute;
+            top: 25px;
+            z-index: 999;
+            background-color: #FFFFFF;
+            li {
+                padding: 20px 0; 
+                width: 200px;
+                border: 1px solid #E8E8E8;
+                &:hover {
+                    transition: all .3s linear;
+                    background-color: #60C4C3;
+                }
+                &:hover a, &:hover .menuIcon {
+                    color: #fff;
+                }
+                a {
+                    color: #555555;
+                    font-size: 10px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .menuIcon {
+        margin-right: 5px;
+        margin-left: 20px;
+        color: #555555;
+    }
+}

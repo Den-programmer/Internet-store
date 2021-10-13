@@ -22,3 +22,15 @@
         }
     }
 }
+
+@media only screen and (max-device-width: 1024px) {
+    .mainNav {
+        ul {
+            li {
+                a {
+                   font-size: 10px;
+                }
+            }
+        }
+    }
+}
