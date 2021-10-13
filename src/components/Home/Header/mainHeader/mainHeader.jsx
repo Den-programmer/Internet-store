@@ -7,9 +7,13 @@ import { NavLink } from 'react-router-dom'
 import CartPopup from '../../../common/CommonMainHeader/CartPopup/cartPopup'
 import { useTranslation } from 'react-i18next'
 
-const MainHeader = ({ deleteFromCart, cartPopupStatus, productsInCart, setIsCartPopupOpenStatus, total }) => {
+const MainHeader = ({ deleteFromCart, cartPopupStatus, productsInCart, setIsCartPopupOpenStatus, total, history, searchText, changeSearchText }) => {
     const { t } = useTranslation()
     const openPopup = () => setIsCartPopupOpenStatus(!cartPopupStatus)
+    const setSearchText = (e) => {
+        changeSearchText(e.currentTarget.value)
+        history.push('/Home/Shop')
+    }
     return (
         <div className={classes.mainHeaderWrapper}>
             <div className={classes.mainHeader}>
@@ -21,7 +25,7 @@ const MainHeader = ({ deleteFromCart, cartPopupStatus, productsInCart, setIsCart
                 </NavLink>
                 <div className={classes.mainPanel}>
                     <div className={classes.searchPanel}>
-                        <input placeholder={t("search")} type="text" />
+                        <input placeholder={t("search")} onChange={setSearchText} type="text" value={searchText}/>
                         <div className={classes.categories}>
                             <h4>{t("all_categories")}</h4>
                             <FontAwesomeIcon className={classes.angleDownIcon} icon={faAngleDown} />

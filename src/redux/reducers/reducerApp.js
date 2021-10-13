@@ -71,6 +71,8 @@ const SET_TEXT_ERROR = 'SET_TEXT_ERROR'
 const SET_IS_LAUNGUAGE_SELECT_LIST_OPEN_STATUS = 'SET_IS_LAUNGUAGE_SELECT_LIST_OPEN_STATUS'
 const SET_LANGUAGE = 'SET_LANGUAGE' 
 
+const CHANGE_SEARCH_TEXT = 'CHANGE_SEARCH_TEXT'
+
 const moveHomePage = () => ({ type: MOVE_HOME_PAGE })
 const moveShopPage = () => ({ type: MOVE_SHOP_PAGE })
 const moveBlogPage = () => ({ type: MOVE_BLOG_PAGE })
@@ -3793,7 +3795,8 @@ const AppState = {
             tag: 'ua',
             isActive: false
         }
-    ]
+    ], 
+    searchText: ''
 }
 
 AppState.totalProductsCount = AppState.products.length
@@ -4003,6 +4006,11 @@ const reducerApp = (state = AppState, action) => {
                     return { ...item, isActive: false }
                 }) 
             }            
+        case CHANGE_SEARCH_TEXT:
+            return {
+                ...state,
+                searchText: action.val
+            }
         default:
             return state
     }
@@ -4050,5 +4058,7 @@ export const unsetProductsCategoriesAsHovered = () => ({ type: UNSET_PRODUCTS_CA
 
 export const setIsLaunguageSelectListOpenStatus = (status) => ({ type: SET_IS_LAUNGUAGE_SELECT_LIST_OPEN_STATUS, status })
 export const setLanguage = (lang, itemId) => ({ type: SET_LANGUAGE, lang, itemId })
+
+export const changeSearchText = (val) => ({ type: CHANGE_SEARCH_TEXT, val })
 
 export default reducerApp

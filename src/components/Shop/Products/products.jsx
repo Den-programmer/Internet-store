@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next'
 
 const Products = React.memo(({ products, productsPortion, productsPerRow, isSidebarShown,
     setProductId, changeProductHoveredStatus, unsetProductAsHovered, totalItemsCount, currentPage,
-    changePage, priceFilter, colorFilter
+    changePage, priceFilter, colorFilter, searchText
 }) => {
     const { t } = useTranslation()
     debugger
@@ -50,14 +50,22 @@ const Products = React.memo(({ products, productsPortion, productsPerRow, isSide
     const productsDataRanged = products.filter(item => {
         if(item.id >= startProductsPortion && item.id <= currentProductsPortion) return true 
     })
-    const productsData = productsDataRanged.filter(item => {
-        let color = ''
-        item.properties.forEach(item => {
-            if(item.title === 'Colour') color = item.value
-            return color = ''
-        })
-        return colorFilter !== '' ? colorFilter === color  ? true : false : true
-    }) 
+    // const productsData = productsDataRanged.filter(item => {
+    //     let color = ''
+    //     item.properties.forEach(item => {
+    //         if(item.title === 'Colour') color = item.value
+    //         return color = ''
+    //     })
+    //     return colorFilter !== '' ? colorFilter === color  ? true : false : true
+    // }) 
+
+    const productsData = productsDataRanged.filter((item) => {
+        if(searchText !== '') {
+            if(item.title.toLowerCase().indexOf(searchText.toLowerCase()) > -1) return true
+        } else {
+            return true
+        }
+    })   
 
     const productsToShow = productsCreation(productsData)
 
@@ -67,7 +75,7 @@ const Products = React.memo(({ products, productsPortion, productsPerRow, isSide
         <section className={classes.products}>
             <div className={classes.products_mainContent}>
                 <div style={mainWidthStyle} className={classes.productsContent}>
-                    {productsToShow}
+                    {productsToShow.length !== 0 ? productsToShow : <h6 className={classes.nothingFound}>Nothing was found!</h6>}
                 </div>
                 {isSidebarShown && <div className={classes.sidebar}>
                     <ShopSidebar />

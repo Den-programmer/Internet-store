@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import classes from './commonMainHeader.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { NavLink } from 'react-router-dom'
@@ -7,15 +7,23 @@ import Logo from './Logo/logo'
 import CartPopup from './CartPopup/cartPopup'
 import { useTranslation } from 'react-i18next'
 
-const CommonMainHeader = ({ cartPopupStatus, setIsCartPopupOpenStatus, productsInCart, deleteFromCart, total }) => {
+const CommonMainHeader = (props) => {
     const { t } = useTranslation()
-    const openPopup = () => setIsCartPopupOpenStatus(!cartPopupStatus)
+    const searchInput = React.createRef()
+    const openPopup = () => props.setIsCartPopupOpenStatus(!props.cartPopupStatus)
+    const setSearchText = (e) => {
+        props.changeSearchText(e.currentTarget.value)
+        props.history.push("/Home/Shop")
+    }
+    useEffect(() => {
+        searchInput.current.focus()
+    })
     return (
         <div className={classes.mainHeader}>
             <Logo />
             <div className={classes.severalOptions}>
                 <div className={classes.search}>
-                    <input placeholder={t("search")} type="text" />
+                    <input ref={searchInput} placeholder={t("search")} onChange={setSearchText} type="text" value={props.searchText} />
                     <div className={classes.categories}>
                         <p>{t("all_categories")}</p>
                         <FontAwesomeIcon className={classes.categoriesArrowDown} icon={faAngleDown} />
@@ -32,11 +40,11 @@ const CommonMainHeader = ({ cartPopupStatus, setIsCartPopupOpenStatus, productsI
                             </NavLink>
                             <div onClick={openPopup} className={classes.shoppingInf}>
                                 <p>
-                                    {productsInCart.length}:
+                                    {props.productsInCart.length}:
                                 </p>
-                                <span>${total}</span>
+                                <span>${props.total}</span>
                             </div>
-                            {cartPopupStatus && <CartPopup total={total} deleteFromCart={deleteFromCart} setIsCartPopupOpenStatus={setIsCartPopupOpenStatus} productsInCart={productsInCart} />}
+                            {props.cartPopupStatus && <CartPopup total={props.total} deleteFromCart={props.deleteFromCart} setIsCartPopupOpenStatus={props.setIsCartPopupOpenStatus} productsInCart={props.productsInCart} />}
                         </div>
                     </div>
                 </div>
