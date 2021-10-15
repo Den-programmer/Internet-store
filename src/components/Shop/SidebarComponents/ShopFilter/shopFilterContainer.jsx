@@ -1,12 +1,12 @@
 import { connect } from 'react-redux'
 import ShopFilter from './shopFilter'
-import { openShopFiltersMenu } from '../../../../redux/reducers/reducerShop'
+import { openShopFiltersMenu, changePriceFilter, setColorFilter } from '../../../../redux/reducers/reducerShop'
 
 const mapStateToProps = (state) => ({
     shopFilters: state.shopPage.shopFilters,
     productsPortion: state.shopPage.productsPortion
 })
 
-const ShopFilterContainer = connect(mapStateToProps, { openShopFiltersMenu })(ShopFilter)
+const ShopFilterContainer = connect(mapStateToProps, { openShopFiltersMenu, changePriceFilter, setColorFilter })(ShopFilter)
 
 export default ShopFilterContainer

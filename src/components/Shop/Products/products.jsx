@@ -12,7 +12,6 @@ const Products = React.memo(({ products, productsPortion, productsPerRow, isSide
     changePage, priceFilter, colorFilter, searchText
 }) => {
     const { t } = useTranslation()
-    debugger
     const wdthFiveProductsToShow = { width: '100%', justifyContent: 'center' }
     const wdthFourProductsToShow = { width: '100%', justifyContent: 'left' }
     const wdthOneProductToShow = { flexDirection: 'column' }
@@ -59,13 +58,44 @@ const Products = React.memo(({ products, productsPortion, productsPerRow, isSide
     //     return colorFilter !== '' ? colorFilter === color  ? true : false : true
     // }) 
 
-    const productsData = productsDataRanged.filter((item) => {
+    const productsDataFiltered = productsDataRanged.filter((item) => {
         if(searchText !== '') {
             if(item.title.toLowerCase().indexOf(searchText.toLowerCase()) > -1) return true
         } else {
             return true
         }
     })   
+
+    const productsPriced = productsDataFiltered.filter(item => {
+        if(priceFilter === 0) {
+            return true
+        } else {
+            if(priceFilter < 50) {
+                if(item.price < 50) {
+                    debugger
+                    return true
+                } 
+            } else if (priceFilter < 100) {
+                if(item.price >= 50 && item.price <= 100) {
+                    return true
+                }
+            } else if (priceFilter < 200) {
+                if(item.price >= 100 && item.price <= 200) {
+                    return true
+                }
+            } else if (priceFilter < 500) {
+                if(item.price >= 200 && item.price <= 500) {
+                    return true
+                }
+            } else {
+                if(item.price >= 500) {
+                    return true
+                }
+            } 
+        }
+    })
+
+    const productsData = productsPriced
 
     const productsToShow = productsCreation(productsData)
 

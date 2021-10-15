@@ -7,9 +7,6 @@ import TypeMenu from '../../components/Shop/SidebarComponents/ShopFilter/FilterM
 const CHANGE_PRICE_FILTER = 'CHANGE_PRICE_FILTER' 
 const SET_COLOR_FILTER = 'SET_COLOR_FILTER'
 
-export const changePriceFilter = (price) => ({ type: CHANGE_PRICE_FILTER, price })
-export const setColorFilter = (color) => ({ type: SET_COLOR_FILTER, color })
-
 const OPEN_SHOP_FILTERS_MENU = 'OPEN_SHOP_FILTERS_MENU'
 
 const OPEN_PRODUCTS_PORTION_OPTION_LIST = 'OPEN_PRODUCTS_PORTION_OPTION_LIST'
@@ -101,7 +98,6 @@ const ShopState = {
             id: 1,
             title: 'Brands',
             isOptionOpen: false,
-            menu: <BrandsMenu />,
             menuOptions: [
                 {
                     id: 1,
@@ -161,7 +157,6 @@ const ShopState = {
                     price: '600'
                 }
             ],
-            menu: <PriceMenu changePriceFilter={changePriceFilter}/>
         },
         {
             id: 3,
@@ -214,7 +209,6 @@ const ShopState = {
                     color: 'yellow'
                 }
             ],
-            menu: <ColourMenu setColorFilter={setColorFilter}/>
         },
         {
             id: 4,
@@ -242,7 +236,6 @@ const ShopState = {
                     title: 'Western Style'
                 },
             ],
-            menu: <TypeMenu />
         },
     ],
     priceFilter: 0,
@@ -293,7 +286,6 @@ const reducerShop = (state = ShopState, action) => {
                 productsPortion: action.status ? state.productsPortion === 25 ? 16 : state.productsPortion : 25
             }   
         case CHANGE_PRICE_FILTER:
-            debugger
             return {
                 ...state,
                 priceFilter: action.price
@@ -319,5 +311,8 @@ export const changeProductsPortion = (portion) => ({ type: CHANGE_PRODUCTS_PORTI
 export const changeSidebarShownStatus = (status) => ({ type: CHANGE_SIDEBAR_SHOWN_STATUS, status })
 
 export const changePage = (currentPage) => ({ type: CHANGE_PAGE, currentPage })
+
+export const changePriceFilter = (price) => ({ type: CHANGE_PRICE_FILTER, price })
+export const setColorFilter = (color) => ({ type: SET_COLOR_FILTER, color })
 
 export default reducerShop
