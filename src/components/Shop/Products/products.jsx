@@ -72,7 +72,6 @@ const Products = React.memo(({ products, productsPortion, productsPerRow, isSide
         } else {
             if(priceFilter < 50) {
                 if(item.price < 50) {
-                    debugger
                     return true
                 } 
             } else if (priceFilter < 100) {

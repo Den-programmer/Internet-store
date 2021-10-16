@@ -10,7 +10,7 @@ const PriceMenu = ({ shopFilters, priceFilter, changePriceFilter }) => {
     return (
         <div className="priceMenu">
             {options}
-            {priceFilter !== 0 && <ResetBtn />}
+            {priceFilter !== 0 && <ResetBtn func={changePriceFilter}/>}
         </div>
     )
 }
