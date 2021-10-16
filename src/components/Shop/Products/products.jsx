@@ -49,14 +49,6 @@ const Products = React.memo(({ products, productsPortion, productsPerRow, isSide
     const productsDataRanged = products.filter(item => {
         if(item.id >= startProductsPortion && item.id <= currentProductsPortion) return true 
     })
-    // const productsData = productsDataRanged.filter(item => {
-    //     let color = ''
-    //     item.properties.forEach(item => {
-    //         if(item.title === 'Colour') color = item.value
-    //         return color = ''
-    //     })
-    //     return colorFilter !== '' ? colorFilter === color  ? true : false : true
-    // }) 
 
     const productsDataFiltered = productsDataRanged.filter((item) => {
         if(searchText !== '') {
@@ -94,7 +86,13 @@ const Products = React.memo(({ products, productsPortion, productsPerRow, isSide
         }
     })
 
-    const productsData = productsPriced
+    const productsData = productsPriced.filter(item => {
+        let color = ''
+        item.properties.forEach(p => {
+            if(p.title === 'Colour') color = p.value
+        })
+        return colorFilter !== '' ? colorFilter.toLowerCase() === color.toLowerCase()  ? true : false : true
+    }) 
 
     const productsToShow = productsCreation(productsData)
 

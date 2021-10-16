@@ -291,7 +291,6 @@ const reducerShop = (state = ShopState, action) => {
                 priceFilter: action.price
             }              
         case SET_COLOR_FILTER:
-            debugger
             return {
                 ...state,
                 colorFilter: action.color
