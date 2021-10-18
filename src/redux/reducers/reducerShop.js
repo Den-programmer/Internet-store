@@ -4,6 +4,7 @@ import PriceMenu from '../../components/Shop/SidebarComponents/ShopFilter/Filter
 import ColourMenu from '../../components/Shop/SidebarComponents/ShopFilter/FilterMenus/ColourMenu/colourMenuContainer'
 import TypeMenu from '../../components/Shop/SidebarComponents/ShopFilter/FilterMenus/TypeMenu/TypeMenuContainer'
 
+const SET_BRAND = 'SET_BRAND'
 const CHANGE_PRICE_FILTER = 'CHANGE_PRICE_FILTER' 
 const SET_COLOR_FILTER = 'SET_COLOR_FILTER'
 
@@ -238,6 +239,7 @@ const ShopState = {
             ],
         },
     ],
+    brandsFilter: [],
     priceFilter: 0,
     colorFilter: '',
     colours: [],
@@ -294,7 +296,13 @@ const reducerShop = (state = ShopState, action) => {
             return {
                 ...state,
                 colorFilter: action.color
-            }       
+            } 
+        case SET_BRAND:
+            debugger
+            return {
+                ...state,
+                brandsFilter: action.status ? [ ...state.brandsFilter, action.brand ] : state.brandsFilter.filter(item => item !== action.brand && true)
+            }
         default:
             return state
     }
@@ -311,6 +319,7 @@ export const changeSidebarShownStatus = (status) => ({ type: CHANGE_SIDEBAR_SHOW
 
 export const changePage = (currentPage) => ({ type: CHANGE_PAGE, currentPage })
 
+export const setBrandsFilter = (brand, status) => ({ type: SET_BRAND, brand, status  })
 export const changePriceFilter = (price) => ({ type: CHANGE_PRICE_FILTER, price })
 export const setColorFilter = (color) => ({ type: SET_COLOR_FILTER, color })
 

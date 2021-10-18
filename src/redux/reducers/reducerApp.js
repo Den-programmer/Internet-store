@@ -156,6 +156,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course I know that all this information is about to be for all of my products!',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -205,7 +206,8 @@ const AppState = {
             },
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
-            tags: ['Tag\'s value', 'Current Tag'],
+            tags: ['Tag\'s value', 'Current Tag']  ,
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -256,6 +258,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -306,6 +309,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -351,6 +355,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -396,6 +401,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -441,6 +447,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -486,6 +493,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -531,6 +539,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -576,6 +585,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -621,6 +631,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -665,6 +676,7 @@ const AppState = {
             date: null,
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
+            brand: 'Kenxinda',
             tags: ['Tag\'s value', 'Current Tag'],
             properties: [
                 {
@@ -711,6 +723,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -756,6 +769,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -801,6 +815,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -846,6 +861,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -891,6 +907,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -936,6 +953,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -981,6 +999,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -1026,6 +1045,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -1071,6 +1091,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -1116,6 +1137,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -1161,6 +1183,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -1206,6 +1229,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -1251,6 +1275,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -1296,6 +1321,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -1341,6 +1367,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -1386,6 +1413,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -1431,6 +1459,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -1476,6 +1505,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -1521,6 +1551,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -1566,6 +1597,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -1611,6 +1643,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -1656,6 +1689,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -1701,6 +1735,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -1746,6 +1781,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -1791,6 +1827,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -1836,6 +1873,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -1881,6 +1919,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -1926,6 +1965,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -1971,6 +2011,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -2016,6 +2057,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -2061,6 +2103,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -2106,6 +2149,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -2151,6 +2195,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -2196,6 +2241,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -2241,6 +2287,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -2286,6 +2333,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -2331,6 +2379,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -2376,6 +2425,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -2421,6 +2471,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -2466,6 +2517,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -2511,6 +2563,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -2556,6 +2609,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -2600,6 +2654,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -2645,6 +2700,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -2690,6 +2746,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -2735,6 +2792,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -2780,6 +2838,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -2825,6 +2884,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,
@@ -2870,6 +2930,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
+            brand: 'Kenxinda',
             properties: [
                 {
                     id: 1,

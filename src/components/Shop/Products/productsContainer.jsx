@@ -10,6 +10,7 @@ const mapStateToProps = (state) => ({
     isSidebarShown: state.shopPage.isSidebarShown,
     currentPage: state.shopPage.currentPage,
     totalItemsCount: state.app.totalProductsCount,
+    brandsFilter: state.shopPage.brandsFilter,
     priceFilter: state.shopPage.priceFilter,
     colorFilter: state.shopPage.colorFilter,
     searchText: state.app.searchText
