@@ -8,7 +8,7 @@ import PriceMenu from '../FilterMenus/PriceMenu/priceMenuContainer'
 import ColourMenu from '../FilterMenus/ColourMenu/colourMenuContainer'
 import TypeMenu from '../FilterMenus/TypeMenu/TypeMenuContainer'
 
-const FilterItem = ({ title, isOptionOpen, id, openShopFiltersMenu, setBrandsFilter, changePriceFilter, setColorFilter }) => {
+const FilterItem = ({ title, isOptionOpen, id, openShopFiltersMenu, setBrandsFilter, setTypeFilter, changePriceFilter, setColorFilter }) => {
     const { t } = useTranslation()
     return (<>
         <div onClick={() => openShopFiltersMenu(id)} className={classes.filterItem}>
@@ -16,7 +16,7 @@ const FilterItem = ({ title, isOptionOpen, id, openShopFiltersMenu, setBrandsFil
             <FontAwesomeIcon className={classes.icon} icon={faAngleDown}/>
         </div>
         {isOptionOpen && id === 1 ? <BrandsMenu setBrandsFilter={setBrandsFilter}/> : isOptionOpen && id === 2 ? <PriceMenu changePriceFilter={changePriceFilter}/> : isOptionOpen && id === 3 ? 
-        <ColourMenu setColorFilter={setColorFilter}/> : isOptionOpen && id === 4 ? <TypeMenu /> : ''} 
+        <ColourMenu setColorFilter={setColorFilter}/> : isOptionOpen && id === 4 ? <TypeMenu setTypeFilter={setTypeFilter}/> : ''} 
     </>)
 }
 

@@ -157,6 +157,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -208,6 +209,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag']  ,
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -259,6 +261,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -310,6 +313,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -356,6 +360,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -402,6 +407,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -448,6 +454,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -494,6 +501,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -540,6 +548,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -586,6 +595,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -632,6 +642,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -677,6 +688,7 @@ const AppState = {
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
             category: ['Category', 'currentCategory'],
             brand: 'Kenxinda',
+            type: 'Casual',
             tags: ['Tag\'s value', 'Current Tag'],
             properties: [
                 {
@@ -724,6 +736,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -770,6 +783,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -816,6 +830,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -862,6 +877,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -908,6 +924,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -954,6 +971,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -1000,6 +1018,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -1046,6 +1065,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -1092,6 +1112,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -1138,6 +1159,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -1184,6 +1206,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -1230,6 +1253,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -1276,6 +1300,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -1322,6 +1347,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -1368,6 +1394,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -1414,6 +1441,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -1460,6 +1488,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -1506,6 +1535,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -1552,6 +1582,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -1598,6 +1629,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -1644,6 +1676,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -1690,6 +1723,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -1736,6 +1770,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -1782,6 +1817,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -1828,6 +1864,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -1874,6 +1911,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -1920,6 +1958,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -1966,6 +2005,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -2012,6 +2052,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -2058,6 +2099,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -2104,6 +2146,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -2150,6 +2193,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -2196,6 +2240,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -2242,6 +2287,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -2288,6 +2334,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -2334,6 +2381,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -2380,6 +2428,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -2426,6 +2475,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -2472,6 +2522,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -2518,6 +2569,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -2564,6 +2616,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -2610,6 +2663,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -2655,6 +2709,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -2701,6 +2756,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -2747,6 +2803,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -2793,6 +2850,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -2839,6 +2897,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -2885,6 +2944,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,
@@ -2931,6 +2991,7 @@ const AppState = {
             category: ['Category', 'currentCategory'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
+            type: 'Casual',
             properties: [
                 {
                     id: 1,

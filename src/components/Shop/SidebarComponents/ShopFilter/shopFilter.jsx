@@ -3,10 +3,10 @@ import classes from './shopFilter.module.scss'
 import FilterItem from './FilterItem/filterItem'
 import { useTranslation } from 'react-i18next'
 
-const ShopFilter = ({ shopFilters, openShopFiltersMenu, changePriceFilter, setColorFilter, setBrandsFilter, productsPortion }) => {
+const ShopFilter = ({ shopFilters, openShopFiltersMenu, changePriceFilter, setColorFilter, setBrandsFilter, setTypeFilter, productsPortion }) => {
     const { t } = useTranslation()
     const filters = shopFilters.map(item => {
-        return <FilterItem openShopFiltersMenu={openShopFiltersMenu} setBrandsFilter={setBrandsFilter} key={item.id} id={item.id} title={item.title} isOptionOpen={item.isOptionOpen} 
+        return <FilterItem openShopFiltersMenu={openShopFiltersMenu} setTypeFilter={setTypeFilter} setBrandsFilter={setBrandsFilter} key={item.id} id={item.id} title={item.title} isOptionOpen={item.isOptionOpen} 
         changePriceFilter={changePriceFilter} setColorFilter={setColorFilter}/>
     })
     return (

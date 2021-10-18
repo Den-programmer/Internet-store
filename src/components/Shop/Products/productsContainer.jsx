@@ -13,6 +13,7 @@ const mapStateToProps = (state) => ({
     brandsFilter: state.shopPage.brandsFilter,
     priceFilter: state.shopPage.priceFilter,
     colorFilter: state.shopPage.colorFilter,
+    typeFilter: state.shopPage.typeFilter,
     searchText: state.app.searchText
 })
 

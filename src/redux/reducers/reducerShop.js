@@ -1,12 +1,7 @@
-import React from 'react'
-import BrandsMenu from '../../components/Shop/SidebarComponents/ShopFilter/FilterMenus/BrandsMenu/brandsMenuContainer'
-import PriceMenu from '../../components/Shop/SidebarComponents/ShopFilter/FilterMenus/PriceMenu/priceMenuContainer'
-import ColourMenu from '../../components/Shop/SidebarComponents/ShopFilter/FilterMenus/ColourMenu/colourMenuContainer'
-import TypeMenu from '../../components/Shop/SidebarComponents/ShopFilter/FilterMenus/TypeMenu/TypeMenuContainer'
-
 const SET_BRAND = 'SET_BRAND'
 const CHANGE_PRICE_FILTER = 'CHANGE_PRICE_FILTER' 
 const SET_COLOR_FILTER = 'SET_COLOR_FILTER'
+const SET_TYPE = 'SET_TYPE'
 
 const OPEN_SHOP_FILTERS_MENU = 'OPEN_SHOP_FILTERS_MENU'
 
@@ -242,9 +237,7 @@ const ShopState = {
     brandsFilter: [],
     priceFilter: 0,
     colorFilter: '',
-    colours: [],
-    brands: [],
-    types: []
+    typeFilter: []
 }
 
 const reducerShop = (state = ShopState, action) => {
@@ -298,11 +291,15 @@ const reducerShop = (state = ShopState, action) => {
                 colorFilter: action.color
             } 
         case SET_BRAND:
-            debugger
             return {
                 ...state,
                 brandsFilter: action.status ? [ ...state.brandsFilter, action.brand ] : state.brandsFilter.filter(item => item !== action.brand && true)
             }
+        case SET_TYPE:
+            return {
+                ...state,
+                typeFilter: action.status ? [ ...state.typeFilter, action.val ] : state.typeFilter.filter(item => item !== action.val && true)
+            }    
         default:
             return state
     }
@@ -322,5 +319,6 @@ export const changePage = (currentPage) => ({ type: CHANGE_PAGE, currentPage })
 export const setBrandsFilter = (brand, status) => ({ type: SET_BRAND, brand, status  })
 export const changePriceFilter = (price) => ({ type: CHANGE_PRICE_FILTER, price })
 export const setColorFilter = (color) => ({ type: SET_COLOR_FILTER, color })
+export const setTypeFilter = (val, status) => ({ type: SET_TYPE, val, status })
 
 export default reducerShop
