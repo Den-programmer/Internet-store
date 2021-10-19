@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './pageTitle.module.scss'
 import { useTranslation } from 'react-i18next'
 
-const PageTitle = ({ currentPath, currentShopPage }) => {
+const PageTitle = ({ currentShopPage }) => {
     const { t } = useTranslation()
     const currPageCheckout = currentShopPage === "Shop Without Sidebar" ? t("shop_without_sidebar") : t("shop_sidebar")
     return (
@@ -11,7 +11,7 @@ const PageTitle = ({ currentPath, currentShopPage }) => {
                 <h2>{currPageCheckout}</h2>
             </div>
             <div className={classes.pathName}>
-                <h3>{currentPath}/{currPageCheckout}</h3>
+                <h3>Home/{currPageCheckout}</h3>
             </div>
         </section>
     )

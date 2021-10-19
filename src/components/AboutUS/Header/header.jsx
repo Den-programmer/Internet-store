@@ -10,7 +10,7 @@ const Header = (props) => {
             <LoginPanel />
             <MainHeader />
             <HeaderNavbar />
-            <HeaderPageName />
+            <HeaderPageName currentPageName="About us" currentPath="Home/About Us"/>
         </header>
     )
 }

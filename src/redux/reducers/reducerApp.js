@@ -32,10 +32,6 @@ const SET_DATE = 'SET_DATE'
 
 const SET_TOTAL_PRODUCTS_COUNT = 'SET_TOTAL_PRODUCTS_COUNT'
 
-const MOVE_HOME_PAGE = 'MOVE_HOME_PAGE'
-const MOVE_SHOP_PAGE = 'MOVE_SHOP_PAGE'
-const MOVE_BLOG_PAGE = 'MOVE_BLOG_PAGE'
-
 const SET_IS_CART_POPUP_OPEN_STATUS = 'SET_IS_CART_POPUP_OPEN_STATUS'
 
 const CHANGE_FREE_SHIPPING = 'CHANGE_FREE_SHIPPING'
@@ -73,10 +69,6 @@ const SET_LANGUAGE = 'SET_LANGUAGE'
 
 const CHANGE_SEARCH_TEXT = 'CHANGE_SEARCH_TEXT'
 
-const moveHomePage = () => ({ type: MOVE_HOME_PAGE })
-const moveShopPage = () => ({ type: MOVE_SHOP_PAGE })
-const moveBlogPage = () => ({ type: MOVE_BLOG_PAGE })
-
 // All products must be with renamed property photos - not photo!
 
  
@@ -85,48 +77,39 @@ const AppState = {
         {
             id: 1,
             path: '/Home',
-            title: 'Home',
-            method: moveHomePage
+            title: 'Home'
         },
         {
             id: 2,
             path: '/Home/Shop',
-            title: 'Shop',
-            method: moveShopPage
+            title: 'Shop'
         },
         {
             id: 3,
             path: '/',
-            title: 'Fashion',
-            method: () => null
+            title: 'Fashion'
         },
         {
             id: 4,
             path: '/',
-            title: 'Electronics',
-            method: () => null
+            title: 'Electronics'
         },
         {
             id: 5,
             path: '/',
-            title: 'Pages',
-            method: () => null
+            title: 'Pages'
         },
         {
             id: 6,
             path: '/',
-            title:'Features',
-            method: () => null
+            title:'Features'
         },
         {
             id: 7,
             path: '/Home/Blog',
-            title:'Blog',
-            method: moveBlogPage
+            title:'Blog'
         }
     ],
-    currentPageName: "About Us",
-    currentPath: 'Home/About Us',
     date: {
         year: '',
         month: '',
@@ -3934,24 +3917,6 @@ const reducerApp = (state = AppState, action) => {
             return {
                 ...state,
                 totalProductsCount: action.count
-            }
-        case MOVE_HOME_PAGE:
-            return {
-                ...state,
-                currentPageName: 'Home',
-                currentPath: 'Home'
-            }
-        case MOVE_SHOP_PAGE:
-            return {
-                ...state,
-                currentPageName: 'Shop',
-                currentPath: 'Home/Shop'
-            }
-        case MOVE_BLOG_PAGE:
-            return {
-                ...state,
-                currentPageName: 'Blog',
-                currentPath: 'Home/Blog'
             }
         case SET_IS_CART_POPUP_OPEN_STATUS:
             return {

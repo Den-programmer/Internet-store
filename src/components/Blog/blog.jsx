@@ -14,7 +14,7 @@ const Blog = (props) => {
             <Login />
             <CommonMainHeader />
             <HeaderNavbar />
-            <HeaderPageName />
+            <HeaderPageName currentPageName="Blog" currentPath="Home/Blog"/>
             <div className={classes.dFlex}>
                 <BlogArticle />
                 <BlogSidebar />
