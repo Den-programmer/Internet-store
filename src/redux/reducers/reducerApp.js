@@ -137,7 +137,7 @@ const AppState = {
                 seconds: 40
             },
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course I know that all this information is about to be for all of my products!',
-            category: ['Category', 'currentCategory'],
+            category: ['Electronics & Hitech'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
             type: 'Casual',
@@ -189,7 +189,7 @@ const AppState = {
                 seconds: 40
             },
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
-            category: ['Category', 'currentCategory'],
+            category: ['Fashion & Clothing'],
             tags: ['Tag\'s value', 'Current Tag']  ,
             brand: 'Kenxinda',
             type: 'Casual',
@@ -241,7 +241,7 @@ const AppState = {
                 seconds: 40
             },
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
-            category: ['Category', 'currentCategory'],
+            category: ['Electronics & Hitech'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
             type: 'Casual',
@@ -293,7 +293,7 @@ const AppState = {
                 seconds: 40
             },
             description: 'The description of this product is pretty simple. It is an apple watch. Super expensive price for nothing, but camera... And of course ',
-            category: ['Category', 'currentCategory'],
+            category: ['Electronics & Hitech', 'Mobile Phones'],
             tags: ['Tag\'s value', 'Current Tag'],
             brand: 'Kenxinda',
             type: 'Casual',

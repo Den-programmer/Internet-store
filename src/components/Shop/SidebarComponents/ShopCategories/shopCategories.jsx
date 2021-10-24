@@ -3,10 +3,10 @@ import classes from './shopCategories.module.scss'
 import CategoriesItem from './CategoriesItem/categoriesItem'
 import { useTranslation } from 'react-i18next'
 
-const ShopCategories = ({ shopCategories }) => {
+const ShopCategories = ({ shopCategories, setCategories }) => {
     const { t } = useTranslation()
     const categories = shopCategories.map(item => {
-        return <CategoriesItem key={item.id} id={item.id} title={item.title} productsCount={item.productsCount} isAdded={item.isAdded}/>
+        return <CategoriesItem setCategories={setCategories} category={item.category} key={item.id} id={item.id} title={item.title} productsCount={item.productsCount} isAdded={item.isAdded}/>
     })
     return (
         <div className={classes.shopCategories}>

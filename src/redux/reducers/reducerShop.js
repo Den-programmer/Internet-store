@@ -12,6 +12,8 @@ const CHANGE_SIDEBAR_SHOWN_STATUS = 'CHANGE_SIDEBAR_SHOWN_STATUS'
 
 const CHANGE_PAGE = 'CHANGE_PAGE'
 
+const SET_CATEGORIES = 'SET_CATEGORIES'
+
 const ShopState = {
     currentShopPage: 'Shop Without Sidebar',
     isSidebarShown: false,
@@ -44,49 +46,57 @@ const ShopState = {
             id: 1,
             title: 'fashionAndClothing',
             productsCount: 128,
-            isAdded: true
+            isAdded: true,
+            category: 'Fashion & Clothing'
         },
         {
             id: 2,
             title: 'Mobile_phones',
             productsCount: 89,
-            isAdded: true
+            isAdded: true,
+            category: 'Mobile Phones'
         },
         {
             id: 3,
             title: 'ElectronicsAndHitech',
             productsCount: 205,
-            isAdded: true
+            isAdded: true,
+            category: 'Electronics & Hitech'
         },
         {
             id: 4,
             title: 'FoodsAndFruits',
             productsCount: 118,
-            isAdded: true
+            isAdded: true,
+            category: 'Foods & Fruits'
         },
         {
             id: 5,
             title: 'BeautyAndHealth',
             productsCount: 45,
-            isAdded: true
+            isAdded: true,
+            category: 'Beauty & Health'
         },
         {
             id: 6,
             title: 'ShoesAndBags',
             productsCount: 23,
-            isAdded: true
+            isAdded: true,
+            category: 'Shoes & Bags'
         },
         {
             id: 7,
             title: 'DecorsAndHome',
             productsCount: 19,
-            isAdded: true
+            isAdded: true,
+            category: 'Decors & Home'
         },
         {
             id: 8,
             title: 'SportsAndOuterwear',
             productsCount: 34,
-            isAdded: true
+            isAdded: true,
+            category: 'Sports & Outerwear'
         }
     ],
     shopFilters: [
@@ -237,7 +247,8 @@ const ShopState = {
     brandsFilter: [],
     priceFilter: 0,
     colorFilter: '',
-    typeFilter: []
+    typeFilter: [],
+    category: ''
 }
 
 const reducerShop = (state = ShopState, action) => {
@@ -300,6 +311,11 @@ const reducerShop = (state = ShopState, action) => {
                 ...state,
                 typeFilter: action.status ? [ ...state.typeFilter, action.val ] : state.typeFilter.filter(item => item !== action.val && true)
             }    
+        case SET_CATEGORIES:
+            return {
+                ...state,
+                category: action.category
+            }
         default:
             return state
     }
@@ -320,5 +336,7 @@ export const setBrandsFilter = (brand, status) => ({ type: SET_BRAND, brand, sta
 export const changePriceFilter = (price) => ({ type: CHANGE_PRICE_FILTER, price })
 export const setColorFilter = (color) => ({ type: SET_COLOR_FILTER, color })
 export const setTypeFilter = (val, status) => ({ type: SET_TYPE, val, status })
+
+export const setCategories = (category) => ({ type: SET_CATEGORIES, category })
 
 export default reducerShop

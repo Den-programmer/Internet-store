@@ -2,7 +2,6 @@ import React from 'react'
 import classes from './headerPageName.module.scss'
 
 const HeaderPageName = ({ currentPageName, currentPath }) => {
-    debugger
     return (
         <div className={classes.pageNameWrapper}>
             <div className={classes.pageName}>

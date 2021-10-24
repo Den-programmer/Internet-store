@@ -4,9 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart, faLongArrowAltRight, faLongArrowAltLeft, faHeart, faEye } from '@fortawesome/free-solid-svg-icons'
 import uncoloredHeart from '../../../../images/heartUncolored.png'
 import { NavLink } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const Product = ({ id, photos, title, price, isNew, isSale, hovered, starsCount, productsPortion,
     greyStarsCount, onMouseMove, onMouseLeave, likeProduct, removeLike, like, productsPerRow, setProductId }) => {
+    const { t } = useTranslation()
+
     const commonProductWidth = '230px'
     const styleWdthFive = { width: commonProductWidth }
     const styleWdthFour = { width: '210px' }
@@ -21,10 +24,10 @@ const Product = ({ id, photos, title, price, isNew, isSale, hovered, starsCount,
         <NavLink to={"/Product/" + id} style={chosenProductStyle} onClick={ProductHandler} onMouseMove={onMouseMoveHandler} onMouseLeave={onMouseLeaveHandler} className={productsPortion !== 10 ? classes.product : classes.productAnother}>
             <div className={classes.productProfile}>
                 {isNew && <div className={classes.new}>
-                    New
+                    {t('new')}
                 </div>}
                 {isSale && <div className={classes.sale}>
-                    Sale
+                    {t('sale')}
                 </div>}
                 <img className={classes.product__photo} src={photos[0]} alt="" />
                 {hovered && <div style={chosenProductStyle} className={classes.additional_functions_Wrapper}><div className={classes.additional_functions}>

@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next'
 
 const Products = React.memo(({ products, productsPortion, productsPerRow, isSidebarShown,
     setProductId, changeProductHoveredStatus, unsetProductAsHovered, totalItemsCount, currentPage,
-    changePage, brandsFilter, priceFilter, colorFilter, typeFilter, searchText
+    changePage, brandsFilter, priceFilter, colorFilter, typeFilter, category, searchText
 }) => {
     const { t } = useTranslation()
     const wdthFiveProductsToShow = { width: '100%', justifyContent: 'center' }
@@ -102,11 +102,19 @@ const Products = React.memo(({ products, productsPortion, productsPerRow, isSide
         }
     })
 
-    const productsData = productsBranded.filter(item => {
+    const productsTyped = productsBranded.filter(item => {
         if(typeFilter.length === 0) {
             return true
         } else {
             return typeFilter.includes(item.type)
+        }
+    })
+
+    const productsData = productsTyped.filter(item => {
+        if(category === '') {
+            return true
+        } else {
+            return item.category.includes(category)
         }
     })
 
