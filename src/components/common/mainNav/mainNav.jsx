@@ -2,8 +2,8 @@ import React from 'react'
 import classes from './mainNav.module.scss'
 import NavbarLink from './NavbarLink/navbarLink'
 
-const MainNav = ({ navbarLinks }) => {
-    const NavbarLinks = navbarLinks.map(link => <NavbarLink method={link.method} title={link.title} path={link.path} id={link.id} key={link.id} />)
+const MainNav = ({ navbarLinks, setCategories }) => {
+    const NavbarLinks = navbarLinks.map(link => <NavbarLink setCategories={setCategories} title={link.title} path={link.path} id={link.id} key={link.id} />)
     return (
         <nav className={classes.mainNav}>
             <ul>

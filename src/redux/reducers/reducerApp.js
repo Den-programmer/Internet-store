@@ -86,12 +86,12 @@ const AppState = {
         },
         {
             id: 3,
-            path: '/',
+            path: '/Home/Shop',
             title: 'Fashion'
         },
         {
             id: 4,
-            path: '/',
+            path: '/Home/Shop',
             title: 'Electronics'
         },
         {

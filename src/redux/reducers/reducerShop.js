@@ -97,7 +97,7 @@ const ShopState = {
             productsCount: 34,
             isAdded: true,
             category: 'Sports & Outerwear'
-        }
+        } 
     ],
     shopFilters: [
         {
@@ -312,6 +312,7 @@ const reducerShop = (state = ShopState, action) => {
                 typeFilter: action.status ? [ ...state.typeFilter, action.val ] : state.typeFilter.filter(item => item !== action.val && true)
             }    
         case SET_CATEGORIES:
+            debugger
             return {
                 ...state,
                 category: action.category
