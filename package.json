@@ -2,6 +2,7 @@
   "name": "shop",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://den-programmer.github.io/Internet-store/",
   "dependencies": {
     "@babel/core": "7.9.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
@@ -80,7 +81,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -98,6 +101,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.2.3",
     "node-sass": "^4.14.1",
     "sass-loader": "^10.0.2"
   },
