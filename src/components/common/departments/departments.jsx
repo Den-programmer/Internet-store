@@ -88,10 +88,10 @@ const Departments = ({ setIsDepartmentsMenuOpenStatus, isDepartmentsMenuOpen, se
     })
 
     return (
-        <div style={language === "English" ? { width: '270px' } : language === "Русский" ? { width: '353.5px' } : { width: '302.5px' } } ref={departmentsMenu} onClick={() => setIsDepartmentsMenuOpenStatus(!isDepartmentsMenuOpen)} className={classes.departments}>
+        <div ref={departmentsMenu} onClick={() => setIsDepartmentsMenuOpenStatus(!isDepartmentsMenuOpen)} className={classes.departments}>
             <h3>{t("departments")}</h3>
             {isDepartmentsMenuOpen && <div className={classes.menu}>
-                <ul style={language === "English" ? { right: '-84px' } : language === "Русский" ? { right: '-106.5px' } : { right: '-105.5px' } } className={classes.menuList}>
+                <ul className={classes.menuList}>
                     {departmentItems}
                 </ul>
             </div>}

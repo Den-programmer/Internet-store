@@ -41,6 +41,10 @@ class App extends Component {
       productsInCartTotalPrice = Number(productsInCartTotalPrice) + Number(this.props.productsInCart[i].price) + '.00'
     }
     this.props.countTotal(productsInCartTotalPrice)
+
+    // Set usual language!
+
+    // this.props.changeLanguage()
   }
   render() {
     return (

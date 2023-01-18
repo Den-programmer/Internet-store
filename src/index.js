@@ -18,7 +18,7 @@ ReactDOM.render(
     <React.StrictMode>
       <BrowserRouter>
         <Provider store={store}>
-          <App />
+          <App changeLanguage={changeLanguage}/>
         </Provider>
       </BrowserRouter>
     </React.StrictMode>

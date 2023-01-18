@@ -31,7 +31,7 @@ const ProductStandart = ({
                     </div>
                         {like ? <div onClick={() => removeLike(id)} className={classes.like}><FontAwesomeIcon icon={faHeart} /></div> :
                         <div onClick={() => likeProduct(id)} className={classes.like}><img src={uncoloredHeart} alt=""/></div>}
-                    <div className={classes.comprison}>
+                    <div className={classes.comparison}>
                         <FontAwesomeIcon className={classes.rightArrow} icon={faLongArrowAltRight} />
                         <FontAwesomeIcon className={classes.leftArrow} icon={faLongArrowAltLeft} />
                     </div>

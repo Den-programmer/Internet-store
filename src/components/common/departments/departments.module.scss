@@ -7,6 +7,7 @@
     background-color: #FFD200;
     box-sizing: border-box;
     padding: 0px 20px;
+    width: 268px;
     color: #222222;
     user-select: none;
     cursor: pointer;
@@ -22,6 +23,7 @@
     .menuList {
         position: absolute;
         top: 25px;
+        right: -105px;
         z-index: 999;
         background-color: #FFFFFF;
         li {
