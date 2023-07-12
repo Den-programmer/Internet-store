@@ -1,17 +1,13 @@
 import React from 'react'
 import classes from './wishlist.module.scss'
-import Login from '../common/Login/loginContainer'
-import CommonMainHeader from '../common/CommonMainHeader/commonMainHeaderContainer'
-import Navbar from '../Home/Header/Navbar/navbar'
 import CurrentList from './CurrentList/currentListContainer'
 import Footer from '../common/Footer/footerContainer'
+import Header from '../Home/Header/header'
 
 const Wishlist = (props) => {
     return (
         <div className={classes.wishlist}>
-            <Login />
-            <CommonMainHeader />
-            <Navbar />
+            <Header />
             <CurrentList />
             <Footer />
         </div>

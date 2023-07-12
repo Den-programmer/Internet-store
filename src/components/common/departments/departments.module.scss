@@ -7,7 +7,7 @@
     background-color: #FFD200;
     box-sizing: border-box;
     padding: 0px 20px;
-    width: 268px;
+    width: 100%;
     color: #222222;
     user-select: none;
     cursor: pointer;
@@ -23,12 +23,11 @@
     .menuList {
         position: absolute;
         top: 25px;
-        right: -105px;
         z-index: 999;
         background-color: #FFFFFF;
         li {
             padding: 20px 0; 
-            width: 268px;
+            width: 100%;
             border: 1px solid #E8E8E8;
             &:hover {
                 transition: all .3s linear;
@@ -58,7 +57,6 @@
         justify-content: space-between;
         background-color: #FFD200;
         box-sizing: border-box;
-        width: 200px;
         height: 50px;
         color: #222222;
         user-select: none;
@@ -79,7 +77,6 @@
             background-color: #FFFFFF;
             li {
                 padding: 20px 0; 
-                width: 200px;
                 border: 1px solid #E8E8E8;
                 &:hover {
                     transition: all .3s linear;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import classes from './departments.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTv, faMobile, faFutbol, faLeaf, faShoppingBasket, faCameraRetro, faPlug, faHeadphones, faAppleAlt, faTags } from '@fortawesome/free-solid-svg-icons'
@@ -7,6 +7,8 @@ import { useTranslation } from 'react-i18next'
 const Departments = ({ setIsDepartmentsMenuOpenStatus, isDepartmentsMenuOpen, setCategories, language }) => {
     const { t } = useTranslation()
     const departmentsMenu = React.createRef()
+    const menuList = React.createRef()
+    const listItem = React.createRef()
     const departmentsData = [
         {
             id: 1,
@@ -80,18 +82,27 @@ const Departments = ({ setIsDepartmentsMenuOpenStatus, isDepartmentsMenuOpen, se
         }
     ]
     const departmentItems = departmentsData.map(d => {
-        return <li onClick={() => setCategories(d.category)} key={d.id}><FontAwesomeIcon className={classes.menuIcon} icon={d.icon} /><a href={d.path}>{d.title}</a></li>
+        return <li ref={listItem} onClick={() => setCategories(d.category)} key={d.id}><FontAwesomeIcon className={classes.menuIcon} icon={d.icon} /><a href={d.path}>{d.title}</a></li>
     })
 
     document.addEventListener('click', e => {
         if(departmentsMenu.current && !departmentsMenu.current.contains(e.target)) setIsDepartmentsMenuOpenStatus(false)
     })
-
+    useEffect(() => {
+            let dWidth = departmentsMenu.current.clientWidth
+            let node1 = menuList.current
+            let node2 = listItem.current
+            if(node1 && node2) {
+                node1.style.width = dWidth + 'px'
+                node2.style.width = dWidth + 'px'
+            }
+    })
+   
     return (
         <div ref={departmentsMenu} onClick={() => setIsDepartmentsMenuOpenStatus(!isDepartmentsMenuOpen)} className={classes.departments}>
             <h3>{t("departments")}</h3>
             {isDepartmentsMenuOpen && <div className={classes.menu}>
-                <ul className={classes.menuList}>
+                <ul style={ language === 'English' ? { right: '-93px' } : { right: '-116px' }} ref={menuList} className={classes.menuList}>
                     {departmentItems}
                 </ul>
             </div>}

@@ -8,10 +8,10 @@ const Navbar = (props) => {
     return (
         <div className={classes.navbarWrapper}>
             <div className={classes.navbar}>
-                <div>
+                <div style={{ width: '25%' }}>
                     <Departments />
                 </div>
-                <div className={classes.mainPartWrapper}>
+                <div style={{ width: '75%' }} className={classes.mainPartWrapper}>
                     <MainNav />
                     <div className={classes.callUsWrapper}>
                         <CallUs />
