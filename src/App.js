@@ -44,7 +44,21 @@ class App extends Component {
 
     // Set usual language!
 
-    // this.props.changeLanguage()
+    // window.onbeforeunload = () => {
+    //   if(localStorage) {
+    //     localStorage["language"] = this.props.language
+    //   }
+    // }
+    
+    // Change departments condition!
+    
+
+    // window.onload = () => {
+    //   if(localStorage) {
+    //     let savedLanguage = localStorage["language"]
+    //     if(savedLanguage !== null) this.props.changeLanguage(localStorage["language"])
+    //   }
+    // }
   }
   render() {
     return (
@@ -69,7 +83,8 @@ class App extends Component {
 const mapStateToProps = (state) => ({
   products: state.app.products,
   productsInCart: state.app.productsInCart,
-  productId: state.app.productId
+  productId: state.app.productId,
+  language: state.app.language
 })
 
 const AppContainer = connect(mapStateToProps, { setDate, setTotalProductsCount, countTotal })(App)

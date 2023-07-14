@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
     background-color: #FFD200;
     box-sizing: border-box;
     padding: 0px 20px;
@@ -19,12 +20,16 @@
     }
 }
 .menu {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 50px 0;
+    width: 100%;
     .menuList {
-        position: absolute;
         top: 25px;
         z-index: 999;
         background-color: #FFFFFF;
+        width: 100%;
         li {
             padding: 20px 0; 
             width: 100%;

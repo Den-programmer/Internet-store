@@ -17,15 +17,17 @@ const MainHeader = ({ deleteFromCart, cartPopupStatus, productsInCart, setIsCart
     return (
         <div className={classes.mainHeaderWrapper}>
             <div className={classes.mainHeader}>
-                <NavLink to="/">
-                    <div className={classes.logo}>
-                        <img src={basket} alt="" />
-                        <h1>Supermart</h1>
-                    </div>
-                </NavLink>
+                <div className={classes.logoWrapper}>
+                    <NavLink to="/">
+                        <div className={classes.logo}>
+                            <img src={basket} alt="" />
+                            <h1>Supermart</h1>
+                        </div>
+                    </NavLink>
+                </div>
                 <div className={classes.mainPanel}>
                     <div className={classes.searchPanel}>
-                        <input placeholder={t("search")} onChange={setSearchText} type="text" value={searchText}/>
+                        <input placeholder={t("search")} onChange={setSearchText} type="text" value={searchText} />
                         <div className={classes.categories}>
                             <h4>{t("all_categories")}</h4>
                             <FontAwesomeIcon className={classes.angleDownIcon} icon={faAngleDown} />
@@ -48,7 +50,7 @@ const MainHeader = ({ deleteFromCart, cartPopupStatus, productsInCart, setIsCart
                             total={total}
                             deleteFromCart={deleteFromCart}
                             setIsCartPopupOpenStatus={setIsCartPopupOpenStatus}
-                            productsInCart={productsInCart} productsInCart={productsInCart} /></div>}
+                            productsInCart={productsInCart} /></div>}
                     </div>
                 </div>
             </div>

@@ -3881,6 +3881,8 @@ const AppState = {
     errorText: '',
     isLaunguageSelectListOpenStatus: false,
     language: 'English',
+    // language: 'en',
+    // Change the reducer, make a case that checks tag - property language!
     languages: [
         {
             id: 1,
