@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "228e2a3adfca8108e3c5e326388e3b7e",
+    "revision": "14b0574845b441f44fa3eadef4025f65",
     "url": "/Internet-store/index.html"
   },
   {
-    "revision": "6f41935e75cbe59a5594",
-    "url": "/Internet-store/static/css/main.b439d1ec.chunk.css"
+    "revision": "f631c70e53c6e80ab816",
+    "url": "/Internet-store/static/css/main.36fc2805.chunk.css"
   },
   {
-    "revision": "e78266a1b27712d1ae4f",
-    "url": "/Internet-store/static/js/2.7f7c2be8.chunk.js"
+    "revision": "66dab440d5481d4891b1",
+    "url": "/Internet-store/static/js/2.bd731cb9.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/Internet-store/static/js/2.7f7c2be8.chunk.js.LICENSE.txt"
+    "url": "/Internet-store/static/js/2.bd731cb9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6f41935e75cbe59a5594",
-    "url": "/Internet-store/static/js/main.39be0f4d.chunk.js"
+    "revision": "f631c70e53c6e80ab816",
+    "url": "/Internet-store/static/js/main.2aa7b88a.chunk.js"
   },
   {
     "revision": "06dd2ecb40aa4274cd2e",
@@ -100,8 +100,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Internet-store/static/media/appleWatch4.571d08af.jpg"
   },
   {
-    "revision": "45e1883f0287e6ffeecd497c4af44ecd",
-    "url": "/Internet-store/static/media/avatar.45e1883f.jpg"
+    "revision": "71ea9319406fe9a05e4591eec646c1e3",
+    "url": "/Internet-store/static/media/avatar.71ea9319.jpg"
   },
   {
     "revision": "707b6ef8874ecc381d331a9a95849301",
