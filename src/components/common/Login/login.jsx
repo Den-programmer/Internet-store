@@ -34,11 +34,13 @@ const Login = React.memo(({ setIsLoginStatus, setIsLaunguageSelectListOpenStatus
                     <li className={classes.vertical_line}>|</li>
                     <li className={classes.navbarItem}><NavLink to="/Wishlist"><img className={classes.heartIcon} src={Heart} alt="" />{t("wishlist")}</NavLink></li>
                 </ul>
-                <div onClick={() => setIsLaunguageSelectListOpenStatus(!selectListStatus)} className={classes.launguage}>
+                <div onClick={() => setIsLaunguageSelectListOpenStatus(!selectListStatus)} className={classes.language}>
                     <p className={classes.navbarItem}>
                         {language}
                     </p>
-                    {selectListStatus && <div ref={popup} className={classes.popup}><LaunguageSelectList setLanguage={setLanguage} languages={languages}/></div>}
+                    {selectListStatus && <div ref={popup} className={classes.popup}>
+                        <LaunguageSelectList setLanguage={setLanguage} languages={languages}/>
+                    </div>}
                     <FontAwesomeIcon className={classes.faAngleDownIcon} icon={faAngleDown}/>
                 </div>
             </div>

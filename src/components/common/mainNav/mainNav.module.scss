@@ -1,23 +1,34 @@
 @import '../../../index.scss';
 
-.mainNav {
+.navigationWrapper {
     padding: 0px 30px;
     width: 55%;
-    ul {
-        display: flex;
-        li {
-            a {
-                color: #FFF;
-                margin: 0px 12px;
-                font-family: $Raleway;
-                text-decoration: none;
-                text-transform: uppercase;
-                font-weight: bold;
-                font-size: 12px;
-                cursor: pointer;
-                &:hover {
-                    transition: all 0.2s linear;
-                    color: #AC053D;
+
+    .navButtonWrapper {
+        display: none;
+    }
+
+    .mainNav {
+        width: 100%;
+
+        ul {
+            display: flex;
+
+            li {
+                a {
+                    color: #FFF;
+                    margin: 0px 12px;
+                    font-family: $Raleway;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 12px;
+                    cursor: pointer;
+
+                    &:hover {
+                        transition: all 0.2s linear;
+                        color: #AC053D;
+                    }
                 }
             }
         }
@@ -29,7 +40,79 @@
         ul {
             li {
                 a {
-                   font-size: 10px;
+                    font-size: 10px;
+                    margin: 0px 7px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-device-width: 1024px) {
+    .navigationWrapper {
+        width: auto;
+    }
+}
+
+@media screen and (max-device-width: 776px) {
+    .navigationWrapper {
+        width: 100%;
+
+        .mainNav {
+            width: 100%;
+
+            ul {
+                display: flex;
+                justify-content: space-around;
+
+                li {
+                    a {
+                        font-size: 10px;
+                        margin: 0px 7px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-device-width: 540px) {
+    .navigationWrapper {
+        position: relative;
+
+        .navButtonWrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .navButton {
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+
+        .mainNav {
+            position: absolute;
+            top: 35px;
+            left: 0;
+            z-index: 999;
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                li {
+                    border: 1px solid #636363;
+                    padding: 10px 0px;
+                    width: 100%;
+                    background: #FFF;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    a {
+                        color: #333;
+                        font-size: 12px;
+                    }
                 }
             }
         }

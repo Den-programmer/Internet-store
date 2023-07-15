@@ -4,8 +4,7 @@ import { setIsDepartmentsMenuOpenStatus } from '../../../redux/reducers/reducerA
 import { setCategories } from '../../../redux/reducers/reducerShop'
 
 const mapStateToProps = (state) => ({
-    isDepartmentsMenuOpen: state.aboutUsPage.isDepartmentsMenuOpen,
-    language: state.app.language
+    isDepartmentsMenuOpen: state.aboutUsPage.isDepartmentsMenuOpen
 })
 
 const DepartmentsContainer = connect(mapStateToProps, { setIsDepartmentsMenuOpenStatus, setCategories })(Departments)

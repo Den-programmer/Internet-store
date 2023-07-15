@@ -20,16 +20,8 @@ const LoginPanel = ({ setIsLoginStatus, language, languages, setIsLaunguageSelec
                     <NavLink onClick={() => setIsLoginStatus(false)} to="/MyAccount" className={classes.signup}>
                         <p>{t("signup")}</p>
                     </NavLink>
-                    <div className={classes.vertical_line}>|</div>
-                    <div className={classes.currency}>
-                        <p>USD</p>
-                    </div>
                 </div>
                 <div className={classes.helpPanel}>
-                    <div className={classes.help_btn}>
-                        <p>{t("help")}</p>
-                    </div>
-                    <div className={classes.vertical_line}>|</div>
                     <div className={classes.wishlist}>
                         <img className={classes.iconMargin} src={heart} alt=""/>
                         <NavLink to="/Wishlist">{t("wishlist")}</NavLink>

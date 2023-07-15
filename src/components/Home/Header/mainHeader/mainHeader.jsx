@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './mainHeader.module.scss'
 import basket from './img/basket.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch, faShoppingBasket, faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faShoppingBasket } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom'
 import CartPopup from '../../../common/CommonMainHeader/CartPopup/cartPopup'
 import { useTranslation } from 'react-i18next'
@@ -20,7 +20,7 @@ const MainHeader = ({ deleteFromCart, cartPopupStatus, productsInCart, setIsCart
                 <div className={classes.logoWrapper}>
                     <NavLink to="/">
                         <div className={classes.logo}>
-                            <img src={basket} alt="" />
+                            <img className={classes.logoImg} src={basket} alt="" />
                             <h1>Supermart</h1>
                         </div>
                     </NavLink>
@@ -28,10 +28,10 @@ const MainHeader = ({ deleteFromCart, cartPopupStatus, productsInCart, setIsCart
                 <div className={classes.mainPanel}>
                     <div className={classes.searchPanel}>
                         <input placeholder={t("search")} onChange={setSearchText} type="text" value={searchText} />
-                        <div className={classes.categories}>
+                        {/* <div className={classes.categories}>
                             <h4>{t("all_categories")}</h4>
                             <FontAwesomeIcon className={classes.angleDownIcon} icon={faAngleDown} />
-                        </div>
+                        </div> */}
                         <div className={classes.searchIcon}>
                             <FontAwesomeIcon icon={faSearch} />
                         </div>

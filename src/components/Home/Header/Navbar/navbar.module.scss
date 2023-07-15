@@ -10,13 +10,16 @@
     @extend .container;
     display: flex;
     align-items: center;
+    .departmentsWrapper {
+        width: 25%;
+    }
     .mainPartWrapper {
         background-color: #333333;
         display: flex;
         align-items: center;
         justify-content: space-between;
         height: 50px;
-        width: 100%;
+        width: 75%;
         .callUsWrapper {
             box-sizing: border-box;
             padding: 0px 10px;
@@ -25,19 +28,26 @@
 }
 
 
-@media screen and (max-device-width: 1024px) {
-    .navbar {
-        .mainPartWrapper {
-            background-color: #333333;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 50px;
-            width: 100%;
-            .callUsWrapper {
-                box-sizing: border-box;
-                padding: 0px 10px;
-            }
-        }
+@media screen and (max-device-width: 1161px) {
+    .callUsWrapper {
+        display: none;
     }
+    .mainPartWrapper {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-device-width: 1024px) {
+    .departmentsWrapper {
+        display: none;
+    }
+    .mainPartWrapper {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+}
+
+@media screen and (max-device-width: 776px) {
+    
 }

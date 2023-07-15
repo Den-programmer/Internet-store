@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTv, faMobile, faFutbol, faLeaf, faShoppingBasket, faCameraRetro, faPlug, faHeadphones, faAppleAlt, faTags } from '@fortawesome/free-solid-svg-icons'
 import { useTranslation } from 'react-i18next'
 
-const Departments = ({ setIsDepartmentsMenuOpenStatus, isDepartmentsMenuOpen, setCategories, language }) => {
+const Departments = ({ setIsDepartmentsMenuOpenStatus, isDepartmentsMenuOpen, setCategories }) => {
     const { t } = useTranslation()
     const departmentsMenu = React.createRef()
     const departmentsData = [
