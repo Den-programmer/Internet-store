@@ -10,7 +10,7 @@
 .counters {
     @extend .container;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     .counter {
         text-align: center;
         color: #fff;
@@ -27,8 +27,19 @@
     }
 }
 
-@media screen and (max-device-width: 1024px) {
+@media screen and (max-device-width: 900px) {
+    .countersWrapper { 
+        height: 180px;
+    }
     .counters {
-       width: 820px;
+        .counter {
+            margin: 0px 10px;
+            h5 {
+                font-size: 35px;
+            }
+            p {
+                font-size: 10px;
+            }
+        }
     }
 }

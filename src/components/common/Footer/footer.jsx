@@ -59,7 +59,6 @@ const Footer = (props) => {
                         <button>{t("submit")}</button>
                     </form>
                     <div className={classes.social_medias}>
-                        <h4 className={classes.keepInTouchTitle}>{t("keep_in_touch")}</h4>
                         <img src={twitter} alt="twitter" />
                         <img src={facebook} alt="facebook" />
                         <img src={instagram} alt="instagram" />
@@ -76,7 +75,7 @@ const Footer = (props) => {
                             <h3>SuperMart</h3>
                         </div>
                         <p>
-                           {t("footer_inf")}
+                            {t("footer_inf")}
                         </p>
                         <div className={classes.about_inf}>
                             <span>{t("address")}:</span>
@@ -91,35 +90,37 @@ const Footer = (props) => {
                             <p>info@supermart.com</p>
                         </div>
                     </div>
-                    <div className={classes.foot_company + ' ' + classes.additionalLinks}>
-                        <h4>{t("company")}</h4>
-                        <ul>
-                            <li>{t("discount_vouches")}</li>
-                            <li>{t("spring_collection")}</li>
-                            <li>{t("trending")}</li>
-                            <li>{t("best_sellers")}</li>
-                            <li>{t("special_deals")}</li>
-                        </ul>
-                    </div>
-                    <div className={classes.foot_policyInfo + ' ' + classes.additionalLinks}>
-                        <h4>{t("policy_info")}</h4>
-                        <ul>
-                            <li>{t("ordersAndReturns")}</li>
-                            <li>{t("advanced_search")}</li>
-                            <li>{t("helpAndFAQs")}</li>
-                            <li>{t("consultant")}</li>
-                            <li>{t("store_locations")}</li>
-                        </ul>
-                    </div>
-                    <div className={classes.foot_myAccount + ' ' + classes.additionalLinks}>
-                        <h4>{t("my_account")}</h4>
-                        <ul>
-                            <li>{t("about_us")}</li>
-                            <li>{t("delivery_information")}</li>
-                            <li>{t("privacy_policy")}</li>
-                            <li>{t("termsAndConditions")}</li>
-                            <li>{t("custom_link")}</li>
-                        </ul>
+                    <div className={classes.footLinks}>
+                        <div className={classes.foot_company + ' ' + classes.additionalLinks}>
+                            <h4>{t("company")}</h4>
+                            <ul>
+                                <li>{t("discount_vouches")}</li>
+                                <li>{t("spring_collection")}</li>
+                                <li>{t("trending")}</li>
+                                <li>{t("best_sellers")}</li>
+                                <li>{t("special_deals")}</li>
+                            </ul>
+                        </div>
+                        <div className={classes.foot_policyInfo + ' ' + classes.additionalLinks}>
+                            <h4>{t("policy_info")}</h4>
+                            <ul>
+                                <li>{t("ordersAndReturns")}</li>
+                                <li>{t("advanced_search")}</li>
+                                <li>{t("helpAndFAQs")}</li>
+                                <li>{t("consultant")}</li>
+                                <li>{t("store_locations")}</li>
+                            </ul>
+                        </div>
+                        <div className={classes.foot_myAccount + ' ' + classes.additionalLinks}>
+                            <h4>{t("my_account")}</h4>
+                            <ul>
+                                <li>{t("about_us")}</li>
+                                <li>{t("delivery_information")}</li>
+                                <li>{t("privacy_policy")}</li>
+                                <li>{t("termsAndConditions")}</li>
+                                <li>{t("custom_link")}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>

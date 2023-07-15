@@ -4,8 +4,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 512px;
     background-color: #FFFF;
+    padding: 50px 0px;
     @extend .container;
     >div {
         margin: 0px 40px;
@@ -52,37 +52,25 @@
     }
 }
 
-@media screen and (max-device-width: 1024px) {
+@media screen and (max-device-width: 1330px) {
     .welcome {
-        width: 840px;
-        >div {
-            margin: 0px 20px;
-        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+    .welcome__text {
+        width: 550px;
+    }
+}
+
+@media screen and (max-device-width: 560px) {
     .storeImg {
         img {
-            width: 400px;
-            height: 300px;
+            width: 250px;
+            height: 150px;
         }
     }
     .welcome__text {
-        .welcome__text_title {
-            font-weight: 600;
-            color: #222222;
-            font-size: 16px;
-        }
-        .welcome__text_subTitle {
-            color: #7B7B7B;
-            font-size: 12px;
-        }
-        .welcome__text_maintext {
-            font-size: 12px;
-            color: #8D8D8D;
-        }
-        .btn_contactUs {
-            a {
-                font-size: 10px;
-            }
-        }
+        width: 250px;
     }
 }
