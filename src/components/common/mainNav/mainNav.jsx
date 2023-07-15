@@ -9,12 +9,8 @@ const MainNav = ({ navbarLinks, setCategories }) => {
     const [isNavOpen, setIsNavOpenStatus] = useState(false)
     useEffect(() => {
         let screenWidth = window.screen.width
-        if(screenWidth > 540) {
-            setIsNavOpenStatus(true)
-        } else {
-            setIsNavOpenStatus(false)
-        }
-    }, [])
+        if(screenWidth > 540) setIsNavOpenStatus(true)
+    })
     return (
         <div className={classes.navigationWrapper}>
             <div className={classes.navButtonWrapper}>

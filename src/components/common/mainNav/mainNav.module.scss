@@ -91,17 +91,33 @@
             }
         }
 
+
         .mainNav {
-            transition: all ease .5s;
             position: absolute;
             top: 35px;
             left: 0;
             z-index: 999;
+            transition: all ease 3s;
+            animation: rotateMenu 400ms ease-in-out forwards;
+            transform-origin: top center;
+
+            @keyframes rotateMenu {
+                0% {
+                    transform: rotateX(-90deg)
+                }
+                70% {
+                    transform: rotateX(20deg) 
+                }
+                100% {
+                    transform: rotateX(0deg) 
+                }
+            }
             ul {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 width: 100%;
+
                 li {
                     border: 1px solid #636363;
                     padding: 10px 0px;
@@ -110,6 +126,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+
                     a {
                         color: #333;
                         font-size: 12px;
