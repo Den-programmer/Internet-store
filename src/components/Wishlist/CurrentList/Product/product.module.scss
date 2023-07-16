@@ -3,7 +3,7 @@
 .product {
     display: flex;
     padding: 20px 30px;
-    border: 1px solid #E8E8E8;
+    border: 1px solid #bcbcbc;
     align-items: center;
     cursor: pointer;
 
@@ -90,6 +90,7 @@
 @media screen and (max-device-width: 480px) {
     .product {
         .item {
+            width: 60%;
             img {
                 width: 35px;
                 height: 40px;

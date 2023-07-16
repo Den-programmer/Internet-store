@@ -3,6 +3,7 @@
 .cartList {
     @extend .container;
     padding: 30px 0px;
+
     .title {
         h3 {
             color: #232323;
@@ -11,28 +12,77 @@
             font-weight: 900;
         }
     }
+
     .productContainer {
         .controls {
+            box-sizing: border-box;
+            padding: 0px 30px;
+            width: 100%;
             display: flex;
             align-items: center;
             background: #FAFAFA;
-            border: 1px solid #E8E8E8;
+            border: 1px solid #bcbcbc;
             height: 60px;
+            justify-content: space-around;
+
             >div {
-                padding: 0px 30px;
+                width: 20%;
             }
+
             h5 {
                 color: #222;
                 text-transform: uppercase;
             }
-            .title {
-                width: 500px;
+        }
+    }
+}
+
+@media screen and (max-device-width: 1030px) {
+    .cartList {
+        width: 100%;
+    }
+}
+
+@media screen and (max-device-width: 800px) {
+    .cartList {
+        width: 125%;
+        position: relative;
+        transform: translate(-10%);
+    }
+}
+
+@media screen and (max-device-width: 460px) {
+    .cartList {
+        .title {
+            h3 {
+                color: #232323;
+                text-transform: uppercase;
+                font-size: 15px;
+                font-weight: 900;
             }
-            .price {
-                width: 104px;
-            }
-            .quantity {
-                width: 100px;
+        }
+    
+        .productContainer {
+            .controls {
+                box-sizing: border-box;
+                padding: 0px 30px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                background: #FAFAFA;
+                border: 1px solid #bcbcbc;
+                height: 60px;
+                justify-content: space-around;
+    
+                >div {
+                    width: 20%;
+                }
+    
+                h5 {
+                    font-size: 8px;
+                    color: #222;
+                    text-transform: uppercase;
+                }
             }
         }
     }

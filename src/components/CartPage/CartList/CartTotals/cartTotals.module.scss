@@ -17,7 +17,7 @@
             td {
                 background-color: #FDFDFD;
                 width: 286px;
-                border:1px solid #E8E8E8;
+                border:1px solid #bcbcbc;
                 padding: 20px;
             }
             .tr_title {
@@ -68,5 +68,14 @@
         border: none;
         border-radius: 1px;
         padding: 24px 234px;
+    }
+}
+
+@media screen and (max-device-width: 600px) {
+    .btn_proceed {
+        button {
+            padding: 24px 0px;
+            width: 100%;
+        }
     }
 }

@@ -27,6 +27,9 @@ const CartList = ({ productsInCart, deleteFromCart, changeFreeShippingStatus, ch
                     <div className={classes.total}>
                         <h5>{t("total")}</h5>
                     </div>
+                    <div className={classes.remove}>
+                        <h5>{t("remove")}</h5>
+                    </div>
                 </div>
                 {Products.length !== 0 ? <div className={classes.products}>
                     {Products}

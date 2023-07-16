@@ -2,14 +2,19 @@
 
 .product {
     display: flex;
+    box-sizing: border-box;
     padding: 20px 30px;
-    border: 1px solid #E8E8E8;
+    border: 1px solid #bcbcbc;
     align-items: center;
+    justify-content: space-between;
     cursor: pointer;
+    width: 100%;
+    >div {
+        width: 15%;
+    }
     .item {
         display: flex;
         align-items: center;
-        width: 550px;
         img {
             width: 55px;
             height: 60px;
@@ -22,17 +27,15 @@
         }
     }
     .price {
-        width: 190px;
         h4 {
             color: #222222;
             font-size: 14px;
             font-family: $Roboto;
         }
     }
-    .quantity {
-        width: 140px;
-    }
     .total {
+        position: relative;
+        right: 40px;
         h4 {
             color: #222222;
             font-size: 14px;
@@ -40,9 +43,29 @@
         }
     }
     .btn_remove {
-        margin-left: auto;
+        position: relative;
+        right: 20px;
         img {
             cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-device-width: 620px) {
+    .product {
+        .item {
+            p {
+                display: none;
+            }
+        }
+        .total {
+            position: relative;
+            right: 20px;
+            h4 {
+                color: #222222;
+                font-size: 14px;
+                font-family: $Roboto;
+            }
         }
     }
 }
