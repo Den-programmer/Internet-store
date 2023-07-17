@@ -3,5 +3,12 @@
     left: -1px;
     background-color: #fff;
     border: 1px solid #E8E8E8;
-    width: 795px;
+    width: 60%;
+}
+
+@media screen and (max-device-width: 650px) {
+    .content { 
+        width:100%;
+    }
+    
 }

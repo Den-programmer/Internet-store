@@ -1,7 +1,9 @@
 @import '../../../../../index.scss';
 
 .productContent {
-    width: 528px;
+    box-sizing: border-box;
+    padding-left: 40px;
+    width: 60%;
     .title {
         h2 {
             color: #232323;
@@ -24,7 +26,7 @@
         }
     }
     .description {
-        width: 482px;
+        width: 100%;
         p {
             color: #8D8D8D;
             font-size: 14px;
@@ -133,7 +135,7 @@
         }
     }
     .horizontal_line {
-        width: 522px;
+        width: 100%;
         height: 1px;
         background-color:#EEEEEE;
         margin: 40px 0px;
@@ -183,6 +185,21 @@
                     border: 1px solid rgb(255, 226, 226);
                     background: #F5F5F5;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-device-width: 660px) {
+    .productContent {
+        .productOptions {
+            .btn_addToCart {
+                .button {
+                    font-size: 10px;
+                }   
+                .cartIcon {
+                    
+                }  
             }
         }
     }

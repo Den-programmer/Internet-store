@@ -1,8 +1,10 @@
 .menu {
+    width: 25%;
     .menuItemWrapper {
+        width: 100%;
         user-select: none;
         .menuItem {
-            width: 285px;
+            width: 100%;
             height: 50px;
             padding-left: 25px;
             border: 1px solid #E8E8E8;
@@ -17,7 +19,7 @@
             }
         }
         .active {
-            width: 284px;
+            width: 100%;
             height: 50px;
             display: flex;
             align-items: center;

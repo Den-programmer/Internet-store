@@ -19,6 +19,7 @@
 }
 
 .customerReview {
+    width: 100%;
     padding: 40px;
     .customerReview__title {
         color: #222222;
@@ -48,17 +49,17 @@
         .userName {
             input {
                margin-left: 30px;
-               width: 600px;
+               width: 100%;
             }
         }
         textarea {
-            width: 600px;
+            width: 100%;
             height: 120px;
             border-radius: 1px;
             resize: none;
         }
         input {
-            width: 600px;
+            width: 100%;
             height: 45px;
             border-radius: 1px;
         }
