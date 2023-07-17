@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Internet-store/static/css/main.5999d5b7.chunk.css",
-    "main.js": "/Internet-store/static/js/main.876e55e8.chunk.js",
-    "main.js.map": "/Internet-store/static/js/main.876e55e8.chunk.js.map",
+    "main.css": "/Internet-store/static/css/main.8dd7e4de.chunk.css",
+    "main.js": "/Internet-store/static/js/main.697c0f3b.chunk.js",
+    "main.js.map": "/Internet-store/static/js/main.697c0f3b.chunk.js.map",
     "runtime-main.js": "/Internet-store/static/js/runtime-main.e299cd68.js",
     "runtime-main.js.map": "/Internet-store/static/js/runtime-main.e299cd68.js.map",
-    "static/js/2.a20e3403.chunk.js": "/Internet-store/static/js/2.a20e3403.chunk.js",
-    "static/js/2.a20e3403.chunk.js.map": "/Internet-store/static/js/2.a20e3403.chunk.js.map",
+    "static/js/2.8ab54ec5.chunk.js": "/Internet-store/static/js/2.8ab54ec5.chunk.js",
+    "static/js/2.8ab54ec5.chunk.js.map": "/Internet-store/static/js/2.8ab54ec5.chunk.js.map",
     "index.html": "/Internet-store/index.html",
-    "precache-manifest.1c167e29691f69d98f4683fade1e00fb.js": "/Internet-store/precache-manifest.1c167e29691f69d98f4683fade1e00fb.js",
+    "precache-manifest.480cd91081620564f5610b288b37446e.js": "/Internet-store/precache-manifest.480cd91081620564f5610b288b37446e.js",
     "service-worker.js": "/Internet-store/service-worker.js",
-    "static/css/main.5999d5b7.chunk.css.map": "/Internet-store/static/css/main.5999d5b7.chunk.css.map",
-    "static/js/2.a20e3403.chunk.js.LICENSE.txt": "/Internet-store/static/js/2.a20e3403.chunk.js.LICENSE.txt",
+    "static/css/main.8dd7e4de.chunk.css.map": "/Internet-store/static/css/main.8dd7e4de.chunk.css.map",
+    "static/js/2.8ab54ec5.chunk.js.LICENSE.txt": "/Internet-store/static/js/2.8ab54ec5.chunk.js.LICENSE.txt",
     "static/media/BLS_Tulip_BrownCream.png": "/Internet-store/static/media/BLS_Tulip_BrownCream.30023083.png",
     "static/media/Cybershot_Digital_Camera.png": "/Internet-store/static/media/Cybershot_Digital_Camera.51cbf03a.png",
     "static/media/Flipkart_Buildskill_13MM_Powerful_Reversible_Impact_Heavy_Duty.png": "/Internet-store/static/media/Flipkart_Buildskill_13MM_Powerful_Reversible_Impact_Heavy_Duty.6063125d.png",
@@ -77,8 +77,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.e299cd68.js",
-    "static/js/2.a20e3403.chunk.js",
-    "static/css/main.5999d5b7.chunk.css",
-    "static/js/main.876e55e8.chunk.js"
+    "static/js/2.8ab54ec5.chunk.js",
+    "static/css/main.8dd7e4de.chunk.css",
+    "static/js/main.697c0f3b.chunk.js"
   ]
 }
