@@ -1,6 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import classes from './cartTotals.module.scss'
+import { NavLink } from 'react-router-dom/cjs/react-router-dom.min'
 
 const CartTotals = ({ subtotal, changeFreeShippingStatus, changeFlatShippingStatus, isFreeShipping, isFlatShipping, shippingTotal, countShippingTotal }) => {
     const { t } = useTranslation() 
@@ -51,7 +52,7 @@ const CartTotals = ({ subtotal, changeFreeShippingStatus, changeFlatShippingStat
                 </tfoot>
             </table>
             <div className={classes.btn_proceed}>
-                <button>{t("proceed_to_checkout")}</button>
+                <button><NavLink to="/Checkout">{t("proceed_to_checkout")}</NavLink></button>
             </div>
         </div>
     )
