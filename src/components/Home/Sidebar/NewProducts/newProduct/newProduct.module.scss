@@ -4,15 +4,15 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid #E5E5E5;
+    border: 1px solid #bcbcbc;
     text-decoration: none;
     cursor: pointer;
     .product_photo {
-        width: 70px;
+        width: 10%;
         height: 70px;
     }
     .product_inf {
-        width: 140px;
+        width: 80%;
         h4 {
             font-family: $Roboto;
             font-size: 14px;

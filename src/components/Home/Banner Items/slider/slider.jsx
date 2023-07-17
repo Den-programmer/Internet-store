@@ -17,10 +17,10 @@ const Slider = ({ slider, changeSliderPage, chooseSliderItem }) => {
                 <div className={classes.description}>
                     <h2 className={classes.description__title}>{item.title}</h2>
                     <p className={classes.description__subtitle}>{item.subtitle}</p>
-                    <BtnShopNow click={null}/>
-                    <div className={classes.switchBtnsControl}>
-                        {switchBtns}
-                    </div>
+                    <BtnShopNow click={null} />
+                </div>
+                <div className={classes.switchBtnsControl}>
+                    {switchBtns}
                 </div>
             </div>
         )

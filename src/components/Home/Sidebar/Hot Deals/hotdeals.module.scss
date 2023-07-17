@@ -99,3 +99,9 @@
 .productWrapper {
     text-decoration: none;
 }
+
+@media screen and (max-device-width: 1400px) {
+    .hotDeals {
+        display: none;
+    }
+}

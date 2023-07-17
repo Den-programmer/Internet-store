@@ -46,3 +46,9 @@
         }
     }
 }
+
+@media screen and (max-device-width: 1400px) {
+    .productCategories {
+        display: none;
+    }
+}

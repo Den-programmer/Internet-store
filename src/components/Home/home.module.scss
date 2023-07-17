@@ -24,3 +24,11 @@
         border: 1px solid #EC4A9B;
     }
 }
+
+@media screen and (max-device-width: 1400px) {
+    .dFlex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

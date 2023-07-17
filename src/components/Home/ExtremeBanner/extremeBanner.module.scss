@@ -45,3 +45,9 @@
         }
     }
 }
+
+@media screen and (max-device-width: 1400px) {
+    .extremeBanner {
+        display: none;
+    }
+}

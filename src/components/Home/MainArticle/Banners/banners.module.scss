@@ -1,17 +1,16 @@
-.container {
-    width: 860px;
-    margin: 0 auto;
-}
 .banners {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 50px 0;
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+    // margin: 50px 0;
+    // width: 100%;
+    display: none;
     .banner {
         position: relative;
         border-radius: 1px;
+        margin: 0px 40px;
         .banner__photo {
-            width: 400px;
+            width: 100%;
             height: 200px;
         }
         .bannerInformation {

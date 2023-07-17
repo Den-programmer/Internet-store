@@ -1,3 +1,9 @@
 .sidebar {
     width: 20%;
 }
+
+@media screen and (max-device-width: 1400px) {
+    .sidebar {
+        width: 100%;
+    }
+}
