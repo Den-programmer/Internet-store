@@ -184,5 +184,14 @@
     "quantity": "Количество",
     "cart_totals": "Сумма покупки",
     "proceed_to_checkout": "Перейти к оформлению заказа",
-    "calculate_shipping": "Рассчитать стоимость доставки"
+    "calculate_shipping": "Рассчитать стоимость доставки",
+
+    "sku": "Артикул",
+    "category": "Категория",
+    "share": "Поделиться",
+    "description_for": "Описание для",
+    "reviews_for": "Отзывы для",
+    "your_email_will_not_be_published": "Ваш электронный адрес не будет опубликован. Обязательные поля помечены",
+    "your_rating": "Ваш рейтинг",
+    "your_review": "Ващ отзыв"
 }

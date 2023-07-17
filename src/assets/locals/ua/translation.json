@@ -183,5 +183,14 @@
     "quantity": "Кiлькiсть",
     "cart_totals": "Сума покупки",
     "proceed_to_checkout": "Перейти до оформлення замовлення",
-    "calculate_shipping": "Розрахувати вартість доставки"
+    "calculate_shipping": "Розрахувати вартість доставки",
+
+    "sku": "Артикул",
+    "category": "Категорiя",
+    "share": "Поділитися",
+    "description_for": "Опис для",
+    "reviews_for": "Відгуки для",
+    "your_email_will_not_be_published": "Ваша електронна адреса не буде опублікована. Обов'язкові поля позначені",
+    "your_rating": "Ваш рейтинг",
+    "your_review": "Ваш відгук"
 }

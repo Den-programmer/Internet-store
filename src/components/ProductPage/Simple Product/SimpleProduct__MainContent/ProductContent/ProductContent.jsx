@@ -9,8 +9,10 @@ import facebook from '../../images/facebook.png'
 import twitter from '../../images/twitter.png'
 import pinterest from '../../images/pinterest.png'
 import { countRating } from '../../../../../utils/function-helpers'
+import { useTranslation } from 'react-i18next'
 
 const ProductContent = ({ currentProduct, addToCart, removeLike, likeProduct }) => {
+    const { t } = useTranslation()
     const currentStyle = { display: 'inline-flex', alignItems: 'center' }
     const data = countRating(4)
     const { starsCount, greyStarsCount } = data
@@ -56,7 +58,7 @@ const ProductContent = ({ currentProduct, addToCart, removeLike, likeProduct }) 
             </div>
             <div className={classes.productOptions}>
                 <div className={classes.btn_addToCart}>
-                    <div className={classes.button} onClick={() => addToCart(currentProduct.id)}>Add to Cart</div>
+                    <div className={classes.button} onClick={() => addToCart(currentProduct.id)}>{t("add_to_cart")}</div>
                     <NavLink to="/CartPage"><FontAwesomeIcon className={classes.cartIcon} icon={faShoppingCart} /></NavLink>
                 </div>
                 {currentProduct.like ?  <div onClick={() => removeLike(currentProduct.id)} className={classes.like}>
@@ -71,17 +73,17 @@ const ProductContent = ({ currentProduct, addToCart, removeLike, likeProduct }) 
             </div>
             <div className={classes.horizontal_line}></div>
             <div className={classes.technicalContent}>
-                <p className={classes.characteristic}><span className={classes.property}>Sku:</span>0{currentProduct.id}</p>
-                <p className={classes.characteristic}><span className={classes.property}>Category:</span>{categoties}</p>
-                <p className={classes.characteristic}><span className={classes.property}>Tags:</span>{tags}</p>
+                <p className={classes.characteristic}><span className={classes.property}>{t("sku")}:</span>0{currentProduct.id}</p>
+                <p className={classes.characteristic}><span className={classes.property}>{t("category")}:</span>{categoties}</p>
+                <p className={classes.characteristic}><span className={classes.property}>{t("tags")}:</span>{tags}</p>
             </div>
             <div className={classes.horizontal_line}></div>
             <div className={classes.share}>
-                <h4>Share:</h4>
+                <h4>{t("share")}:</h4>
                 <div className={classes.shareBlocks}>
                     <div className={classes.shareItem}>
                         <img src={facebook} alt="" />
-                        <p>Share</p>
+                        <p>{t("share")}</p>
                     </div>
                     <div className={classes.shareItem}>
                         <img src={twitter} alt="" />

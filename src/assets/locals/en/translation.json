@@ -184,5 +184,14 @@
     "quantity": "Quantity",
     "cart_totals": "Cart Totals",
     "proceed_to_checkout": "Proceed to checkout",
-    "calculate_shipping": "Calculate Shipping"
+    "calculate_shipping": "Calculate Shipping",
+
+    "sku": "Sku",
+    "category": "Category",
+    "share": "Share",
+    "description_for": "Description for",
+    "reviews_for": "Reviews for",
+    "your_email_will_not_be_published": "Your email address will not be published. Required fields are marked",
+    "your_rating": "Your Rating",
+    "your_review": "Your Review"
 }    
