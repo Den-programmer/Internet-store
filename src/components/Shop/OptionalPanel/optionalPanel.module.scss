@@ -8,7 +8,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @extend .container;
     padding: 24px 0px;
     p {
         margin-block-start: 0em;
@@ -85,6 +84,36 @@
             }
             .optionIcons {
 
+            }
+        }
+    }
+}
+
+@media screen and (max-device-width: 610px) {
+    .optionalPanel {
+        .showing_title {
+            width: 20%;
+            h3 {
+                font-size: 10px;
+            }
+        }
+        .options {
+            .contentConvenience {
+                display: flex;
+                align-items: center;
+                >div {
+                    padding: 10px 14px;
+                    border-radius: 1px;
+                    cursor: pointer;
+                    &:hover {
+                        transition: all .3s linear;
+                        color: #444444;
+                        background-color: #F5F5F5;
+                    }
+                }
+                .optionIcons {
+    
+                }
             }
         }
     }

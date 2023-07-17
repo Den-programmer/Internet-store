@@ -13,7 +13,7 @@ const Products = React.memo(({ products, productsPortion, productsPerRow, isSide
 }) => {
     const { t } = useTranslation()
     const wdthFiveProductsToShow = { width: '100%', justifyContent: 'center' }
-    const wdthFourProductsToShow = { width: '100%', justifyContent: 'left' }
+    const wdthFourProductsToShow = { width: '100%', justifyContent: 'center' }
     const wdthOneProductToShow = { flexDirection: 'column' }
     const mainWidthStyle = productsPerRow === 5 ? wdthFiveProductsToShow : productsPerRow === 4 ? wdthFourProductsToShow : wdthOneProductToShow
     const productsCreation = (productsData) => {

@@ -40,9 +40,9 @@ const OptionalPanel = ({ productsPortion, changeProductsPortion, productsPerRow,
                         {isPortionListOpen && countItemsMenu}
                     </div>
                 </div>
-                <div className={classes.sort}>
+                {/* <div className={classes.sort}>
                     <p>{t("default_sorting")}</p><FontAwesomeIcon className={classes.iconAngleDown} icon={faAngleDown} />
-                </div>
+                </div> */}
                 <div className={classes.contentConvenience}>
                     <div onClick={() => changeSidebarShownStatus(false)}><FontAwesomeIcon className={classes.optionIcons} icon={faTh} /></div>
                     <div onClick={() => changeSidebarShownStatus(true)}><FontAwesomeIcon className={classes.optionIcons} icon={faList} /></div>

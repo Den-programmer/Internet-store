@@ -2,7 +2,6 @@
 
 
 .products {
-    @extend .container;
     .products_mainContent {
         display: flex;
         align-items: flex-start;
@@ -10,7 +9,9 @@
     .productsContent {
         display: flex;
         align-items: start;
+        justify-content: center;
         flex-wrap: wrap;
+        width: 100%;
     }
     .nothingFound {
         color: #222;

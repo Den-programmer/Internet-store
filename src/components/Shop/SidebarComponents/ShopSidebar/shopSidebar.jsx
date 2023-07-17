@@ -1,10 +1,11 @@
 import React from 'react'
 import ShopCategories from '../ShopCategories/shopCategoriesContainer'
 import ShopFilter from '../ShopFilter/shopFilterContainer'
+import classes from './shopSidebar.module.scss'
 
 const ShopSidebar = (props) => {
     return (
-        <div>
+        <div className={classes.sidebar}>
             <ShopCategories />
             <ShopFilter />
         </div>
