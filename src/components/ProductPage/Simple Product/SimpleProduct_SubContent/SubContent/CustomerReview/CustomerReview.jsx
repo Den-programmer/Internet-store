@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next'
 const CustomerReview = ({ comments, addComment, user, setTextError, error }) => {
     const { t } = useTranslation()
     const [comment, setCommentVal] = useState('')
-    const data = countRating(user.rating)
+    const data = countRating(!user.rating ? 0 : user.rating)
     const { starsCount, greyStarsCount } = data
     const commentsItems = comments.map(item => {
         const data = countRating(item.rating)
@@ -18,7 +18,6 @@ const CustomerReview = ({ comments, addComment, user, setTextError, error }) => 
         greyStarsCount={greyStarsCount} 
         authorName={item.authorName} 
         date={item.date} 
-        photo={item.authorPhoto}
         text={item.commentText}/>
     })
     const changeCommentValue = (e) => {

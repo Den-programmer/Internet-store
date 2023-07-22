@@ -104,11 +104,11 @@ const AppState = {
             path: '/',
             title:'Features'
         },
-        {
-            id: 7,
-            path: '/Home/Blog',
-            title:'Blog'
-        }
+        // {
+        //     id: 7,
+        //     path: '/Home/Blog',
+        //     title:'Blog'
+        // }
     ],
     date: {
         year: '',
@@ -3873,7 +3873,7 @@ const AppState = {
     productsInCart: [],
     total: '0.00',
     shippingTotal: '0.00',
-    isFreeShipping: false,
+    isFreeShipping: true,
     isFlatShipping: false,
     totalProductsCount: 0,
     cartPopupStatus: false,

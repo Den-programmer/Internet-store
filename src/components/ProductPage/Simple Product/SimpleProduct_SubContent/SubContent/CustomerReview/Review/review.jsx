@@ -1,11 +1,12 @@
 import React from 'react'
 import classes from './review.module.scss'
+import defaultUser from '../../../../../../../images/defaultUserPhoto.jpg'
 
 const Review = ({ photo, starsCount, greyStarsCount, authorName, date, text }) => {
     return (
         <div className={classes.review}>
             <div className={classes.photo}>
-                <img src={photo} alt="" />
+                <img src={!photo ? defaultUser : photo} alt="" />
             </div>
             <div className={classes.reviewContent}>
                 <div className={classes.reviewContent__header}>

@@ -5,7 +5,6 @@ import reducerApp from "./reducers/reducerApp"
 import reducerBlog from "./reducers/reducerBlog"
 import reducerShop from "./reducers/reducerShop"
 import reducerProductPage from "./reducers/reducerProductPage"
-import reducerProfile from "./reducers/reducerProfile"
 import reducerLogin from "./reducers/reducerLogin"
 
 const reducers = combineReducers({
@@ -15,7 +14,6 @@ const reducers = combineReducers({
     shopPage: reducerShop,
     blogPage: reducerBlog,
     productPage: reducerProductPage,
-    profile: reducerProfile,
     auth: reducerLogin
 })
 

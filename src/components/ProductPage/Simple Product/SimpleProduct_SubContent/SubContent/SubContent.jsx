@@ -4,8 +4,8 @@ import SimpleProduct__Description from './SimpleProduct__Description/SimpleProdu
 import CustomerReview from './CustomerReview/CustomerReview'
 import AdditionalProductInformation from './AdditionalProductInformation/AdditionalProductInformation'
 
-const SubContent = ({ menuItemChosenId, comments, addComment, authorName, authorPhoto, rating, setTextError, error, currentProduct }) => {
-    const user = { name: authorName, photo: authorPhoto, rating }
+const SubContent = ({ menuItemChosenId, comments, addComment, authorName, setTextError, error, currentProduct }) => {
+    const user = { name: authorName }
     return (
         <div className={classes.content}>
             {menuItemChosenId === 1 ? <SimpleProduct__Description description={currentProduct.description} title={currentProduct.title}/> 

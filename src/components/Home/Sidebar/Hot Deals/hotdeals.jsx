@@ -25,7 +25,7 @@ const HotDeals = ({ sliderItems, sliderItemShown, changeHotDealsSliderItem, hotD
                     </div>
                 </div>
             </div>
-            <div className={classes.timer}>
+            {item.date && <div className={classes.timer}>
                 <div className={classes.timer__days}>
                     <h6>{item.date.days < 10 ? daysFormat : item.date.days}</h6>
                     <p>{t("days")}</p>
@@ -38,7 +38,7 @@ const HotDeals = ({ sliderItems, sliderItemShown, changeHotDealsSliderItem, hotD
                     <h6>{item.date.minutes < 10 ? minutesFormat : item.date.minutes}</h6>
                     <p>{t("mins")}</p>
                 </div>
-            </div>
+            </div>}
         </NavLink>)
     })
 
