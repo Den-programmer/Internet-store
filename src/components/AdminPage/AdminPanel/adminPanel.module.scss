@@ -1,0 +1,60 @@
+@import '../../../index.scss';
+
+.horizontal_line {
+    background-color: #408DE4;
+    height: 2px;
+    width: 100%;
+}
+
+.listItemTemplate {
+    font-size: 14px;
+    color: #222;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-decoration: none;
+    margin: 0px 15px;
+    cursor: pointer;
+    &:hover {
+        border-bottom: 2px solid #222;
+    }
+}
+
+.adminPanel {
+    @extend .container;
+    margin-bottom: 40px;
+    .header {
+        h2 {
+            color: #232323;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 22px;
+        }
+    }
+
+    .panel {
+        .nav {
+            background-color: #F6F6F6;
+            padding: 25px;
+
+            .list {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .listItem {
+                    .listLink {
+                        @extend .listItemTemplate;
+                    }
+                }
+
+                .listItemActive {
+                    .listLink {
+                        @extend .listItemTemplate;
+                        border-bottom: 2px solid #222;
+                    }
+                }
+            }
+        }
+    }
+}

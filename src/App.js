@@ -3,7 +3,7 @@ import AboutUs from './components/AboutUS/aboutUs'
 import Home from './components/Home/home'
 import { Switch, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { setDate, setTotalProductsCount, countTotal } from './redux/reducers/reducerApp'
+import { setDate, setTotalProductsCount, countTotal, requestProducts } from './redux/reducers/reducerApp'
 import Shop from './components/Shop/shopContainer'
 import Blog from './components/Blog/blog'
 import Wishlist from './components/Wishlist/wishlist'
@@ -12,6 +12,9 @@ import ContactUs from './components/Contact Us/contactUs'
 import CartPage from './components/CartPage/cartPage'
 import CheckoutPage from './components/Checkout/checkoutPage'
 import ProductPage from './components/ProductPage/productPage'
+import AdminPage from './components/AdminPage/adminPage'
+import ProductPanel from './components/AdminPage/ProductPanel/productPanel'
+import StatsPanel from './components/AdminPage/StatsPanel/statsPanel'
 
 class App extends Component {
   componentDidMount() {
@@ -59,7 +62,12 @@ class App extends Component {
     //     if(savedLanguage !== null) this.props.changeLanguage(localStorage["language"])
     //   }
     // }
+
+    this.props.requestProducts()
   }
+  // componentDidUpdate() {
+  //   this.props.requestProducts()
+  // }
   render() {
     return (
       <div className="App">
@@ -73,6 +81,14 @@ class App extends Component {
           <Route path="/Home/Blog" render={() => <Blog />}/>
           <Route path="/Home" render={() => <Home />} />
           <Route path="/Wishlist" render={() => <Wishlist />}/>
+          <Route path="/AdminPage/Products" render={() => <div>
+            <AdminPage />
+            <ProductPanel />
+          </div>}/>
+          <Route path="/AdminPage/Stats" render={() => <div>
+            <AdminPage />
+            <StatsPanel />
+          </div>}/>
           <Route path='/' render={() => <AboutUs />} />
         </Switch>
       </div >
@@ -87,6 +103,6 @@ const mapStateToProps = (state) => ({
   language: state.app.language
 })
 
-const AppContainer = connect(mapStateToProps, { setDate, setTotalProductsCount, countTotal })(App)
+const AppContainer = connect(mapStateToProps, { setDate, setTotalProductsCount, countTotal, requestProducts })(App)
 
 export default AppContainer
