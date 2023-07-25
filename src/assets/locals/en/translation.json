@@ -193,5 +193,20 @@
     "reviews_for": "Reviews for",
     "your_email_will_not_be_published": "Your email address will not be published. Required fields are marked",
     "your_rating": "Your Rating",
-    "your_review": "Your Review"
+    "your_review": "Your Review",
+
+    "adminPage": "Admin Page",
+    "products": "Products",
+    "stats": "Stats",
+    "add_new_product": "Add new product",
+    "product_title": "Product Title",
+    "brand": "Brand",
+    "type": "Type",
+    "weight": "Weight",
+    "dimensions": "Dimensions",
+    "categories_with_example": "Categories - Mobile Phones&Electronics",
+    "size": "Size",
+    "color": "Color",
+    "price_pl": "Price - 00.00",
+    "description": "Description"
 }    

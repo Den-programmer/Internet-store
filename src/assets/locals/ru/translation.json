@@ -193,5 +193,20 @@
     "reviews_for": "Отзывы для",
     "your_email_will_not_be_published": "Ваш электронный адрес не будет опубликован. Обязательные поля помечены",
     "your_rating": "Ваш рейтинг",
-    "your_review": "Ващ отзыв"
+    "your_review": "Ващ отзыв",
+
+    "adminPage": "Страница админа",
+    "products": "Продукты",
+    "stats": "Статистика",
+    "add_new_product": "Добавить новый продукт",
+    "product_title": "Название продукта",
+    "brand": "Бренд",
+    "type": "Тип",
+    "weight": "Вес",
+    "dimensions": "Измерения",
+    "categories_with_example": "Категории - Mobile Phones&Electronics",
+    "size": "Размер",
+    "color": "Цвет",
+    "price_pl": "Цена - 00.00",
+    "description": "Описание"
 }

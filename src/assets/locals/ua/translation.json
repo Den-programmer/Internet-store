@@ -192,5 +192,20 @@
     "reviews_for": "Відгуки для",
     "your_email_will_not_be_published": "Ваша електронна адреса не буде опублікована. Обов'язкові поля позначені",
     "your_rating": "Ваш рейтинг",
-    "your_review": "Ваш відгук"
+    "your_review": "Ваш відгук",
+
+    "adminPage": "Сторінка адміністратора",
+    "products": "Продукти",
+    "stats": "Статистика",
+    "add_new_product": "Додати новий товар",
+    "product_title": "Назва продукту",
+    "brand": "Бренд",
+    "type": "Тип",
+    "weight": "Вага",
+    "dimensions": "Розміри",
+    "categories_with_example": "Категорiї - Mobile Phones&Electronics",
+    "size": "Розмір",
+    "color": "Колір",
+    "price_pl": "Цiна - 00.00",
+    "description": "Опис"
 }
