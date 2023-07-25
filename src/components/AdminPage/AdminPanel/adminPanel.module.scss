@@ -24,10 +24,7 @@
     margin-bottom: 40px;
     .header {
         h2 {
-            color: #232323;
-            text-transform: uppercase;
-            font-weight: 900;
-            font-size: 22px;
+            @extend .headerTitle;
         }
     }
 

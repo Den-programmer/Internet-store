@@ -2,4 +2,89 @@
 
 .productPanel {
     @extend .container;
+
+    .header {
+        h3 {
+            @extend .headerTitle;
+        }
+    }
+
+    .addProductPanel {
+        width: 100%;
+
+        .block {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .productCharacteristicsWrapper {
+            width: 45%;
+        }
+
+        .charasteristicsWrapper {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .productCharacteristic {
+            width: 100%;
+            margin: 15px 0px;
+
+            .productCharacteristic_textfield {
+                width: 100%;
+                padding: 15px;
+            }
+
+            .productCharacteristic_textarea {
+                box-sizing: border-box;
+                width: 100%;
+                padding: 15px;
+                height: 150px;
+                resize: none;
+            }
+        }
+
+        .btn_wrapper {
+            margin: 20px 0px;
+
+            .btn_addNewProduct {
+                padding: 25px;
+                color: #FFF;
+                outline: none;
+                border: none;
+                text-transform: uppercase;
+                font-weight: 900;
+                cursor: pointer;
+                background-color: #20bf55;
+                background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+            }
+        }
+    }
+}
+
+@media screen and (max-device-width: 660px) {
+    .productPanel {
+        .addProductPanel {
+    
+            .block {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 100%;
+            }
+    
+            .productCharacteristic {
+                .productCharacteristic_textarea {
+                    box-sizing: content-box;
+                    width: 100%;
+                    padding: 15px;
+                    height: 150px;
+                    resize: none;
+                }
+            }
+        }
+    }
 }

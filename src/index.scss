@@ -24,15 +24,20 @@ img {
   user-select: none;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: $Raleway;
 }
 
-p, li {
+p,
+li {
   font-family: $Roboto;
 }
 
-button, a {
+button,
+a {
   cursor: pointer;
 }
 
@@ -45,28 +50,37 @@ ul {
 
 .dateWrapper {
   .date {
-      width: 40px;
-      height: 45px;
-      border-radius: 1px;
-      background-color: #408DE4;
-      color: #FFF;
-      text-transform: uppercase;
-      font-family: $Roboto;
-      user-select: none;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
-      .day {
-          font-size: 18px;
-          margin-block-start: 0;
-          margin-block-end: 0;
-      }
-      .month {
-          font-size: 11px;
-          margin-block-end: 0;
-          margin-block-start: 0;
-      }
+    width: 40px;
+    height: 45px;
+    border-radius: 1px;
+    background-color: #408DE4;
+    color: #FFF;
+    text-transform: uppercase;
+    font-family: $Roboto;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+
+    .day {
+      font-size: 18px;
+      margin-block-start: 0;
+      margin-block-end: 0;
+    }
+
+    .month {
+      font-size: 11px;
+      margin-block-end: 0;
+      margin-block-start: 0;
+    }
   }
+}
+
+.headerTitle {
+  color: #232323;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 22px;
 }

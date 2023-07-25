@@ -10,10 +10,7 @@
     @extend .container;
     .title {
         h3 {
-            color: #232323;
-            text-transform: uppercase;
-            font-weight: 900;
-            font-size: 22px;
+            @extend .headerTitle;
         }
     }
     .returningCustomer {
