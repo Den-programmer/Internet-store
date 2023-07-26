@@ -1,5 +1,18 @@
 $border: #cfd7d9;
 
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.error {
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+}
+
 .loginPage {
     background: #408de4;
     width: 100%;

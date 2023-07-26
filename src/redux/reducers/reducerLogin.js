@@ -17,11 +17,12 @@ const reducerLogin = (state = LoginState, action) => {
                 isLogin: action.status
             }
         case SET_AUTHENTICATION:
-            const { email, name, isLogin, isAuth } = action
+            const { email, name, userId, isLogin, isAuth } = action
             return {
                 ...state,
                 email, 
                 name,
+                userId,
                 isLogin,
                 isAuth
             }    
@@ -32,7 +33,7 @@ const reducerLogin = (state = LoginState, action) => {
 
 /* Action Creators! */
 
-export const authentication = (email, name, isLogin = true, isAuth = true) => ({ type: SET_AUTHENTICATION, email, name, isLogin, isAuth })
+export const authentication = (email, name, userId, isLogin = true, isAuth = true) => ({ type: SET_AUTHENTICATION, email, name, userId, isLogin, isAuth })
 
 export const setIsLoginStatus = (status) => ({ type: SET_IS_LOGIN_STATUS, status })
 
