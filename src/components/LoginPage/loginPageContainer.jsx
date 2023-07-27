@@ -1,11 +1,12 @@
 import { connect } from 'react-redux'
 import LoginPage from './loginPage'
-import { setIsLoginStatus } from '../../redux/reducers/reducerLogin'
+import { setIsLoginStatus, login, register } from '../../redux/reducers/reducerLogin'
 
 const mapStateToProps = (state) => ({
-    isLogin: state.auth.isLogin
+    isLogin: state.auth.isLogin,
+    isFetching: state.app.isFetching
 })
 
-const LoginPageContainer = connect(mapStateToProps, { setIsLoginStatus })(LoginPage)
+const LoginPageContainer = connect(mapStateToProps, { setIsLoginStatus, login, register })(LoginPage)
 
 export default LoginPageContainer

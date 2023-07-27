@@ -7,6 +7,15 @@ import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 
 const LoginSchema = Yup.object().shape({
+    email: Yup.string()
+    .email('Invalid email!')
+    .required('Email is required!'),
+    password: Yup.string()
+    .min(6, 'Password is too short!')
+    .required('Password is required')
+})
+
+const SignupSchema = Yup.object().shape({
     username: Yup.string()
     .min(2, 'User name is too short!')
     .max(50, 'User name is too long!')
@@ -19,12 +28,12 @@ const LoginSchema = Yup.object().shape({
     .required('Password is required')
 })
 
-const LoginPage = ({ isLogin, setIsLoginStatus }) => {
+const LoginPage = ({ isLogin, setIsLoginStatus, login, register, isFetching }) => {
     const { t } = useTranslation()
     const [isPassword, setPasswordStatus] = useState(false)
     const submit = (values, { setSubmitting }) => {
-        const FOrmData = JSON.stringify(values)
-        alert(FOrmData)
+        isLogin ? login(values.email, values.password) :
+        register(values.email, values.username, values.password)
     }
     return (
         <div className={classes.loginPage}>
@@ -37,7 +46,7 @@ const LoginPage = ({ isLogin, setIsLoginStatus }) => {
                     <Formik
                     initialValues={isLogin ? { email: '', password: '' } : {  email: '', password: '', username: '' }}
                     onSubmit={submit}
-                    validationSchema={LoginSchema}>
+                    validationSchema={isLogin ? LoginSchema : SignupSchema}>
                         <Form>
                             {!isLogin && <div className={classes.textField}>
                                 <p className={classes.textField_calling}>{t("Name")}</p>
@@ -57,15 +66,17 @@ const LoginPage = ({ isLogin, setIsLoginStatus }) => {
                                     </div>
                                 </div>
                             </div>
-                            <ErrorMessage className={classes.error} name="username" component="div" />
+                            {!isLogin && <ErrorMessage className={classes.error} name="username" component="div" />}
                             <ErrorMessage className={classes.error} name="password" component="div" />
                             <ErrorMessage className={classes.error} name="email" component="div" />
                             {isLogin ? <div className={classes.center}>
-                                <button type="submit" className={classes.signUpAndLogin}>
+                                <button disabled={isFetching ? true : false} type="submit" 
+                                className={isFetching ? classes.signUpAndLoginDisabled : classes.signUpAndLogin}>
                                     {t("login")}
                                 </button>
                             </div> : <div className={classes.center}>
-                                <button type="submit" className={classes.signUpAndLogin}>
+                                <button disabled={isFetching ? true : false} type="submit" 
+                                className={isFetching ? classes.signUpAndLoginDisabled : classes.signUpAndLogin}>
                                     {t("signup")}
                                 </button>
                             </div>}

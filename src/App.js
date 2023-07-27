@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import AboutUs from './components/AboutUS/aboutUs'
 import Home from './components/Home/home'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { setDate, setTotalProductsCount, countTotal, requestProducts } from './redux/reducers/reducerApp'
 import Shop from './components/Shop/shopContainer'
@@ -74,6 +74,7 @@ class App extends Component {
         <Switch>
           <Route path="/Checkout" render={() => <CheckoutPage />}/>
           <Route path="/CartPage" render={() => <CartPage />}/>
+          {this.props.isAuth && <Route exact path='/MyAccount' render={() => (<Redirect to="/" />)} />}
           <Route path="/MyAccount" render={() => <LoginPage />}/>
           <Route path={"/Product/:id?"} render={() => <ProductPage />}/>
           <Route path="/ContactUs" render={() => <ContactUs />}/>
@@ -100,7 +101,8 @@ const mapStateToProps = (state) => ({
   products: state.app.products,
   productsInCart: state.app.productsInCart,
   productId: state.app.productId,
-  language: state.app.language
+  language: state.app.language,
+  isAuth: state.auth.isAuth
 })
 
 const AppContainer = connect(mapStateToProps, { setDate, setTotalProductsCount, countTotal, requestProducts })(App)

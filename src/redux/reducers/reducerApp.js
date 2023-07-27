@@ -1287,12 +1287,13 @@ export const changeFetchingStatus = (status) => ({ type: IS_FETCHING, status })
 
 export const requestProducts = () => async (dispatch) => {
     try {
-        changeFetchingStatus(true)
+        dispatch(changeFetchingStatus(true))
         const products = await ProductsAPI.getAllProducts()
         dispatch(setProducts(products))   
-        changeFetchingStatus(false)         
+        dispatch(changeFetchingStatus(false))         
     } catch(err) {
         alert("Something has gone wrong... " + err)
+        dispatch(changeFetchingStatus(false))         
     }
 }
 
