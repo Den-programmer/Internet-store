@@ -1289,11 +1289,76 @@ export const requestProducts = () => async (dispatch) => {
     try {
         dispatch(changeFetchingStatus(true))
         const products = await ProductsAPI.getAllProducts()
-        dispatch(setProducts(products))   
+        let productId = 0
+        const productsData = products.map((product) => {
+            const { title, price, photos, rating, isNewest, isSale, hovered, like, isInCart, 
+                isInStock, isCompare, desc, categories, tags, brand, type,
+            weight, dimensions, composition, color, size  } = product
+            productId++
+            return {
+                id: productId,
+                title,
+                price,
+                photos,
+                rating,
+                isNew: isNewest,
+                isSale,
+                hovered,
+                like,
+                isInCart,
+                isInStock,
+                isCompare,
+                description: desc,
+                category: categories,
+                tags,
+                brand,
+                type,
+                properties: [
+                    {
+                        id: 1,
+                        title: 'Weight',
+                        value: weight
+                    },
+                    {
+                        id: 2,
+                        title: 'Dimensions',
+                        value: dimensions
+                    },
+                    {
+                        id: 3,
+                        title: 'Composition',
+                        value: composition
+                    },
+                    {
+                        id: 4,
+                        title: 'Color',
+                        value: color
+                    },
+                    {
+                        id: 5,
+                        title: 'Size',
+                        value: size
+                    }
+                ]
+            }
+        })
+        dispatch(setProducts(productsData))   
         dispatch(changeFetchingStatus(false))         
     } catch(err) {
         alert("Something has gone wrong... " + err)
         dispatch(changeFetchingStatus(false))         
+    }
+}
+
+export const addProduct = (product) => async (dispatch) => {
+    try {
+        dispatch(changeFetchingStatus(true)) 
+        const data = await ProductsAPI.addProduct(product)
+        console.log(data)
+        dispatch(changeFetchingStatus(false)) 
+    } catch(err) {
+        alert("Something has gone wrong... " + err)
+        dispatch(changeFetchingStatus(false)) 
     }
 }
 

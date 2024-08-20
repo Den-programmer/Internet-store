@@ -119,6 +119,7 @@ const Products = React.memo(({ products, productsPortion, productsPerRow, isSide
     })
 
     const productsToShow = productsCreation(productsData)
+    debugger
 
     const pagesCount = Math.ceil(totalItemsCount / productsPortion)
     const forcePage = currentPage - 1

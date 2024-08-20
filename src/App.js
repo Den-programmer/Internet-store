@@ -12,7 +12,7 @@ import ContactUs from './components/Contact Us/contactUs'
 import CartPage from './components/CartPage/cartPage'
 import CheckoutPage from './components/Checkout/checkoutPage'
 import ProductPage from './components/ProductPage/productPage'
-import AdminPage from './components/AdminPage/adminPage'
+import AdminPage from './components/AdminPage/adminPageContainer'
 import ProductPanel from './components/AdminPage/ProductPanel/productPanel'
 import StatsPanel from './components/AdminPage/StatsPanel/statsPanel'
 

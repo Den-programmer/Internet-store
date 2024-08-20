@@ -48,7 +48,7 @@ export const register = (email, username, password) => async (dispatch) => {
     try {
         dispatch(changeFetchingStatus(true))
         const data = await AuthAPI.register(email, username, password)
-        dispatch(authentication(data.email, data.username, data._id, data.isAdmin, false, true))
+        dispatch(authentication(data.email, data.username, data._id, data.isAdmin, true, true))
         dispatch(changeFetchingStatus(false))
     } catch (err) {
         alert("Something has gone wrong: " + err)
@@ -60,7 +60,7 @@ export const login = (email, password) => async (dispatch) => {
     try {
         dispatch(changeFetchingStatus(true))
         const data = await AuthAPI.login(email, password)
-        dispatch(authentication(data.email, data.username, data._id, data.isAdmin, false, true))
+        dispatch(authentication(data.email, data.username, data._id, data.isAdmin, true, true))
         dispatch(changeFetchingStatus(false))
     } catch (err) {
         alert("Something has gone wrong: " + err)

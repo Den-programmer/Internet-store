@@ -22,6 +22,47 @@
             width: 45%;
         }
 
+        .productPhotos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px dashed #bebebe;
+            height: 200px;
+
+            .productChangingPhoto {
+                text-align: center;
+
+                .productChangingPhoto_title {
+                    color: #c4c4c4;
+                    font-size: 18px;
+                }
+
+                .productChangingPhoto__text {
+                    font-size: 14px;
+                    color: #222;
+                }
+
+                .productChangingPhoto_hidden_filefield {
+                    overflow: hidden;
+                    width: 0.1px;
+                    height: 0.1px;
+                    opacity: 0;
+                    position: absolute;
+                    z-index: -1;
+                }
+
+                .selectFile_btn {
+                    cursor: pointer;
+                    padding: 10px;
+                    background:#20bf55;
+                    color: #FFF;
+                    border-radius: 4px;
+                    margin-top:20px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
         .charasteristicsWrapper {
             width: 100%;
             display: flex;
@@ -68,14 +109,14 @@
 @media screen and (max-device-width: 660px) {
     .productPanel {
         .addProductPanel {
-    
+
             .block {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 width: 100%;
             }
-    
+
             .productCharacteristic {
                 .productCharacteristic_textarea {
                     box-sizing: content-box;
