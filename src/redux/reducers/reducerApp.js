@@ -1019,6 +1019,12 @@ const AppState = {
             name: 'Українська',
             tag: 'ua',
             isActive: false
+        },
+        {
+            id: 4,
+            name: 'Dansk',
+            tag: 'da',
+            isActive: false
         }
     ], 
     searchText: '',

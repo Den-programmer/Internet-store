@@ -5,9 +5,10 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 import translationEN from './assets/locals/en/translation.json'
 import translationRU from './assets/locals/ru/translation.json'
 import translationUA from './assets/locals/ua/translation.json'
+import translationDA from './assets/locals/da/translation.json'
 
 const fallbackLng = ['en']
-const availableLanguages = ['en', 'ru', 'ua']
+const availableLanguages = ['en', 'ru', 'ua', 'da']
 
 const resources = {
     en: {
@@ -18,6 +19,9 @@ const resources = {
     },
     ua: {
         translation: translationUA
+    },
+    da: {
+        translation: translationDA
     }
 }
 
