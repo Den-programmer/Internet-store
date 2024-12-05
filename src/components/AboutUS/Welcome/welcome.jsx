@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './welcome.module.scss'
-import supermarketPhoto from '../../../images/supermarketPhoto.jpg'
+import supermarketPhoto from '../../../images/supermarketPhoto.png'
 import { NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 

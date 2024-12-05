@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './mainHeader.module.scss'
-import basket from './img/basket.png'
+import logo from './img/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faShoppingBasket } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom'
@@ -20,7 +20,7 @@ const MainHeader = ({ deleteFromCart, cartPopupStatus, productsInCart, setIsCart
                 <div className={classes.logoWrapper}>
                     <NavLink to="/">
                         <div className={classes.logo}>
-                            <img className={classes.logoImg} src={basket} alt="" />
+                            <img className={classes.logoImg} src={logo} alt="" />
                             <h1>Supermart</h1>
                         </div>
                     </NavLink>

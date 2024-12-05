@@ -12,8 +12,6 @@ import phone_samsung_galaxy_note_20_ultra_8gb_256gb from '../../components/Home/
 
 
 import avatar from '../../images/avatar.jpg'
-import avatar9 from '../../images/avatar9.jpg'
-import avatar10 from '../../images/avatar10.png'
 import { faTv, faMobileAlt, faGem, faWallet, faGift, faHome, faPizzaSlice, faTshirt, faShoppingBag, faClock } from '@fortawesome/free-solid-svg-icons'
 
 
@@ -182,7 +180,7 @@ const HomeState = {
                 id: 2,
                 text: 'Black gold Makin\' your way in the world today takes every thing you\'ve got. Takin\' a break from all you worries the some marry shop theme.',
                 name: 'Hayden Cristian',
-                photo: avatar9,
+                photo: avatar,
                 position: 'Lead designer',
                 isShown: false
             },
@@ -190,7 +188,7 @@ const HomeState = {
                 id: 3,
                 text: 'Black gold Makin\' your way in the world today takes every thing you\'ve got. Takin\' a break from all you worries the some marry shop theme.',
                 name: 'Ariane Grande',
-                photo: avatar10,
+                photo: avatar,
                 position: 'Lead designer',
                 isShown: false
             },

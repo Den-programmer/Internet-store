@@ -32,7 +32,7 @@
         }
         .productsCountMenuWrapper { 
             position: relative;
-            z-index: 1;
+            z-index: auto;
             .active {
                 transition: all .3s linear;
                 color: #444444;
