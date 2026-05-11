@@ -14,7 +14,7 @@ const aboutUsState = {
             id: 1,
             photo: MemberOne,
             name: 'Denis Grigorov',
-            position: 'Godness',
+            position: 'Main director',
             facebook: 'https://www.facebook.com/entityII/',
             google: 'https://google.com/',
             linkedIn: 'https://www.linkedin.com/',
